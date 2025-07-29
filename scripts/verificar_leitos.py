@@ -24,9 +24,9 @@ AGHU_DB_CONFIG = {
     'port': os.getenv("aghu_port")
 }
 
-API_TOKEN = os.getenv("HL7_API_TOKEN")
-HL7_ENDPOINT = os.getenv("HL7_API_ENDPOINT")
-WEB_SERVICE_URL = "https://api.hospital.com/hl7"
+""" token = os.getenv("EPIMED_TOKEN")
+url = os.getenv("EPIMED_ENDPOINT")
+integrationId = os.getenv("EPIMED_INTEGRATION_ID") """
 
 LOG_DIR = "/var/www/html/epimed/logs"
 os.makedirs(LOG_DIR, exist_ok=True)
@@ -52,7 +52,7 @@ def registrar_log(mensagem, nivel="info"):
     elif nivel == "warning":
         logger.warning(mensagem)
 
-def gerar_mensagem_hl7(unitcode, unitname, bedcode, bedname,
+def gerar_mensagem_hl7(unitcode, unitname, unittypecode, bedcode, bedname,
                        activebeddate, disablebeddate, updatetimestamp,
                        clientid, typebedcode, bedstatus):
 
@@ -73,111 +73,66 @@ def gerar_mensagem_hl7(unitcode, unitname, bedcode, bedname,
 
     timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
 
-    msh = f"MSH|^~\\&|HUAP||EPIMED||{timestamp}|||ORU^R01|20190409220503_ORU_65870_95936689|P|2.5||||||ASCII"
-    pv1 = f"PV1|1||{unitcode}^^{unitname}||||||||||||||||||||||||||||||"
+    msh = f"MSH|^~&|HUAP||EPIMED||{timestamp}||ORU^R01|20190409220503_ORU_65870_95936689|P|2.5||||||ASCII"
     pid = f"PID|1||||||||||||||||||||||"
+    pv1 = f"PV1|1||{unitcode}^{unittypecode}^{unitname}||||||||||||||||||||||||||||||"
     obr = f"OBR|1|{clientid}|||||{updatetimestamp}||||||||||||||||||||||||||||"
     obx = f"OBX|1|ST|{bedcode}^{bedname}||{typebedcode}^{bedstatus}|||||||{activebeddate}||{disablebeddate}||||||"
 
-    return f"{msh}\n{pv1}\n{pid}\n{obr}\n{obx}"
+    return f"{msh}\n{pid}\n{pv1}\n{obr}\n{obx}"
+
+import os
+import requests
 
 def enviar_mensagem_hl7(mensagem):
-    print(mensagem)
-    # Simulação de envio para ambiente de teste/desenvolvimento
+    #url = "https://ewsclient.epimedmonitor.com/Ewsclient.svc"
+    url = os.getenv("EPIMED_ENDPOINT")
+    token = os.getenv("EPIMED_TOKEN")
+    integrationId = os.getenv("EPIMED_INTEGRATION_ID")
 
-""" O endpoint de login
-    O endpoint de envio da msg
-    Tipo de requisição: application/json ou x-www-form-urlencoded?
-    Campos exigidos: "username" e "password"? Ou "client_id" e "client_secret"?
-    A API aceita texto puro HL7 (text/plain) ou exige application/hl7-v2?
-    A quebra de linha pode ser \n ou precisa ser \r (caracter típico HL7)?
-    Exemplo do curl da documentação (ou payload esperado)
-        curl -X POST https://api.exemplo.com/login \
-         -H "Content-Type: application/x-www-form-urlencoded" \
-         -d "username=meunome&password=minhasenha"
-
-         Resposta: {"access_token": "eyJhbGciOi..."}
-
-         curl -X POST https://api.exemplo.com/hl7 \
-            -H "Authorization: Bearer eyJhbGciOi..." \
-            -H "Content-Type: text/plain" \
-            --data-binary @mensagem.hl7
-
-    Como o token vem na resposta (campo "access_token" ou "token"?)
-    O token vai no cabeçalho como:
-        Authorization: Bearer TOKEN
-        ou Authorization: Token TOKEN
-        ou outro, como X-API-KEY: TOKEN
-
-    Requisitos adicionais do servidor
-        Autorização por IP: O servidor exige IPs autorizados para acesso?
-        Token tem tempo de expiração? (precisa renovar?)
-        HTTPS obrigatório? (sempre sim, mas confirmar)
-        Timeout ou limite de requisições por minuto?
-
-    Resposta esperada
-        O servidor retorna o quê se a mensagem for aceita?
-        Um código 200 OK com texto?
-        Um ACK HL7?
-        Um ID de protocolo?
-        Em caso de erro, como a API responde? (status 400, 401, 500?)
-
-LOGIN_URL = "https://api.seuservico.com/login"
-HL7_ENDPOINT = "https://api.seuservico.com/hl7"
-
-# 1. Obter token via login
-def obter_token(usuario, senha):
-    login_payload = {
-        "username": usuario,
-        "password": senha
-    }
-    try:
-        resposta = requests.post(LOGIN_URL, json=login_payload, timeout=10)
-        resposta.raise_for_status()
-        dados = resposta.json()
-        return dados.get("access_token")  # ou "token", dependendo da API
-    except Exception as e:
-        print(f"Erro ao obter token: {e}")
-        return None
-
-# 2. Enviar mensagem HL7 com token
-def enviar_hl7_com_token(token, mensagem_hl7):
     headers = {
-        "Authorization": f"Bearer {token}",
-        "Content-Type": "text/plain"
+        "Content-Type": "application/soap+xml; charset=utf-8"
     }
+
+    soap_body = f'''<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"
+        xmlns:tem="http://tempuri.org/">
+        <soap:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+            <wsa:Action>http://tempuri.org/IEwsClient/SendHl7Message_DynamicToken</wsa:Action>
+            <wsa:To>{url}</wsa:To>
+        </soap:Header>
+        <soap:Body>
+            <tem:SendHl7Message_DynamicToken>
+                <tem:dynamicToken>{token}</tem:dynamicToken>
+                <tem:integrationId>{integrationId}</tem:integrationId>
+                <tem:message><![CDATA[{mensagem}]]></tem:message>
+            </tem:SendHl7Message_DynamicToken>
+        </soap:Body>
+    </soap:Envelope>'''
+
     try:
-        resposta = requests.post(HL7_ENDPOINT, data=mensagem_hl7, headers=headers, timeout=10)
-        if resposta.status_code == 200:
-            print("✅ Mensagem HL7 enviada com sucesso.")
-        else:
-            print(f"⚠️ Erro {resposta.status_code}: {resposta.text}")
-    except Exception as e:
-        print(f"❌ Erro na requisição HL7: {e}")
-    """
-     
-    """
-    headers = {
-        "Authorization": f"Bearer {API_TOKEN}",
-        "Authorization": "Token SEU_TOKEN",  # ou "JWT SEU_TOKEN"
-        "X-API-KEY": "SEU_TOKEN",  # ou "x-auth-token": "SEU_TOKEN"
-        "Content-Type": "application/hl7-v2"
-        "Content-Type": "text/plain"
-    }
-    
-     try:
         response = requests.post(
-            WEB_SERVICE_URL,
-            data=mensagem,
+            url,
+            data=soap_body.encode("utf-8"),
             headers=headers,
-            timeout=10  # evitar travar para sempre
+            timeout=10
         )
         response.raise_for_status()
-        print("Mensagem enviada com sucesso:", response.status_code)
-    except Exception as e:
-        print("Erro ao enviar mensagem:", e) """
+        print("✅ Mensagem enviada com sucesso!")
+        print("\n📨 Status Code:", response.status_code)
+        print("\n📨 Headers:")
+        print("\n📨 Body:", soap_body)
+        for k, v in response.headers.items():
+            print(f"   {k}: {v}")
+        print("\n📨 Corpo da resposta (raw XML):")
+        print(response.text)  # Corpo da resposta como exibido no Postman
 
-    return 'ACK'
+    except requests.exceptions.HTTPError as http_err:
+        print("❌ Erro HTTP:", http_err)
+        print("📨 Corpo da resposta de erro:")
+        print(response.text)
+    except Exception as e:
+        print("❌ Erro geral:", e)
+    return response.status_code
 
 def conectar_db(config):
     return psycopg2.connect(**config)
@@ -188,6 +143,7 @@ def obter_leitos_aghu(conexao):
             SELECT
                 unidades_funcionais.seq AS unitcode,
                 unidades_funcionais.descricao AS unitname,
+                unidades_funcionais.ind_unid_cti AS unittypecode,
                 leitos.lto_id AS bedcode,
                 leitos.lto_id AS bedname,
                 leitos.ind_leito_extra AS typebedcode,
@@ -196,7 +152,7 @@ def obter_leitos_aghu(conexao):
             INNER JOIN AGH.AGH_UNIDADES_FUNCIONAIS unidades_funcionais
                 ON leitos.unf_seq = unidades_funcionais.seq
         """)
-        return {row[2]: row[:] for row in cursor.fetchall()}  # bedname como chave
+        return {row[3]: row[:] for row in cursor.fetchall()}  # bedname como chave
 
 def obter_leitos_epimed(conexao):
     with conexao.cursor() as cursor:
@@ -322,7 +278,7 @@ def verificar_leitos_novos():
         registrar_log(f"{len(novos_leitos)} novo(s) leito(s) detectado(s).")
 
         for leito_id, info in novos_leitos.items():
-            unitcode, unitname, bedcode, bedname, typebedcode, ind_situacao = info
+            unitcode, unitname, unittypecode, bedcode, bedname, typebedcode, ind_situacao = info
 
             activebeddate = disablebeddate = None
             updatetimestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -344,8 +300,9 @@ def verificar_leitos_novos():
 
                     status_map = {"A": "1", "I": "0"}
                     type_map = {"N": "1", "S": "2"}
+                    unittype_map = {"N": "GS", "S": "GE"}
                     mensagem = gerar_mensagem_hl7(
-                        unitcode, unitname, bedcode, bedname,
+                        unitcode, unitname, unittype_map.get(unittypecode), bedcode, bedname,
                         activebeddate, disablebeddate, updatetimestamp,
                         clientid, type_map.get(typebedcode), status_map.get(ind_situacao)
                     )
@@ -396,16 +353,20 @@ def verificar_alteracoes_status():
 
         for leito_id, novo_status in alteracoes.items():
             dados_leito = leitos_aghu[leito_id]
-            unitcode, unitname, bedcode, bedname, typebedcode, ind_situacao = dados_leito
+            unitcode, unitname, unittypecode, bedcode, bedname, typebedcode, ind_situacao = dados_leito
 
             activebeddate = disablebeddate = None
 
-            if novo_status == "S":  # Ativo
-                dt = obter_data_ativacao(conn_aghu, leito_id)
-                activebeddate = dt.strftime("%Y-%m-%d %H:%M:%S") if dt else None
-            elif novo_status == "N":  # Inativo
-                dt = obter_data_inativacao(conn_aghu, leito_id)
-                disablebeddate = dt.strftime("%Y-%m-%d %H:%M:%S") if dt else None
+            if novo_status == "A":  # Ativo
+                dta = obter_data_ativacao(conn_aghu, leito_id)
+                activebeddate = dta.strftime("%Y-%m-%d %H:%M:%S") if dta else None
+                registrar_log(f"Leito {leito_id} está ATIVO desde {activebeddate}.")
+            elif novo_status == "I":  # Inativo
+                dta = obter_data_ativacao(conn_aghu, leito_id)
+                activebeddate = dta.strftime("%Y-%m-%d %H:%M:%S") if dta else None
+                dti = obter_data_inativacao(conn_aghu, leito_id)
+                disablebeddate = dti.strftime("%Y-%m-%d %H:%M:%S") if dti else None
+                registrar_log(f"Leito {leito_id} INATIVO, desde {disablebeddate}")
 
             updatetimestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
@@ -417,8 +378,9 @@ def verificar_alteracoes_status():
 
                 status_map = {"A": "1", "I": "0"}
                 type_map = {"N": "1", "S": "2"}
+                unittype_map = {"N": "GS", "S": "GE"}
                 mensagem = gerar_mensagem_hl7(
-                    unitcode, unitname, bedcode, bedname,
+                    unitcode, unitname, unittype_map.get(unittypecode), bedcode, bedname,
                     activebeddate, disablebeddate, updatetimestamp,
                     clientid, type_map.get(typebedcode), status_map.get(ind_situacao)
                 )

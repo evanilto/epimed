@@ -1,0 +1,531 @@
+2025-07-29 10:27:57,793 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 10:27:57,850 - INFO - Nenhum novo leito detectado.
+2025-07-29 10:27:57,850 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 10:27:57,851 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 10:27:57,903 - INFO - 2 leito(s) com alteração de situação detectado(s).
+2025-07-29 10:27:57,903 - INFO - Leito UTIN006: novo status I, gerando mensagem HL7.
+2025-07-29 10:27:57,927 - INFO - Log de envio criado para leito UTIN006 com id 6269.
+2025-07-29 10:27:57,930 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 10:29:25,701 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 10:29:25,755 - INFO - Nenhum novo leito detectado.
+2025-07-29 10:29:25,755 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 10:29:25,755 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 10:29:25,809 - INFO - 2 leito(s) com alteração de situação detectado(s).
+2025-07-29 10:29:25,810 - INFO - Leito UTIN006: novo status I, gerando mensagem HL7.
+2025-07-29 10:29:25,841 - INFO - Log de envio criado para leito UTIN006 com id 6270.
+2025-07-29 10:29:25,844 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 10:30:31,269 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 10:30:31,325 - INFO - Nenhum novo leito detectado.
+2025-07-29 10:30:31,326 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 10:30:31,326 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 10:30:31,375 - INFO - 2 leito(s) com alteração de situação detectado(s).
+2025-07-29 10:30:31,375 - INFO - Leito UTIN006: novo status I, gerando mensagem HL7.
+2025-07-29 10:30:31,400 - INFO - Log de envio criado para leito UTIN006 com id 6271.
+2025-07-29 10:30:31,408 - INFO - Log de resposta atualizado para id 6271.
+2025-07-29 10:30:31,412 - INFO - Status do leito UTIN006 atualizado para I.
+2025-07-29 10:30:31,412 - INFO - Leito CMF005: novo status I, gerando mensagem HL7.
+2025-07-29 10:30:31,415 - INFO - Log de envio criado para leito CMF005 com id 6272.
+2025-07-29 10:30:31,421 - INFO - Log de resposta atualizado para id 6272.
+2025-07-29 10:30:31,429 - INFO - Status do leito CMF005 atualizado para I.
+2025-07-29 10:30:31,429 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 10:39:48,952 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 10:39:49,023 - INFO - Nenhum novo leito detectado.
+2025-07-29 10:39:49,024 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 10:39:49,024 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 10:39:49,080 - INFO - Nenhuma alteração de status detectada.
+2025-07-29 10:39:49,080 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 10:40:10,413 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 10:40:10,472 - INFO - Nenhum novo leito detectado.
+2025-07-29 10:40:10,473 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 10:40:10,473 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 10:40:10,562 - INFO - 2 leito(s) com alteração de situação detectado(s).
+2025-07-29 10:40:10,562 - INFO - Leito UTIN006: novo status A, gerando mensagem HL7.
+2025-07-29 10:40:10,587 - INFO - Log de envio criado para leito UTIN006 com id 6273.
+2025-07-29 10:40:10,595 - INFO - Log de resposta atualizado para id 6273.
+2025-07-29 10:40:10,599 - INFO - Status do leito UTIN006 atualizado para A.
+2025-07-29 10:40:10,600 - INFO - Leito CMF005: novo status A, gerando mensagem HL7.
+2025-07-29 10:40:10,603 - INFO - Log de envio criado para leito CMF005 com id 6274.
+2025-07-29 10:40:10,607 - INFO - Log de resposta atualizado para id 6274.
+2025-07-29 10:40:10,610 - INFO - Status do leito CMF005 atualizado para A.
+2025-07-29 10:40:10,611 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 10:40:50,393 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 10:40:50,562 - INFO - Nenhum novo leito detectado.
+2025-07-29 10:40:50,563 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 10:40:50,563 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 10:40:50,632 - INFO - 2 leito(s) com alteração de situação detectado(s).
+2025-07-29 10:40:50,632 - INFO - Leito UTIN006: novo status I, gerando mensagem HL7.
+2025-07-29 10:40:50,689 - INFO - Log de envio criado para leito UTIN006 com id 6275.
+2025-07-29 10:40:50,696 - INFO - Log de resposta atualizado para id 6275.
+2025-07-29 10:40:50,701 - INFO - Status do leito UTIN006 atualizado para I.
+2025-07-29 10:40:50,701 - INFO - Leito CMF005: novo status I, gerando mensagem HL7.
+2025-07-29 10:40:50,705 - INFO - Log de envio criado para leito CMF005 com id 6276.
+2025-07-29 10:40:50,709 - INFO - Log de resposta atualizado para id 6276.
+2025-07-29 10:40:50,714 - INFO - Status do leito CMF005 atualizado para I.
+2025-07-29 10:40:50,714 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 10:41:17,507 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 10:41:17,557 - INFO - Nenhum novo leito detectado.
+2025-07-29 10:41:17,557 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 10:41:17,557 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 10:41:17,611 - INFO - 2 leito(s) com alteração de situação detectado(s).
+2025-07-29 10:41:17,611 - INFO - Leito UTIN006: novo status A, gerando mensagem HL7.
+2025-07-29 10:41:17,636 - INFO - Log de envio criado para leito UTIN006 com id 6277.
+2025-07-29 10:41:17,641 - INFO - Log de resposta atualizado para id 6277.
+2025-07-29 10:41:17,645 - INFO - Status do leito UTIN006 atualizado para A.
+2025-07-29 10:41:17,645 - INFO - Leito CMF005: novo status A, gerando mensagem HL7.
+2025-07-29 10:41:17,647 - INFO - Log de envio criado para leito CMF005 com id 6278.
+2025-07-29 10:41:17,650 - INFO - Log de resposta atualizado para id 6278.
+2025-07-29 10:41:17,652 - INFO - Status do leito CMF005 atualizado para A.
+2025-07-29 10:41:17,653 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 10:41:33,534 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 10:41:33,718 - INFO - Nenhum novo leito detectado.
+2025-07-29 10:41:33,718 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 10:41:33,718 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 10:41:33,789 - INFO - 2 leito(s) com alteração de situação detectado(s).
+2025-07-29 10:41:33,789 - INFO - Leito UTIN006: novo status I, gerando mensagem HL7.
+2025-07-29 10:41:33,802 - INFO - Log de envio criado para leito UTIN006 com id 6279.
+2025-07-29 10:41:33,809 - INFO - Log de resposta atualizado para id 6279.
+2025-07-29 10:41:33,813 - INFO - Status do leito UTIN006 atualizado para I.
+2025-07-29 10:41:33,814 - INFO - Leito CMF005: novo status I, gerando mensagem HL7.
+2025-07-29 10:41:33,816 - INFO - Log de envio criado para leito CMF005 com id 6280.
+2025-07-29 10:41:33,820 - INFO - Log de resposta atualizado para id 6280.
+2025-07-29 10:41:33,823 - INFO - Status do leito CMF005 atualizado para I.
+2025-07-29 10:41:33,823 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 10:41:57,967 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 10:41:58,040 - INFO - Nenhum novo leito detectado.
+2025-07-29 10:41:58,040 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 10:41:58,041 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 10:41:58,106 - INFO - 2 leito(s) com alteração de situação detectado(s).
+2025-07-29 10:41:58,106 - INFO - Leito UTIN006: novo status A, gerando mensagem HL7.
+2025-07-29 10:41:58,118 - INFO - Log de envio criado para leito UTIN006 com id 6281.
+2025-07-29 10:41:58,127 - INFO - Log de resposta atualizado para id 6281.
+2025-07-29 10:41:58,132 - INFO - Status do leito UTIN006 atualizado para A.
+2025-07-29 10:41:58,132 - INFO - Leito CMF005: novo status A, gerando mensagem HL7.
+2025-07-29 10:41:58,137 - INFO - Log de envio criado para leito CMF005 com id 6282.
+2025-07-29 10:41:58,141 - INFO - Log de resposta atualizado para id 6282.
+2025-07-29 10:41:58,144 - INFO - Status do leito CMF005 atualizado para A.
+2025-07-29 10:41:58,144 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 10:44:52,217 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 10:44:52,279 - INFO - Nenhum novo leito detectado.
+2025-07-29 10:44:52,279 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 10:44:52,280 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 10:44:52,341 - INFO - Nenhuma alteração de status detectada.
+2025-07-29 10:44:52,342 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 10:45:49,508 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 10:46:09,626 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 10:46:09,675 - INFO - Nenhum novo leito detectado.
+2025-07-29 10:46:09,676 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 10:46:09,676 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 10:46:09,722 - INFO - Nenhuma alteração de status detectada.
+2025-07-29 10:46:09,722 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 10:47:15,491 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 10:47:15,540 - INFO - Nenhum novo leito detectado.
+2025-07-29 10:47:15,541 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 10:47:15,541 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 10:47:15,712 - INFO - 1 leito(s) com alteração de situação detectado(s).
+2025-07-29 10:47:15,713 - INFO - Leito UPG.UV001: novo status A, gerando mensagem HL7.
+2025-07-29 10:47:15,810 - INFO - Log de envio criado para leito UPG.UV001 com id 6283.
+2025-07-29 10:47:15,817 - INFO - Log de resposta atualizado para id 6283.
+2025-07-29 10:47:15,822 - INFO - Status do leito UPG.UV001 atualizado para A.
+2025-07-29 10:47:15,822 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 10:52:30,936 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 10:52:31,005 - INFO - Nenhum novo leito detectado.
+2025-07-29 10:52:31,005 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 10:52:31,005 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 10:52:31,067 - INFO - Nenhuma alteração de status detectada.
+2025-07-29 10:52:31,067 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 10:53:06,644 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 10:53:06,706 - INFO - Nenhum novo leito detectado.
+2025-07-29 10:53:06,706 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 10:53:06,706 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 10:53:06,880 - INFO - 1 leito(s) com alteração de situação detectado(s).
+2025-07-29 10:53:06,880 - INFO - Leito UPG.UV001: novo status I, gerando mensagem HL7.
+2025-07-29 10:53:06,905 - INFO - Log de envio criado para leito UPG.UV001 com id 6284.
+2025-07-29 10:53:06,912 - INFO - Log de resposta atualizado para id 6284.
+2025-07-29 10:53:06,916 - INFO - Status do leito UPG.UV001 atualizado para I.
+2025-07-29 10:53:06,917 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 10:54:10,385 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 10:54:10,441 - INFO - Nenhum novo leito detectado.
+2025-07-29 10:54:10,441 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 10:54:10,442 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 10:54:10,502 - INFO - 1 leito(s) com alteração de situação detectado(s).
+2025-07-29 10:54:10,502 - INFO - Leito UPG.UV001: novo status A, gerando mensagem HL7.
+2025-07-29 10:54:10,558 - INFO - Log de envio criado para leito UPG.UV001 com id 6285.
+2025-07-29 10:54:10,565 - INFO - Log de resposta atualizado para id 6285.
+2025-07-29 10:54:10,568 - INFO - Status do leito UPG.UV001 atualizado para A.
+2025-07-29 10:54:10,568 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 11:23:04,437 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 11:23:04,484 - INFO - Nenhum novo leito detectado.
+2025-07-29 11:23:04,484 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 11:23:04,484 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 11:23:04,546 - INFO - 1 leito(s) com alteração de situação detectado(s).
+2025-07-29 11:23:04,547 - INFO - Leito UPG.UV001: novo status I, gerando mensagem HL7.
+2025-07-29 11:23:04,603 - INFO - Log de envio criado para leito UPG.UV001 com id 6286.
+2025-07-29 11:23:04,610 - INFO - Log de resposta atualizado para id 6286.
+2025-07-29 11:23:04,615 - INFO - Status do leito UPG.UV001 atualizado para I.
+2025-07-29 11:23:04,615 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 11:25:16,399 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 11:25:16,456 - INFO - Nenhum novo leito detectado.
+2025-07-29 11:25:16,457 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 11:25:16,457 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 11:25:16,508 - INFO - 1 leito(s) com alteração de situação detectado(s).
+2025-07-29 11:25:16,509 - INFO - Leito UPG.UV001: novo status A, gerando mensagem HL7.
+2025-07-29 11:25:16,528 - INFO - Log de envio criado para leito UPG.UV001 com id 6287.
+2025-07-29 11:25:16,533 - INFO - Log de resposta atualizado para id 6287.
+2025-07-29 11:25:16,539 - INFO - Status do leito UPG.UV001 atualizado para A.
+2025-07-29 11:25:16,539 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 11:28:41,876 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 11:28:41,934 - INFO - Nenhum novo leito detectado.
+2025-07-29 11:28:41,935 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 11:28:41,935 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 11:28:41,985 - INFO - 1 leito(s) com alteração de situação detectado(s).
+2025-07-29 11:28:41,987 - INFO - Leito UPG.UV001 INATIVO, desde 2025-07-29 11:31:13
+2025-07-29 11:28:41,988 - INFO - Leito UPG.UV001: novo status I, gerando mensagem HL7.
+2025-07-29 11:28:42,007 - INFO - Log de envio criado para leito UPG.UV001 com id 6288.
+2025-07-29 11:28:42,013 - INFO - Log de resposta atualizado para id 6288.
+2025-07-29 11:28:42,016 - INFO - Status do leito UPG.UV001 atualizado para I.
+2025-07-29 11:28:42,017 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 12:38:24,454 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 12:38:24,514 - INFO - Nenhum novo leito detectado.
+2025-07-29 12:38:24,515 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 12:38:24,515 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 12:38:24,574 - INFO - 1 leito(s) com alteração de situação detectado(s).
+2025-07-29 12:38:24,577 - INFO - Leito UPG.UV001 está ATIVO desde 2025-07-29 11:33:45.
+2025-07-29 12:38:24,578 - INFO - Leito UPG.UV001: novo status A, gerando mensagem HL7.
+2025-07-29 12:38:24,598 - INFO - Log de envio criado para leito UPG.UV001 com id 6289.
+2025-07-29 12:38:24,889 - INFO - Log de resposta atualizado para id 6289.
+2025-07-29 12:38:24,893 - INFO - Status do leito UPG.UV001 atualizado para A.
+2025-07-29 12:38:24,893 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 14:06:22,518 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 14:06:22,690 - INFO - Nenhum novo leito detectado.
+2025-07-29 14:06:22,691 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 14:06:22,691 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 14:06:22,755 - INFO - 2 leito(s) com alteração de situação detectado(s).
+2025-07-29 14:06:22,757 - INFO - Leito UPG.UV001 INATIVO, desde 2025-07-29 13:49:50
+2025-07-29 14:06:22,757 - INFO - Leito UPG.UV001: novo status I, gerando mensagem HL7.
+2025-07-29 14:06:22,798 - INFO - Log de envio criado para leito UPG.UV001 com id 6290.
+2025-07-29 14:06:23,201 - INFO - Log de resposta atualizado para id 6290.
+2025-07-29 14:06:23,205 - INFO - Status do leito UPG.UV001 atualizado para I.
+2025-07-29 14:06:23,207 - INFO - Leito UPG.UV002 está ATIVO desde 2025-07-29 13:49:50.
+2025-07-29 14:06:23,207 - INFO - Leito UPG.UV002: novo status A, gerando mensagem HL7.
+2025-07-29 14:06:23,210 - INFO - Log de envio criado para leito UPG.UV002 com id 6291.
+2025-07-29 14:06:23,290 - INFO - Log de resposta atualizado para id 6291.
+2025-07-29 14:06:23,293 - INFO - Status do leito UPG.UV002 atualizado para A.
+2025-07-29 14:06:23,294 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 14:12:03,030 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 14:12:03,077 - INFO - Nenhum novo leito detectado.
+2025-07-29 14:12:03,078 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 14:12:03,078 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 14:12:03,146 - INFO - 2 leito(s) com alteração de situação detectado(s).
+2025-07-29 14:12:03,147 - INFO - Leito UPG.UV001 está ATIVO desde 2025-07-29 14:10:13.
+2025-07-29 14:12:03,148 - INFO - Leito UPG.UV001: novo status A, gerando mensagem HL7.
+2025-07-29 14:12:03,222 - INFO - Log de envio criado para leito UPG.UV001 com id 6292.
+2025-07-29 14:12:03,415 - INFO - Log de resposta atualizado para id 6292.
+2025-07-29 14:12:03,418 - INFO - Status do leito UPG.UV001 atualizado para A.
+2025-07-29 14:12:03,419 - INFO - Leito UPG.UV002 INATIVO, desde 2025-07-29 14:10:13
+2025-07-29 14:12:03,419 - INFO - Leito UPG.UV002: novo status I, gerando mensagem HL7.
+2025-07-29 14:12:03,421 - INFO - Log de envio criado para leito UPG.UV002 com id 6293.
+2025-07-29 14:12:03,499 - INFO - Log de resposta atualizado para id 6293.
+2025-07-29 14:12:03,501 - INFO - Status do leito UPG.UV002 atualizado para I.
+2025-07-29 14:12:03,501 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 14:15:47,776 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 14:15:47,837 - INFO - Nenhum novo leito detectado.
+2025-07-29 14:15:47,838 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 14:15:47,838 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 14:15:47,901 - INFO - 1 leito(s) com alteração de situação detectado(s).
+2025-07-29 14:15:47,903 - INFO - Leito UPG.UV001 INATIVO, desde 2025-07-29 14:18:18
+2025-07-29 14:15:47,903 - INFO - Leito UPG.UV001: novo status I, gerando mensagem HL7.
+2025-07-29 14:15:47,928 - INFO - Log de envio criado para leito UPG.UV001 com id 6294.
+2025-07-29 14:15:48,193 - INFO - Log de resposta atualizado para id 6294.
+2025-07-29 14:15:48,198 - INFO - Status do leito UPG.UV001 atualizado para I.
+2025-07-29 14:15:48,198 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 14:18:23,245 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 14:18:23,307 - INFO - Nenhum novo leito detectado.
+2025-07-29 14:18:23,307 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 14:18:23,308 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 14:18:23,393 - INFO - 1 leito(s) com alteração de situação detectado(s).
+2025-07-29 14:18:23,395 - INFO - Leito UPG.UV001 está ATIVO desde 2025-07-29 14:20:29.
+2025-07-29 14:18:23,396 - INFO - Leito UPG.UV001: novo status A, gerando mensagem HL7.
+2025-07-29 14:18:23,559 - INFO - Log de envio criado para leito UPG.UV001 com id 6295.
+2025-07-29 14:18:23,752 - INFO - Log de resposta atualizado para id 6295.
+2025-07-29 14:18:23,761 - INFO - Status do leito UPG.UV001 atualizado para A.
+2025-07-29 14:18:23,761 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 14:20:15,164 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 14:20:15,215 - INFO - Nenhum novo leito detectado.
+2025-07-29 14:20:15,215 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 14:20:15,215 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 14:20:15,263 - INFO - 1 leito(s) com alteração de situação detectado(s).
+2025-07-29 14:20:15,265 - INFO - Leito UPG.UV001 INATIVO, desde 2025-07-29 14:22:41
+2025-07-29 14:20:15,265 - INFO - Leito UPG.UV001: novo status I, gerando mensagem HL7.
+2025-07-29 14:20:15,287 - INFO - Log de envio criado para leito UPG.UV001 com id 6296.
+2025-07-29 14:20:15,669 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 14:27:45,640 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 14:27:45,701 - INFO - Nenhum novo leito detectado.
+2025-07-29 14:27:45,701 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 14:27:45,701 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 14:27:45,762 - INFO - Nenhuma alteração de status detectada.
+2025-07-29 14:27:45,763 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 14:28:18,455 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 14:28:18,515 - INFO - Nenhum novo leito detectado.
+2025-07-29 14:28:18,516 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 14:28:18,516 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 14:28:18,577 - INFO - 1 leito(s) com alteração de situação detectado(s).
+2025-07-29 14:28:18,579 - INFO - Leito UPG.UV001 INATIVO, desde 2025-07-29 14:30:49
+2025-07-29 14:28:18,580 - INFO - Leito UPG.UV001: novo status I, gerando mensagem HL7.
+2025-07-29 14:28:18,605 - INFO - Log de envio criado para leito UPG.UV001 com id 6297.
+2025-07-29 14:28:18,783 - INFO - Log de resposta atualizado para id 6297.
+2025-07-29 14:28:18,789 - INFO - Status do leito UPG.UV001 atualizado para I.
+2025-07-29 14:28:18,789 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 15:01:48,137 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 15:01:48,209 - INFO - Nenhum novo leito detectado.
+2025-07-29 15:01:48,209 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 15:01:48,209 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 15:01:48,272 - INFO - Nenhuma alteração de status detectada.
+2025-07-29 15:01:48,273 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 15:02:14,418 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 15:02:14,479 - INFO - Nenhum novo leito detectado.
+2025-07-29 15:02:14,480 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 15:02:14,480 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 15:02:14,541 - INFO - 1 leito(s) com alteração de situação detectado(s).
+2025-07-29 15:02:14,543 - INFO - Leito UPG.UV001 está ATIVO desde 2025-07-29 15:04:44.
+2025-07-29 15:02:14,544 - INFO - Leito UPG.UV001: novo status A, gerando mensagem HL7.
+2025-07-29 15:02:14,566 - INFO - Log de envio criado para leito UPG.UV001 com id 6298.
+2025-07-29 15:02:14,815 - INFO - Log de resposta atualizado para id 6298.
+2025-07-29 15:02:14,819 - INFO - Status do leito UPG.UV001 atualizado para A.
+2025-07-29 15:02:14,820 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 15:20:22,246 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 15:20:22,425 - INFO - Nenhum novo leito detectado.
+2025-07-29 15:20:22,425 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 15:20:22,425 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 15:20:22,486 - INFO - 1 leito(s) com alteração de situação detectado(s).
+2025-07-29 15:20:22,488 - INFO - Leito UPG.UV001 INATIVO, desde 2025-07-29 15:22:46
+2025-07-29 15:20:22,489 - INFO - Leito UPG.UV001: novo status I, gerando mensagem HL7.
+2025-07-29 15:20:22,519 - INFO - Log de envio criado para leito UPG.UV001 com id 6299.
+2025-07-29 15:20:22,755 - INFO - Log de resposta atualizado para id 6299.
+2025-07-29 15:20:22,760 - INFO - Status do leito UPG.UV001 atualizado para I.
+2025-07-29 15:20:22,761 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 15:28:00,752 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 15:28:00,838 - INFO - Nenhum novo leito detectado.
+2025-07-29 15:28:00,841 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 15:28:00,841 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 15:28:00,935 - INFO - 1 leito(s) com alteração de situação detectado(s).
+2025-07-29 15:28:00,937 - INFO - Leito UPG.UV001 está ATIVO desde 2025-07-29 15:30:27.
+2025-07-29 15:28:00,938 - INFO - Leito UPG.UV001: novo status A, gerando mensagem HL7.
+2025-07-29 15:28:00,963 - INFO - Log de envio criado para leito UPG.UV001 com id 6300.
+2025-07-29 15:28:01,265 - INFO - Log de resposta atualizado para id 6300.
+2025-07-29 15:28:01,269 - INFO - Status do leito UPG.UV001 atualizado para A.
+2025-07-29 15:28:01,270 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 15:29:22,171 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 15:29:22,249 - INFO - Nenhum novo leito detectado.
+2025-07-29 15:29:22,250 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 15:29:22,250 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 15:29:22,330 - INFO - 1 leito(s) com alteração de situação detectado(s).
+2025-07-29 15:29:22,332 - INFO - Leito UPG.UV001 INATIVO, desde 2025-07-29 15:31:50
+2025-07-29 15:29:22,332 - INFO - Leito UPG.UV001: novo status I, gerando mensagem HL7.
+2025-07-29 15:29:22,351 - INFO - Log de envio criado para leito UPG.UV001 com id 6301.
+2025-07-29 15:29:22,583 - INFO - Log de resposta atualizado para id 6301.
+2025-07-29 15:29:22,587 - INFO - Status do leito UPG.UV001 atualizado para I.
+2025-07-29 15:29:22,587 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 15:34:34,268 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 15:34:34,350 - INFO - Nenhum novo leito detectado.
+2025-07-29 15:34:34,351 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 15:34:34,351 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 15:34:34,428 - INFO - 1 leito(s) com alteração de situação detectado(s).
+2025-07-29 15:34:34,430 - INFO - Leito UPG.UV001 está ATIVO desde 2025-07-29 15:37:04.
+2025-07-29 15:34:34,431 - INFO - Leito UPG.UV001: novo status A, gerando mensagem HL7.
+2025-07-29 15:34:34,470 - INFO - Log de envio criado para leito UPG.UV001 com id 6302.
+2025-07-29 15:34:34,727 - INFO - Log de resposta atualizado para id 6302.
+2025-07-29 15:34:34,742 - INFO - Status do leito UPG.UV001 atualizado para A.
+2025-07-29 15:34:34,742 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 15:41:50,638 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 15:41:50,703 - INFO - Nenhum novo leito detectado.
+2025-07-29 15:41:50,703 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 15:41:50,703 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 15:41:50,766 - INFO - 1 leito(s) com alteração de situação detectado(s).
+2025-07-29 15:41:50,768 - INFO - Leito UPG.UV001 INATIVO, desde 2025-07-29 15:43:25
+2025-07-29 15:41:50,768 - INFO - Leito UPG.UV001: novo status I, gerando mensagem HL7.
+2025-07-29 15:41:50,785 - INFO - Log de envio criado para leito UPG.UV001 com id 6303.
+2025-07-29 15:41:51,023 - INFO - Log de resposta atualizado para id 6303.
+2025-07-29 15:41:51,027 - INFO - Status do leito UPG.UV001 atualizado para I.
+2025-07-29 15:41:51,027 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 15:43:44,602 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 15:43:44,676 - INFO - Nenhum novo leito detectado.
+2025-07-29 15:43:44,676 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 15:43:44,676 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 15:43:44,746 - INFO - 1 leito(s) com alteração de situação detectado(s).
+2025-07-29 15:43:44,749 - INFO - Leito UPG.UV001 está ATIVO desde 2025-07-29 15:46:17.
+2025-07-29 15:43:44,750 - INFO - Leito UPG.UV001: novo status A, gerando mensagem HL7.
+2025-07-29 15:43:44,769 - INFO - Log de envio criado para leito UPG.UV001 com id 6304.
+2025-07-29 15:43:45,015 - INFO - Log de resposta atualizado para id 6304.
+2025-07-29 15:43:45,021 - INFO - Status do leito UPG.UV001 atualizado para A.
+2025-07-29 15:43:45,022 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 15:48:08,361 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 15:48:08,447 - INFO - Nenhum novo leito detectado.
+2025-07-29 15:48:08,447 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 15:48:08,448 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 15:48:08,527 - INFO - 1 leito(s) com alteração de situação detectado(s).
+2025-07-29 15:48:08,529 - INFO - Leito UPG.UV001 INATIVO, desde 2025-07-29 15:47:47
+2025-07-29 15:48:08,529 - INFO - Leito UPG.UV001: novo status I, gerando mensagem HL7.
+2025-07-29 15:48:08,563 - INFO - Log de envio criado para leito UPG.UV001 com id 6305.
+2025-07-29 15:48:08,808 - INFO - Log de resposta atualizado para id 6305.
+2025-07-29 15:48:08,812 - INFO - Status do leito UPG.UV001 atualizado para I.
+2025-07-29 15:48:08,812 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 15:48:46,775 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 15:48:46,861 - INFO - Nenhum novo leito detectado.
+2025-07-29 15:48:46,861 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 15:48:46,861 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 15:48:46,940 - INFO - Nenhuma alteração de status detectada.
+2025-07-29 15:48:46,940 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 15:49:06,070 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 15:49:06,150 - INFO - Nenhum novo leito detectado.
+2025-07-29 15:49:06,151 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 15:49:06,151 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 15:49:06,233 - INFO - 1 leito(s) com alteração de situação detectado(s).
+2025-07-29 15:49:06,236 - INFO - Leito UPG.UV001 está ATIVO desde 2025-07-29 15:51:40.
+2025-07-29 15:49:06,236 - INFO - Leito UPG.UV001: novo status A, gerando mensagem HL7.
+2025-07-29 15:49:06,246 - INFO - Log de envio criado para leito UPG.UV001 com id 6306.
+2025-07-29 15:49:06,482 - INFO - Log de resposta atualizado para id 6306.
+2025-07-29 15:49:06,486 - INFO - Status do leito UPG.UV001 atualizado para A.
+2025-07-29 15:49:06,486 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 15:50:58,238 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 15:50:58,324 - INFO - Nenhum novo leito detectado.
+2025-07-29 15:50:58,325 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 15:50:58,325 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 15:50:58,415 - INFO - 1 leito(s) com alteração de situação detectado(s).
+2025-07-29 15:50:58,417 - INFO - Leito UPG.UV001 INATIVO, desde 2025-07-29 15:53:16
+2025-07-29 15:50:58,417 - INFO - Leito UPG.UV001: novo status I, gerando mensagem HL7.
+2025-07-29 15:50:58,437 - INFO - Log de envio criado para leito UPG.UV001 com id 6307.
+2025-07-29 15:50:58,619 - INFO - Log de resposta atualizado para id 6307.
+2025-07-29 15:50:58,624 - INFO - Status do leito UPG.UV001 atualizado para I.
+2025-07-29 15:50:58,624 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 15:51:56,561 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 15:51:56,642 - INFO - Nenhum novo leito detectado.
+2025-07-29 15:51:56,642 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 15:51:56,643 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 15:51:56,727 - INFO - 1 leito(s) com alteração de situação detectado(s).
+2025-07-29 15:51:56,729 - INFO - Leito UPG.UV001 está ATIVO desde 2025-07-29 15:54:24.
+2025-07-29 15:51:56,729 - INFO - Leito UPG.UV001: novo status A, gerando mensagem HL7.
+2025-07-29 15:51:56,757 - INFO - Log de envio criado para leito UPG.UV001 com id 6308.
+2025-07-29 15:51:56,938 - INFO - Log de resposta atualizado para id 6308.
+2025-07-29 15:51:56,944 - INFO - Status do leito UPG.UV001 atualizado para A.
+2025-07-29 15:51:56,944 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 15:53:58,567 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 15:53:58,644 - INFO - Nenhum novo leito detectado.
+2025-07-29 15:53:58,644 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 15:53:58,644 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 15:53:58,715 - INFO - 1 leito(s) com alteração de situação detectado(s).
+2025-07-29 15:53:58,717 - INFO - Leito UPG.UV001 INATIVO, desde 2025-07-29 15:56:28
+2025-07-29 15:53:58,718 - INFO - Leito UPG.UV001: novo status I, gerando mensagem HL7.
+2025-07-29 15:53:58,726 - INFO - Log de envio criado para leito UPG.UV001 com id 6309.
+2025-07-29 15:53:58,937 - INFO - Log de resposta atualizado para id 6309.
+2025-07-29 15:53:58,940 - INFO - Status do leito UPG.UV001 atualizado para I.
+2025-07-29 15:53:58,940 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 15:54:57,081 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 15:54:57,151 - INFO - Nenhum novo leito detectado.
+2025-07-29 15:54:57,152 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 15:54:57,152 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 15:54:57,228 - INFO - 1 leito(s) com alteração de situação detectado(s).
+2025-07-29 15:54:57,230 - INFO - Leito UPG.UV001 está ATIVO desde 2025-07-29 15:57:27.
+2025-07-29 15:54:57,231 - INFO - Leito UPG.UV001: novo status A, gerando mensagem HL7.
+2025-07-29 15:54:57,241 - INFO - Log de envio criado para leito UPG.UV001 com id 6310.
+2025-07-29 15:54:57,392 - INFO - Log de resposta atualizado para id 6310.
+2025-07-29 15:54:57,396 - INFO - Status do leito UPG.UV001 atualizado para A.
+2025-07-29 15:54:57,396 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 15:57:17,181 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 15:57:17,251 - INFO - Nenhum novo leito detectado.
+2025-07-29 15:57:17,251 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 15:57:17,251 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 15:57:17,317 - INFO - 1 leito(s) com alteração de situação detectado(s).
+2025-07-29 15:57:17,320 - INFO - Leito UPG.UV001 INATIVO, desde 2025-07-29 15:59:46
+2025-07-29 15:57:17,320 - INFO - Leito UPG.UV001: novo status I, gerando mensagem HL7.
+2025-07-29 15:57:17,326 - INFO - Log de envio criado para leito UPG.UV001 com id 6311.
+2025-07-29 15:57:17,584 - INFO - Log de resposta atualizado para id 6311.
+2025-07-29 15:57:17,587 - INFO - Status do leito UPG.UV001 atualizado para I.
+2025-07-29 15:57:17,588 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 15:59:09,758 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 15:59:09,838 - INFO - Nenhum novo leito detectado.
+2025-07-29 15:59:09,838 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 15:59:09,838 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 15:59:09,914 - INFO - 1 leito(s) com alteração de situação detectado(s).
+2025-07-29 15:59:09,916 - INFO - Leito UPG.UV001 está ATIVO desde 2025-07-29 16:01:39.
+2025-07-29 15:59:09,916 - INFO - Leito UPG.UV001: novo status A, gerando mensagem HL7.
+2025-07-29 15:59:09,935 - INFO - Log de envio criado para leito UPG.UV001 com id 6312.
+2025-07-29 15:59:10,119 - INFO - Log de resposta atualizado para id 6312.
+2025-07-29 15:59:10,123 - INFO - Status do leito UPG.UV001 atualizado para A.
+2025-07-29 15:59:10,124 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 16:07:10,691 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 16:07:10,875 - INFO - Nenhum novo leito detectado.
+2025-07-29 16:07:10,875 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 16:07:10,876 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 16:07:10,962 - INFO - 1 leito(s) com alteração de situação detectado(s).
+2025-07-29 16:07:10,964 - INFO - Leito UPG.UV001 INATIVO, desde 2025-07-29 16:09:42
+2025-07-29 16:07:10,964 - INFO - Leito UPG.UV001: novo status I, gerando mensagem HL7.
+2025-07-29 16:07:10,993 - INFO - Log de envio criado para leito UPG.UV001 com id 6313.
+2025-07-29 16:07:11,271 - INFO - Log de resposta atualizado para id 6313.
+2025-07-29 16:07:11,279 - INFO - Status do leito UPG.UV001 atualizado para I.
+2025-07-29 16:07:11,279 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 16:09:00,377 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 16:09:00,447 - INFO - Nenhum novo leito detectado.
+2025-07-29 16:09:00,447 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 16:09:00,447 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 16:09:00,521 - INFO - 1 leito(s) com alteração de situação detectado(s).
+2025-07-29 16:09:00,523 - INFO - Leito UPG.UV001 está ATIVO desde 2025-07-29 16:11:30.
+2025-07-29 16:09:00,523 - INFO - Leito UPG.UV001: novo status A, gerando mensagem HL7.
+2025-07-29 16:09:00,544 - INFO - Log de envio criado para leito UPG.UV001 com id 6314.
+2025-07-29 16:09:00,752 - INFO - Log de resposta atualizado para id 6314.
+2025-07-29 16:09:00,757 - INFO - Status do leito UPG.UV001 atualizado para A.
+2025-07-29 16:09:00,757 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 16:12:49,615 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 16:12:49,688 - INFO - Nenhum novo leito detectado.
+2025-07-29 16:12:49,688 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 16:12:49,688 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 16:12:49,765 - INFO - 1 leito(s) com alteração de situação detectado(s).
+2025-07-29 16:12:49,767 - INFO - Leito OBRISCO.UV002 está ATIVO desde 2025-07-29 16:15:12.
+2025-07-29 16:12:49,767 - INFO - Leito OBRISCO.UV002: novo status A, gerando mensagem HL7.
+2025-07-29 16:12:49,795 - INFO - Log de envio criado para leito OBRISCO.UV002 com id 6315.
+2025-07-29 16:12:49,968 - INFO - Log de resposta atualizado para id 6315.
+2025-07-29 16:12:49,974 - INFO - Status do leito OBRISCO.UV002 atualizado para A.
+2025-07-29 16:12:49,974 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 16:16:03,075 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 16:16:03,164 - INFO - Nenhum novo leito detectado.
+2025-07-29 16:16:03,165 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 16:16:03,165 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 16:16:03,242 - INFO - 1 leito(s) com alteração de situação detectado(s).
+2025-07-29 16:16:03,244 - INFO - Leito CC AMB003 está ATIVO desde 2025-07-29 16:17:21.
+2025-07-29 16:16:03,245 - INFO - Leito CC AMB003: novo status A, gerando mensagem HL7.
+2025-07-29 16:16:03,303 - INFO - Log de envio criado para leito CC AMB003 com id 6316.
+2025-07-29 16:16:03,464 - INFO - Log de resposta atualizado para id 6316.
+2025-07-29 16:16:03,468 - INFO - Status do leito CC AMB003 atualizado para A.
+2025-07-29 16:16:03,469 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 16:16:58,687 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 16:16:58,773 - INFO - Nenhum novo leito detectado.
+2025-07-29 16:16:58,773 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 16:16:58,774 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 16:16:58,871 - INFO - 1 leito(s) com alteração de situação detectado(s).
+2025-07-29 16:16:58,873 - INFO - Leito UPG.UV001 INATIVO, desde 2025-07-29 16:19:25
+2025-07-29 16:16:58,873 - INFO - Leito UPG.UV001: novo status I, gerando mensagem HL7.
+2025-07-29 16:16:58,898 - INFO - Log de envio criado para leito UPG.UV001 com id 6317.
+2025-07-29 16:16:59,096 - INFO - Log de resposta atualizado para id 6317.
+2025-07-29 16:16:59,101 - INFO - Status do leito UPG.UV001 atualizado para I.
+2025-07-29 16:16:59,101 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 16:38:58,212 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 16:38:58,295 - INFO - Nenhum novo leito detectado.
+2025-07-29 16:38:58,295 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 16:38:58,295 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 16:38:58,369 - INFO - 1 leito(s) com alteração de situação detectado(s).
+2025-07-29 16:38:58,371 - INFO - Leito UPG.UV001 está ATIVO desde 2025-07-29 16:41:29.
+2025-07-29 16:38:58,371 - INFO - Leito UPG.UV001: novo status A, gerando mensagem HL7.
+2025-07-29 16:38:58,393 - INFO - Log de envio criado para leito UPG.UV001 com id 6318.
+2025-07-29 16:38:58,606 - INFO - Log de resposta atualizado para id 6318.
+2025-07-29 16:38:58,610 - INFO - Status do leito UPG.UV001 atualizado para A.
+2025-07-29 16:38:58,610 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 16:40:07,837 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-29 16:40:07,915 - INFO - Nenhum novo leito detectado.
+2025-07-29 16:40:07,916 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-29 16:40:07,916 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-29 16:40:07,996 - INFO - 1 leito(s) com alteração de situação detectado(s).
+2025-07-29 16:40:07,999 - INFO - Leito UPG.UV001 INATIVO, desde 2025-07-29 16:42:40
+2025-07-29 16:40:07,999 - INFO - Leito UPG.UV001: novo status I, gerando mensagem HL7.
+2025-07-29 16:40:08,020 - INFO - Log de envio criado para leito UPG.UV001 com id 6319.
+2025-07-29 16:40:08,229 - INFO - Log de resposta atualizado para id 6319.
+2025-07-29 16:40:08,234 - INFO - Status do leito UPG.UV001 atualizado para I.
+2025-07-29 16:40:08,234 - INFO - Conexões com os bancos de dados encerradas.
