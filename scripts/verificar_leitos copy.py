@@ -2,7 +2,6 @@ import os
 import psycopg2
 import requests
 import logging
-import xml.etree.ElementTree as ET
 from datetime import datetime
 from dotenv import load_dotenv
 
@@ -24,6 +23,10 @@ AGHU_DB_CONFIG = {
     'host': os.getenv("aghu_host"),
     'port': os.getenv("aghu_port")
 }
+
+""" token = os.getenv("EPIMED_TOKEN")
+url = os.getenv("EPIMED_ENDPOINT")
+integrationId = os.getenv("EPIMED_INTEGRATION_ID") """
 
 LOG_DIR = "/var/www/html/epimed/logs"
 os.makedirs(LOG_DIR, exist_ok=True)
@@ -72,22 +75,17 @@ def gerar_mensagem_hl7(unitcode, unitname, unittypecode, bedcode, bedname,
 
     msh = f"MSH|^~&|HUAP||EPIMED||{timestamp}||ORU^R01|20190409220503_ORU_65870_95936689|P|2.5||||||ASCII"
     pid = f"PID|1||||||||||||||||||||||"
-    pv1 = f"PV1|1||{unitcode}^^{unitname}||||||||||||||||||||||||||||||"
+    pv1 = f"PV1|1||{unitcode}^{unittypecode}^{unitname}||||||||||||||||||||||||||||||"
     obr = f"OBR|1|{clientid}|||||{updatetimestamp}||||||||||||||||||||||||||||"
     obx = f"OBX|1|ST|{bedcode}^{bedname}||{typebedcode}^{bedstatus}|||||||{activebeddate}||{disablebeddate}||||||"
 
-    # unittypecode não é considerado nesse momento
-    #pv1 = f"PV1|1||{unitcode}^{unittypecode}^{unitname}||||||||||||||||||||||||||||||"
-
     return f"{msh}\n{pid}\n{pv1}\n{obr}\n{obx}"
 
-def enviar_mensagem_hl7(log_id, mensagem, conexao):
+import os
+import requests
 
-    namespaces = {
-    's': 'http://www.w3.org/2003/05/soap-envelope',
-    'a': 'http://www.w3.org/2005/08/addressing',
-    't': 'http://tempuri.org/'
-}
+def enviar_mensagem_hl7(mensagem):
+    #url = "https://ewsclient.epimedmonitor.com/Ewsclient.svc"
     url = os.getenv("EPIMED_ENDPOINT")
     token = os.getenv("EPIMED_TOKEN")
     integrationId = os.getenv("EPIMED_INTEGRATION_ID")
@@ -112,9 +110,6 @@ def enviar_mensagem_hl7(log_id, mensagem, conexao):
     </soap:Envelope>'''
 
     try:
-        ack_code = None
-        response = None
-
         response = requests.post(
             url,
             data=soap_body.encode("utf-8"),
@@ -124,61 +119,20 @@ def enviar_mensagem_hl7(log_id, mensagem, conexao):
         response.raise_for_status()
         print("✅ Mensagem enviada com sucesso!")
         print("\n📨 Status Code:", response.status_code)
-        #print("\n📨 Headers:")
+        print("\n📨 Headers:")
         print("\n📨 Body:", soap_body)
-        #for k, v in response.headers.items():
-        #    print(f"   {k}: {v}")
-        #print("\n📨 Corpo da resposta (raw XML):")
-        #print(response.text)
-
-        # Parseia o XML
-        root = ET.fromstring(response.content)
-
-        # Localiza o elemento com a resposta HL7
-        hl7_elem = root.find('.//t:SendHl7Message_DynamicTokenResult', namespaces)
-
-        if hl7_elem is not None and hl7_elem.text:
-            hl7_resp = hl7_elem.text.strip()
-            print("📦 Resposta HL7:")
-            print(hl7_resp)
-            
-            # Quebra em linhas HL7
-            hl7_lines = hl7_resp.splitlines()
-
-            # Procura o segmento MSA e extrai o ACK code
-            for line in hl7_lines:
-                if line.startswith("MSA"):
-                    parts = line.split("|")
-                    if len(parts) > 1:
-                        ack_code = parts[1]
-                    break
-
-            if ack_code == "AA":
-                print("✅ ACK recebido com sucesso (AA - Application Accept).")
-            elif ack_code == "AE":
-                print("⚠️ ACK com erro de aplicação (AE - Application Error).")
-            elif ack_code == "AR":
-                print("❌ ACK rejeitado (AR - Application Reject).")
-            elif ack_code:
-                print(f"ACK com código desconhecido: {ack_code}")
-            else:
-                print("ACK não encontrado no segmento MSA.")
-
-        else:
-            print("❌ Conteúdo HL7 não encontrado na resposta.")
-
-        salvar_log_resposta(log_id, mensagem, hl7_resp, conexao)
+        for k, v in response.headers.items():
+            print(f"   {k}: {v}")
+        print("\n📨 Corpo da resposta (raw XML):")
+        print(response.text)  # Corpo da resposta como exibido no Postman
 
     except requests.exceptions.HTTPError as http_err:
         print("❌ Erro HTTP:", http_err)
         print("📨 Corpo da resposta de erro:")
         print(response.text)
-        raise
     except Exception as e:
         print("❌ Erro geral:", e)
-        raise
-
-    return ack_code
+    return response.status_code
 
 def conectar_db(config):
     return psycopg2.connect(**config)
@@ -215,10 +169,10 @@ def inserir_leito_epimed(conexao, leito_id, ind_situacao, activebeddate=None):
                 """,
                 (leito_id, leito_id, ind_situacao, activebeddate)
             )
-
+        conexao.commit()
         registrar_log(f"Leito {leito_id} inserido na base local.", nivel="info")
-
     except Exception as e:
+        conexao.rollback()
         registrar_log(f"Erro ao inserir leito {leito_id} na base local: {e}", nivel="error")
         raise
 
@@ -231,12 +185,11 @@ def salvar_log_envio(leito_id, conexao):
                 RETURNING id
             """, (leito_id,))
             log_id = cursor.fetchone()[0]
-
+        conexao.commit()
         registrar_log(f"Log de envio criado para leito {leito_id} com id {log_id}.", nivel="info")
-
         return log_id
-
     except Exception as e:
+        conexao.rollback()
         registrar_log(f"Erro ao salvar log de envio para leito {leito_id}: {e}", nivel="error")
         raise
 
@@ -251,10 +204,10 @@ def salvar_log_resposta(log_id, mensagem, resposta, conexao):
                 """,
                 (mensagem, resposta, 'enviado', log_id, log_id)
             )
-
+        conexao.commit()
         registrar_log(f"Log de resposta atualizado para id {log_id}.", nivel="info")
-
     except Exception as e:
+        conexao.rollback()
         registrar_log(f"Erro ao atualizar log de resposta para id {log_id}: {e}", nivel="error")
         raise
         
@@ -276,10 +229,10 @@ def atualizar_status_leito(conexao, leito_id, nova_situacao, activebeddate=None,
 
             query = f"UPDATE leitos SET {', '.join(campos)} WHERE clientid = %s"
             cursor.execute(query, tuple(valores))
-
+        conexao.commit()
         registrar_log(f"Status do leito {leito_id} atualizado para {nova_situacao}.", nivel="info")
-
     except Exception as e:
+        conexao.rollback()
         registrar_log(f"Erro ao atualizar status do leito {leito_id}: {e}", nivel="error")
         raise
 
@@ -317,10 +270,10 @@ def verificar_leitos_novos():
         }
 
         if not novos_leitos:
-           msg = "Nenhum novo leito detectado."
-           print(msg)
-           registrar_log(msg)
-           return
+            msg = "Nenhum novo leito detectado."
+            print(msg)
+            registrar_log(msg)
+            return
 
         registrar_log(f"{len(novos_leitos)} novo(s) leito(s) detectado(s).")
 
@@ -331,9 +284,7 @@ def verificar_leitos_novos():
             updatetimestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             status = "pendente"  
 
-            dta = obter_data_ativacao(conn_aghu, leito_id)
-            if not dta:
-                dta = obter_data_criacao(conn_aghu, leito_id)
+            dt_criacao = obter_data_criacao(conn_aghu, leito_id)
 
             if ind_situacao == "A":  
                 activebeddate = dt_criacao.strftime("%Y-%m-%d %H:%M:%S")
@@ -342,47 +293,36 @@ def verificar_leitos_novos():
                 registrar_log(f"Leito {leito_id} INATIVO, com data de criacao em {dt_criacao}", nivel="warning")
 
             try:
-                resposta = None
 
-                with conn_epimed: #commit e rollback automáticos
+                if ind_situacao == "A":  
+                    log_id = salvar_log_envio(leito_id, conn_epimed)
+                    clientid = log_id
 
-                    if ind_situacao == "A":  #só envia leitos ativos
-                        log_id = salvar_log_envio(leito_id, conn_epimed)
-                        clientid = log_id
+                    status_map = {"A": "1", "I": "0"}
+                    type_map = {"N": "1", "S": "2"}
+                    unittype_map = {"N": "GS", "S": "GE"}
+                    mensagem = gerar_mensagem_hl7(
+                        unitcode, unitname, unittype_map.get(unittypecode), bedcode, bedname,
+                        activebeddate, disablebeddate, updatetimestamp,
+                        clientid, type_map.get(typebedcode), status_map.get(ind_situacao)
+                    )
 
-                        status_map = {"A": "1", "I": "0"}
-                        type_map = {"N": "1", "S": "2"}
-                        unittype_map = {"N": "GS", "S": "GE"}
-                        mensagem = gerar_mensagem_hl7(
-                            unitcode, unitname, unittype_map.get(unittypecode), bedcode, bedname,
-                            activebeddate, disablebeddate, updatetimestamp,
-                            clientid, type_map.get(typebedcode), status_map.get(ind_situacao)
-                        )
+                    resposta = enviar_mensagem_hl7(mensagem)
+                    salvar_log_resposta(log_id, mensagem, resposta, conn_epimed)
 
-                        resposta = enviar_mensagem_hl7(log_id, mensagem, conn_epimed)
-
-                        if resposta == "AA":  # ACK de sucesso
-                            inserir_leito_epimed(conn_epimed, leito_id, ind_situacao, activebeddate)
-                            registrar_log(f"Leito {leito_id} recebido com sucesso!", nivel="info")
-                        else:
-                            msg = f"Erro ao enviar leito {leito_id}: ACK recebido com código {resposta}"
-                            registrar_log(msg, nivel="error")
-
+                inserir_leito_epimed(conn_epimed, leito_id, ind_situacao, activebeddate)
+                status = "sucesso"
             except requests.RequestException as e:
                 resposta = str(e)
+                status = "erro"
                 msg = f"Erro ao enviar leito {leito_id}: {resposta}"
                 registrar_log(msg, nivel="error")
-
-        print("Rotina de inclusão de leitos novos executada com sucesso!")
-
-    except Exception as e:
-        registrar_log(f"❌ Erro na rotina de inclusão de leitos novos: {str(e)}", nivel="error")
-        print(f"❌ Erro na rotina de inclusão de leitos novos: {str(e)}")
 
     finally:
         conn_epimed.close()
         conn_aghu.close()
         registrar_log("Conexões com os bancos de dados encerradas.")
+        print("Rotina de inclusão de leitos novos executada com sucesso!!!")
 
 def verificar_alteracoes_status():
     registrar_log("(2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.")
@@ -405,9 +345,9 @@ def verificar_alteracoes_status():
                     alteracoes[leito_id] = bedstatus_aghu
 
         if not alteracoes:
-           registrar_log("Nenhuma alteração de status detectada.")
-           print("Nenhuma alteração de status detectada.")
-           return
+            registrar_log("Nenhuma alteração de status detectada.")
+            print("Nenhuma alteração de status detectada.")
+            return
 
         registrar_log(f"{len(alteracoes)} leito(s) com alteração de situação detectado(s).")
 
@@ -423,9 +363,6 @@ def verificar_alteracoes_status():
                 registrar_log(f"Leito {leito_id} está ATIVO desde {activebeddate}.")
             elif novo_status == "I":  # Inativo
                 dta = obter_data_ativacao(conn_aghu, leito_id)
-                if not dta:
-                    dta = obter_data_criacao(conn_aghu, leito_id)
-
                 activebeddate = dta.strftime("%Y-%m-%d %H:%M:%S") if dta else None
                 dti = obter_data_inativacao(conn_aghu, leito_id)
                 disablebeddate = dti.strftime("%Y-%m-%d %H:%M:%S") if dti else None
@@ -436,47 +373,30 @@ def verificar_alteracoes_status():
             registrar_log(f"Leito {leito_id}: novo status {novo_status}, gerando mensagem HL7.")
 
             try:
+                log_id = salvar_log_envio(leito_id, conn_epimed)
+                clientid = log_id  
 
-                resposta = None
+                status_map = {"A": "1", "I": "0"}
+                type_map = {"N": "1", "S": "2"}
+                unittype_map = {"N": "GS", "S": "GE"}
+                mensagem = gerar_mensagem_hl7(
+                    unitcode, unitname, unittype_map.get(unittypecode), bedcode, bedname,
+                    activebeddate, disablebeddate, updatetimestamp,
+                    clientid, type_map.get(typebedcode), status_map.get(ind_situacao)
+                )
 
-                with conn_epimed: #commit e rollback automáticos
-
-                    log_id = salvar_log_envio(leito_id, conn_epimed)
-                    clientid = log_id  
-
-                    status_map = {"A": "1", "I": "0"}
-                    type_map = {"N": "1", "S": "2"}
-                    unittype_map = {"N": "GS", "S": "GE"}
-                    mensagem = gerar_mensagem_hl7(
-                        unitcode, unitname, unittype_map.get(unittypecode), bedcode, bedname,
-                        activebeddate, disablebeddate, updatetimestamp,
-                        clientid, type_map.get(typebedcode), status_map.get(ind_situacao)
-                    )
-
-                    resposta = enviar_mensagem_hl7(log_id, mensagem, conn_epimed)
-
-                    if resposta == "AA":  # ACK de sucesso
-                        atualizar_status_leito(conn_epimed, leito_id, novo_status, activebeddate, disablebeddate)
-                        registrar_log(f"Leito {leito_id} recebido com sucesso!", nivel="info")
-                    else:
-                        msg = f"Erro ao enviar leito {leito_id}: ACK recebido com código {resposta}"
-                        registrar_log(msg, nivel="error")
-
+                resposta = enviar_mensagem_hl7(mensagem)
+                salvar_log_resposta(log_id, mensagem, resposta, conn_epimed)
+                atualizar_status_leito(conn_epimed, leito_id, novo_status, activebeddate, disablebeddate)
             except requests.RequestException as e:
                 resposta = str(e)
-                msg = f"Erro ao enviar leito {leito_id}: {resposta}"
-                registrar_log(msg, nivel="error")
-
-        print("Rotina de verificação de alterações de status concluída com sucesso!")
-
-    except Exception as e:
-        registrar_log(f"❌ Erro na rotina de verificação de alterações de status: {str(e)}", nivel="error")
-        print(f"❌ Erro na rotina de verificação de alterações de status: {str(e)}")
+                registrar_log(f"Erro ao enviar mensagem HL7 para leito {leito_id}: {resposta}", nivel="error")
 
     finally:
         conn_epimed.close()
         conn_aghu.close()
         registrar_log("Conexões com os bancos de dados encerradas.")
+        print("Rotina de verificação de alterações de status concluída com sucesso!!!")
 
 if __name__ == "__main__":
     verificar_leitos_novos()
