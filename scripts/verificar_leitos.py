@@ -205,15 +205,15 @@ def obter_leitos_epimed(conexao):
         cursor.execute('SELECT clientid, bedcode, bedstatus FROM leitos')
         return {row[0]: (row[1], row[2]) for row in cursor.fetchall()}
 
-def inserir_leito_epimed(conexao, leito_id, ind_situacao, activebeddate=None):
+def inserir_leito_epimed(conexao, leito_id, ind_situacao, activebeddate=None, disablebeddate=None):
     try:
         with conexao.cursor() as cursor:
             cursor.execute(
                 """
-                INSERT INTO leitos (clientid, bedcode, bedstatus, activebeddate)
-                VALUES (%s, %s, %s, %s)
+                INSERT INTO leitos (clientid, bedcode, bedstatus, activebeddate, disablebeddate)
+                VALUES (%s, %s, %s, %s, %s)
                 """,
-                (leito_id, leito_id, ind_situacao, activebeddate)
+                (leito_id, leito_id, ind_situacao, activebeddate, disablebeddate)
             )
 
         registrar_log(f"Leito {leito_id} inserido na base local.", nivel="info")
@@ -317,12 +317,13 @@ def verificar_leitos_novos():
         }
 
         if not novos_leitos:
-           msg = "Nenhum novo leito detectado."
-           print(msg)
-           registrar_log(msg)
+           registrar_log("Nenhum novo leito detectado.")
+           print("Nenhum novo leito detectado.")
+           print("Rotina de inclusão de leitos novos executada com sucesso!")
            return
 
         registrar_log(f"{len(novos_leitos)} novo(s) leito(s) detectado(s).")
+        print(f"Detectados {len(novos_leitos)} novo(s) leito(s).")
 
         for leito_id, info in novos_leitos.items():
             unitcode, unitname, unittypecode, bedcode, bedname, typebedcode, ind_situacao = info
@@ -334,19 +335,32 @@ def verificar_leitos_novos():
             dta = obter_data_ativacao(conn_aghu, leito_id)
             if not dta:
                 dta = obter_data_criacao(conn_aghu, leito_id)
+            activebeddate = dta.strftime("%Y-%m-%d %H:%M:%S")
+
+            #verifica se alguma vez esteve inativo
+            dti = None
+            dta = obter_data_ativacao(conn_aghu, leito_id)
+            if dta:
+                dti = obter_data_inativacao(conn_aghu, leito_id)
+            disablebeddate = dti.strftime("%Y-%m-%d %H:%M:%S") if dti else None
 
             if ind_situacao == "A":  
-                activebeddate = dt_criacao.strftime("%Y-%m-%d %H:%M:%S")
                 registrar_log(f"Leito {leito_id} está ATIVO desde {activebeddate}.")
             else:
-                registrar_log(f"Leito {leito_id} INATIVO, com data de criacao em {dt_criacao}", nivel="warning")
+                if not dti:
+                    dti = obter_data_inativacao(conn_aghu, leito_id)
+                disablebeddate = dti.strftime("%Y-%m-%d %H:%M:%S") if dti else None
+
+                registrar_log(f"Leito {leito_id} INATIVO, com data de criacao em {dta}", nivel="warning")
 
             try:
                 resposta = None
 
                 with conn_epimed: #commit e rollback automáticos
 
-                    if ind_situacao == "A":  #só envia leitos ativos
+                    #if ind_situacao == "A":  #só envia leitos ativos
+                    if ind_situacao in ("A", "I") :  #carga inicial de leitos ativos e inativos
+
                         log_id = salvar_log_envio(leito_id, conn_epimed)
                         clientid = log_id
 
@@ -359,10 +373,11 @@ def verificar_leitos_novos():
                             clientid, type_map.get(typebedcode), status_map.get(ind_situacao)
                         )
 
-                        resposta = enviar_mensagem_hl7(log_id, mensagem, conn_epimed)
+                        #resposta = enviar_mensagem_hl7(log_id, mensagem, conn_epimed)
+                        resposta = 'AA' #carga inicial
 
                         if resposta == "AA":  # ACK de sucesso
-                            inserir_leito_epimed(conn_epimed, leito_id, ind_situacao, activebeddate)
+                            inserir_leito_epimed(conn_epimed, leito_id, ind_situacao, activebeddate, disablebeddate)
                             registrar_log(f"Leito {leito_id} recebido com sucesso!", nivel="info")
                         else:
                             msg = f"Erro ao enviar leito {leito_id}: ACK recebido com código {resposta}"
@@ -407,9 +422,11 @@ def verificar_alteracoes_status():
         if not alteracoes:
            registrar_log("Nenhuma alteração de status detectada.")
            print("Nenhuma alteração de status detectada.")
+           print("Rotina de verificação de alterações de status concluída com sucesso!")
            return
 
         registrar_log(f"{len(alteracoes)} leito(s) com alteração de situação detectado(s).")
+        print(f"Detectados {len(alteracoes)} leito(s) com alteração de situação.")
 
         for leito_id, novo_status in alteracoes.items():
             dados_leito = leitos_aghu[leito_id]
@@ -419,6 +436,8 @@ def verificar_alteracoes_status():
 
             if novo_status == "A":  # Ativo
                 dta = obter_data_ativacao(conn_aghu, leito_id)
+                if not dta:
+                    dta = obter_data_criacao(conn_aghu, leito_id)
                 activebeddate = dta.strftime("%Y-%m-%d %H:%M:%S") if dta else None
                 registrar_log(f"Leito {leito_id} está ATIVO desde {activebeddate}.")
             elif novo_status == "I":  # Inativo

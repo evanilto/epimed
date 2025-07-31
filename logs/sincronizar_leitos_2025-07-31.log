@@ -1,0 +1,1362 @@
+2025-07-31 18:10:58,921 - INFO - (1)-INICIANDO ROTINA DE VERIFICAÇÃO DE LEITOS NOVOS.
+2025-07-31 18:10:59,039 - INFO - 339 novo(s) leito(s) detectado(s).
+2025-07-31 18:10:59,043 - WARNING - Leito CMF003 INATIVO, com data de criacao em 2023-05-03 14:59:06.554000
+2025-07-31 18:10:59,048 - INFO - Log de envio criado para leito CMF003 com id 1.
+2025-07-31 18:10:59,055 - INFO - Leito CMF003 inserido na base local.
+2025-07-31 18:10:59,055 - INFO - Leito CMF003 recebido com sucesso!
+2025-07-31 18:10:59,062 - INFO - Leito CCF016 está ATIVO desde 2022-10-18 09:13:16.
+2025-07-31 18:10:59,064 - INFO - Log de envio criado para leito CCF016 com id 2.
+2025-07-31 18:10:59,070 - INFO - Leito CCF016 inserido na base local.
+2025-07-31 18:10:59,070 - INFO - Leito CCF016 recebido com sucesso!
+2025-07-31 18:10:59,076 - INFO - Leito CCF001 está ATIVO desde 2020-11-03 12:06:19.
+2025-07-31 18:10:59,078 - INFO - Log de envio criado para leito CCF001 com id 3.
+2025-07-31 18:10:59,081 - INFO - Leito CCF001 inserido na base local.
+2025-07-31 18:10:59,082 - INFO - Leito CCF001 recebido com sucesso!
+2025-07-31 18:10:59,090 - WARNING - Leito UCINCA001 INATIVO, com data de criacao em 2023-05-04 12:07:50.866000
+2025-07-31 18:10:59,092 - INFO - Log de envio criado para leito UCINCA001 com id 4.
+2025-07-31 18:10:59,093 - INFO - Leito UCINCA001 inserido na base local.
+2025-07-31 18:10:59,093 - INFO - Leito UCINCA001 recebido com sucesso!
+2025-07-31 18:10:59,105 - WARNING - Leito UTI II001 INATIVO, com data de criacao em None
+2025-07-31 18:10:59,108 - INFO - Log de envio criado para leito UTI II001 com id 5.
+2025-07-31 18:10:59,109 - INFO - Leito UTI II001 inserido na base local.
+2025-07-31 18:10:59,109 - INFO - Leito UTI II001 recebido com sucesso!
+2025-07-31 18:10:59,115 - WARNING - Leito UTI II002 INATIVO, com data de criacao em None
+2025-07-31 18:10:59,117 - INFO - Log de envio criado para leito UTI II002 com id 6.
+2025-07-31 18:10:59,119 - INFO - Leito UTI II002 inserido na base local.
+2025-07-31 18:10:59,119 - INFO - Leito UTI II002 recebido com sucesso!
+2025-07-31 18:10:59,125 - WARNING - Leito UTI II003 INATIVO, com data de criacao em None
+2025-07-31 18:10:59,127 - INFO - Log de envio criado para leito UTI II003 com id 7.
+2025-07-31 18:10:59,129 - INFO - Leito UTI II003 inserido na base local.
+2025-07-31 18:10:59,129 - INFO - Leito UTI II003 recebido com sucesso!
+2025-07-31 18:10:59,135 - WARNING - Leito UTI II004 INATIVO, com data de criacao em None
+2025-07-31 18:10:59,137 - INFO - Log de envio criado para leito UTI II004 com id 8.
+2025-07-31 18:10:59,138 - INFO - Leito UTI II004 inserido na base local.
+2025-07-31 18:10:59,138 - INFO - Leito UTI II004 recebido com sucesso!
+2025-07-31 18:10:59,146 - INFO - Leito 6º CMM002 está ATIVO desde 2023-11-17 16:11:28.
+2025-07-31 18:10:59,148 - INFO - Log de envio criado para leito 6º CMM002 com id 9.
+2025-07-31 18:10:59,149 - INFO - Leito 6º CMM002 inserido na base local.
+2025-07-31 18:10:59,149 - INFO - Leito 6º CMM002 recebido com sucesso!
+2025-07-31 18:10:59,153 - WARNING - Leito UCINCO006 INATIVO, com data de criacao em 2024-07-11 11:22:30.831000
+2025-07-31 18:10:59,155 - INFO - Log de envio criado para leito UCINCO006 com id 10.
+2025-07-31 18:10:59,156 - INFO - Leito UCINCO006 inserido na base local.
+2025-07-31 18:10:59,156 - INFO - Leito UCINCO006 recebido com sucesso!
+2025-07-31 18:10:59,161 - WARNING - Leito UCINCO007 INATIVO, com data de criacao em 2024-07-11 11:22:30.858000
+2025-07-31 18:10:59,162 - INFO - Log de envio criado para leito UCINCO007 com id 11.
+2025-07-31 18:10:59,163 - INFO - Leito UCINCO007 inserido na base local.
+2025-07-31 18:10:59,163 - INFO - Leito UCINCO007 recebido com sucesso!
+2025-07-31 18:10:59,168 - WARNING - Leito ORL001 INATIVO, com data de criacao em 2022-05-26 10:33:39.615000
+2025-07-31 18:10:59,170 - INFO - Log de envio criado para leito ORL001 com id 12.
+2025-07-31 18:10:59,171 - INFO - Leito ORL001 inserido na base local.
+2025-07-31 18:10:59,172 - INFO - Leito ORL001 recebido com sucesso!
+2025-07-31 18:10:59,177 - INFO - Leito HOSPDIA006 está ATIVO desde 2022-02-15 17:29:47.
+2025-07-31 18:10:59,179 - INFO - Log de envio criado para leito HOSPDIA006 com id 13.
+2025-07-31 18:10:59,180 - INFO - Leito HOSPDIA006 inserido na base local.
+2025-07-31 18:10:59,180 - INFO - Leito HOSPDIA006 recebido com sucesso!
+2025-07-31 18:10:59,340 - WARNING - Leito UPG011 INATIVO, com data de criacao em None
+2025-07-31 18:10:59,343 - INFO - Log de envio criado para leito UPG011 com id 14.
+2025-07-31 18:10:59,345 - INFO - Leito UPG011 inserido na base local.
+2025-07-31 18:10:59,345 - INFO - Leito UPG011 recebido com sucesso!
+2025-07-31 18:10:59,366 - INFO - Leito CCEMI007 está ATIVO desde 2022-05-25 17:28:00.
+2025-07-31 18:10:59,368 - INFO - Log de envio criado para leito CCEMI007 com id 15.
+2025-07-31 18:10:59,370 - INFO - Leito CCEMI007 inserido na base local.
+2025-07-31 18:10:59,370 - INFO - Leito CCEMI007 recebido com sucesso!
+2025-07-31 18:10:59,391 - INFO - Leito CCM007 está ATIVO desde 2022-05-26 13:39:09.
+2025-07-31 18:10:59,394 - INFO - Log de envio criado para leito CCM007 com id 16.
+2025-07-31 18:10:59,396 - INFO - Leito CCM007 inserido na base local.
+2025-07-31 18:10:59,396 - INFO - Leito CCM007 recebido com sucesso!
+2025-07-31 18:10:59,402 - WARNING - Leito UTI II009 INATIVO, com data de criacao em 2022-01-19 16:05:56.657000
+2025-07-31 18:10:59,405 - INFO - Log de envio criado para leito UTI II009 com id 17.
+2025-07-31 18:10:59,408 - INFO - Leito UTI II009 inserido na base local.
+2025-07-31 18:10:59,408 - INFO - Leito UTI II009 recebido com sucesso!
+2025-07-31 18:10:59,436 - WARNING - Leito UTI II010 INATIVO, com data de criacao em None
+2025-07-31 18:10:59,439 - INFO - Log de envio criado para leito UTI II010 com id 18.
+2025-07-31 18:10:59,440 - INFO - Leito UTI II010 inserido na base local.
+2025-07-31 18:10:59,440 - INFO - Leito UTI II010 recebido com sucesso!
+2025-07-31 18:10:59,448 - INFO - Leito UTIN004 está ATIVO desde 2020-05-13 10:37:02.
+2025-07-31 18:10:59,451 - INFO - Log de envio criado para leito UTIN004 com id 19.
+2025-07-31 18:10:59,452 - INFO - Leito UTIN004 inserido na base local.
+2025-07-31 18:10:59,452 - INFO - Leito UTIN004 recebido com sucesso!
+2025-07-31 18:10:59,458 - INFO - Leito HEMATO006 está ATIVO desde 2021-06-16 14:20:47.
+2025-07-31 18:10:59,459 - INFO - Log de envio criado para leito HEMATO006 com id 20.
+2025-07-31 18:10:59,460 - INFO - Leito HEMATO006 inserido na base local.
+2025-07-31 18:10:59,461 - INFO - Leito HEMATO006 recebido com sucesso!
+2025-07-31 18:10:59,502 - WARNING - Leito TESTE001 INATIVO, com data de criacao em None
+2025-07-31 18:10:59,504 - INFO - Log de envio criado para leito TESTE001 com id 21.
+2025-07-31 18:10:59,506 - INFO - Leito TESTE001 inserido na base local.
+2025-07-31 18:10:59,506 - INFO - Leito TESTE001 recebido com sucesso!
+2025-07-31 18:10:59,511 - INFO - Leito UCINCO002 está ATIVO desde 2022-06-27 17:15:41.
+2025-07-31 18:10:59,513 - INFO - Log de envio criado para leito UCINCO002 com id 22.
+2025-07-31 18:10:59,514 - INFO - Leito UCINCO002 inserido na base local.
+2025-07-31 18:10:59,515 - INFO - Leito UCINCO002 recebido com sucesso!
+2025-07-31 18:10:59,521 - INFO - Leito PED003 está ATIVO desde 2021-09-01 09:28:11.
+2025-07-31 18:10:59,523 - INFO - Log de envio criado para leito PED003 com id 23.
+2025-07-31 18:10:59,524 - INFO - Leito PED003 inserido na base local.
+2025-07-31 18:10:59,524 - INFO - Leito PED003 recebido com sucesso!
+2025-07-31 18:10:59,529 - INFO - Leito CCEMI008 está ATIVO desde 2021-06-16 11:32:33.
+2025-07-31 18:10:59,531 - INFO - Log de envio criado para leito CCEMI008 com id 24.
+2025-07-31 18:10:59,532 - INFO - Leito CCEMI008 inserido na base local.
+2025-07-31 18:10:59,532 - INFO - Leito CCEMI008 recebido com sucesso!
+2025-07-31 18:10:59,540 - INFO - Leito CCM013 está ATIVO desde 2022-09-19 16:27:14.
+2025-07-31 18:10:59,542 - INFO - Log de envio criado para leito CCM013 com id 25.
+2025-07-31 18:10:59,544 - INFO - Leito CCM013 inserido na base local.
+2025-07-31 18:10:59,544 - INFO - Leito CCM013 recebido com sucesso!
+2025-07-31 18:10:59,551 - INFO - Leito CCEMI009 está ATIVO desde 2021-06-16 11:32:33.
+2025-07-31 18:10:59,553 - INFO - Log de envio criado para leito CCEMI009 com id 26.
+2025-07-31 18:10:59,554 - INFO - Leito CCEMI009 inserido na base local.
+2025-07-31 18:10:59,554 - INFO - Leito CCEMI009 recebido com sucesso!
+2025-07-31 18:10:59,587 - WARNING - Leito UPG012 INATIVO, com data de criacao em None
+2025-07-31 18:10:59,589 - INFO - Log de envio criado para leito UPG012 com id 27.
+2025-07-31 18:10:59,590 - INFO - Leito UPG012 inserido na base local.
+2025-07-31 18:10:59,590 - INFO - Leito UPG012 recebido com sucesso!
+2025-07-31 18:10:59,624 - WARNING - Leito UPG013 INATIVO, com data de criacao em None
+2025-07-31 18:10:59,626 - INFO - Log de envio criado para leito UPG013 com id 28.
+2025-07-31 18:10:59,627 - INFO - Leito UPG013 inserido na base local.
+2025-07-31 18:10:59,627 - INFO - Leito UPG013 recebido com sucesso!
+2025-07-31 18:10:59,632 - INFO - Leito CCM003 está ATIVO desde 2022-08-08 11:11:09.
+2025-07-31 18:10:59,634 - INFO - Log de envio criado para leito CCM003 com id 29.
+2025-07-31 18:10:59,636 - INFO - Leito CCM003 inserido na base local.
+2025-07-31 18:10:59,636 - INFO - Leito CCM003 recebido com sucesso!
+2025-07-31 18:10:59,642 - INFO - Leito 6º CMM008 está ATIVO desde 2023-02-06 16:51:40.
+2025-07-31 18:10:59,644 - INFO - Log de envio criado para leito 6º CMM008 com id 30.
+2025-07-31 18:10:59,645 - INFO - Leito 6º CMM008 inserido na base local.
+2025-07-31 18:10:59,645 - INFO - Leito 6º CMM008 recebido com sucesso!
+2025-07-31 18:10:59,680 - WARNING - Leito UPG014 INATIVO, com data de criacao em None
+2025-07-31 18:10:59,683 - INFO - Log de envio criado para leito UPG014 com id 31.
+2025-07-31 18:10:59,684 - INFO - Leito UPG014 inserido na base local.
+2025-07-31 18:10:59,684 - INFO - Leito UPG014 recebido com sucesso!
+2025-07-31 18:10:59,720 - WARNING - Leito UPG015 INATIVO, com data de criacao em None
+2025-07-31 18:10:59,722 - INFO - Log de envio criado para leito UPG015 com id 32.
+2025-07-31 18:10:59,723 - INFO - Leito UPG015 inserido na base local.
+2025-07-31 18:10:59,723 - INFO - Leito UPG015 recebido com sucesso!
+2025-07-31 18:10:59,736 - WARNING - Leito OBST013 INATIVO, com data de criacao em 2022-04-06 09:31:46.722000
+2025-07-31 18:10:59,737 - INFO - Log de envio criado para leito OBST013 com id 33.
+2025-07-31 18:10:59,739 - INFO - Leito OBST013 inserido na base local.
+2025-07-31 18:10:59,739 - INFO - Leito OBST013 recebido com sucesso!
+2025-07-31 18:10:59,745 - WARNING - Leito OBST015 INATIVO, com data de criacao em 2022-04-06 09:31:46.744000
+2025-07-31 18:10:59,746 - INFO - Log de envio criado para leito OBST015 com id 34.
+2025-07-31 18:10:59,748 - INFO - Leito OBST015 inserido na base local.
+2025-07-31 18:10:59,748 - INFO - Leito OBST015 recebido com sucesso!
+2025-07-31 18:10:59,756 - WARNING - Leito OBST019 INATIVO, com data de criacao em 2022-04-06 09:31:46.789000
+2025-07-31 18:10:59,759 - INFO - Log de envio criado para leito OBST019 com id 35.
+2025-07-31 18:10:59,760 - INFO - Leito OBST019 inserido na base local.
+2025-07-31 18:10:59,760 - INFO - Leito OBST019 recebido com sucesso!
+2025-07-31 18:10:59,784 - INFO - Leito CC AMB001 está ATIVO desde 2024-04-17 13:17:41.
+2025-07-31 18:10:59,787 - INFO - Log de envio criado para leito CC AMB001 com id 36.
+2025-07-31 18:10:59,789 - INFO - Leito CC AMB001 inserido na base local.
+2025-07-31 18:10:59,789 - INFO - Leito CC AMB001 recebido com sucesso!
+2025-07-31 18:10:59,812 - INFO - Leito CC AMB002 está ATIVO desde 2024-04-17 13:17:41.
+2025-07-31 18:10:59,814 - INFO - Log de envio criado para leito CC AMB002 com id 37.
+2025-07-31 18:10:59,816 - INFO - Leito CC AMB002 inserido na base local.
+2025-07-31 18:10:59,816 - INFO - Leito CC AMB002 recebido com sucesso!
+2025-07-31 18:10:59,850 - WARNING - Leito UPG016 INATIVO, com data de criacao em None
+2025-07-31 18:10:59,853 - INFO - Log de envio criado para leito UPG016 com id 38.
+2025-07-31 18:10:59,854 - INFO - Leito UPG016 inserido na base local.
+2025-07-31 18:10:59,854 - INFO - Leito UPG016 recebido com sucesso!
+2025-07-31 18:10:59,861 - WARNING - Leito CC AMB003 INATIVO, com data de criacao em 2024-08-20 10:19:05.104000
+2025-07-31 18:10:59,863 - INFO - Log de envio criado para leito CC AMB003 com id 39.
+2025-07-31 18:10:59,864 - INFO - Leito CC AMB003 inserido na base local.
+2025-07-31 18:10:59,864 - INFO - Leito CC AMB003 recebido com sucesso!
+2025-07-31 18:10:59,894 - WARNING - Leito UPG017 INATIVO, com data de criacao em None
+2025-07-31 18:10:59,897 - INFO - Log de envio criado para leito UPG017 com id 40.
+2025-07-31 18:10:59,898 - INFO - Leito UPG017 inserido na base local.
+2025-07-31 18:10:59,898 - INFO - Leito UPG017 recebido com sucesso!
+2025-07-31 18:10:59,928 - INFO - Leito UCINCO004 está ATIVO desde 2025-06-03 15:47:16.
+2025-07-31 18:10:59,930 - INFO - Log de envio criado para leito UCINCO004 com id 41.
+2025-07-31 18:10:59,931 - INFO - Leito UCINCO004 inserido na base local.
+2025-07-31 18:10:59,931 - INFO - Leito UCINCO004 recebido com sucesso!
+2025-07-31 18:10:59,968 - WARNING - Leito UPG018 INATIVO, com data de criacao em None
+2025-07-31 18:10:59,970 - INFO - Log de envio criado para leito UPG018 com id 42.
+2025-07-31 18:10:59,971 - INFO - Leito UPG018 inserido na base local.
+2025-07-31 18:10:59,971 - INFO - Leito UPG018 recebido com sucesso!
+2025-07-31 18:10:59,976 - INFO - Leito HOSPDIA005 está ATIVO desde 2024-04-17 12:21:07.
+2025-07-31 18:10:59,979 - INFO - Log de envio criado para leito HOSPDIA005 com id 43.
+2025-07-31 18:10:59,981 - INFO - Leito HOSPDIA005 inserido na base local.
+2025-07-31 18:10:59,981 - INFO - Leito HOSPDIA005 recebido com sucesso!
+2025-07-31 18:11:00,017 - WARNING - Leito UPG009 INATIVO, com data de criacao em None
+2025-07-31 18:11:00,022 - INFO - Log de envio criado para leito UPG009 com id 44.
+2025-07-31 18:11:00,024 - INFO - Leito UPG009 inserido na base local.
+2025-07-31 18:11:00,024 - INFO - Leito UPG009 recebido com sucesso!
+2025-07-31 18:11:00,030 - INFO - Leito UCO004 está ATIVO desde 2021-06-16 14:18:54.
+2025-07-31 18:11:00,034 - INFO - Log de envio criado para leito UCO004 com id 45.
+2025-07-31 18:11:00,035 - INFO - Leito UCO004 inserido na base local.
+2025-07-31 18:11:00,035 - INFO - Leito UCO004 recebido com sucesso!
+2025-07-31 18:11:00,041 - INFO - Leito UTIN002 está ATIVO desde 2020-05-13 10:37:02.
+2025-07-31 18:11:00,044 - INFO - Log de envio criado para leito UTIN002 com id 46.
+2025-07-31 18:11:00,045 - INFO - Leito UTIN002 inserido na base local.
+2025-07-31 18:11:00,045 - INFO - Leito UTIN002 recebido com sucesso!
+2025-07-31 18:11:00,051 - INFO - Leito HEMATO005 está ATIVO desde 2021-06-16 14:20:47.
+2025-07-31 18:11:00,053 - INFO - Log de envio criado para leito HEMATO005 com id 47.
+2025-07-31 18:11:00,054 - INFO - Leito HEMATO005 inserido na base local.
+2025-07-31 18:11:00,054 - INFO - Leito HEMATO005 recebido com sucesso!
+2025-07-31 18:11:00,061 - INFO - Leito OBST007 está ATIVO desde 2022-04-14 16:10:00.
+2025-07-31 18:11:00,063 - INFO - Log de envio criado para leito OBST007 com id 48.
+2025-07-31 18:11:00,064 - INFO - Leito OBST007 inserido na base local.
+2025-07-31 18:11:00,065 - INFO - Leito OBST007 recebido com sucesso!
+2025-07-31 18:11:00,072 - INFO - Leito CTI I008 está ATIVO desde 2024-07-22 08:50:44.
+2025-07-31 18:11:00,074 - INFO - Log de envio criado para leito CTI I008 com id 49.
+2025-07-31 18:11:00,075 - INFO - Leito CTI I008 inserido na base local.
+2025-07-31 18:11:00,075 - INFO - Leito CTI I008 recebido com sucesso!
+2025-07-31 18:11:00,079 - INFO - Leito DIP006 está ATIVO desde 2022-10-11 10:19:41.
+2025-07-31 18:11:00,080 - INFO - Log de envio criado para leito DIP006 com id 50.
+2025-07-31 18:11:00,082 - INFO - Leito DIP006 inserido na base local.
+2025-07-31 18:11:00,082 - INFO - Leito DIP006 recebido com sucesso!
+2025-07-31 18:11:00,086 - WARNING - Leito TESTE003 INATIVO, com data de criacao em 2025-07-31 15:18:10.077000
+2025-07-31 18:11:00,089 - INFO - Log de envio criado para leito TESTE003 com id 51.
+2025-07-31 18:11:00,090 - INFO - Leito TESTE003 inserido na base local.
+2025-07-31 18:11:00,091 - INFO - Leito TESTE003 recebido com sucesso!
+2025-07-31 18:11:00,096 - INFO - Leito DIP003 está ATIVO desde 2021-06-15 14:59:04.
+2025-07-31 18:11:00,099 - INFO - Log de envio criado para leito DIP003 com id 52.
+2025-07-31 18:11:00,100 - INFO - Leito DIP003 inserido na base local.
+2025-07-31 18:11:00,100 - INFO - Leito DIP003 recebido com sucesso!
+2025-07-31 18:11:00,104 - WARNING - Leito UTIN007 INATIVO, com data de criacao em 2023-06-22 15:29:21.722000
+2025-07-31 18:11:00,107 - INFO - Log de envio criado para leito UTIN007 com id 53.
+2025-07-31 18:11:00,108 - INFO - Leito UTIN007 inserido na base local.
+2025-07-31 18:11:00,109 - INFO - Leito UTIN007 recebido com sucesso!
+2025-07-31 18:11:00,125 - INFO - Leito 6º CMM006 está ATIVO desde 2023-02-06 16:51:40.
+2025-07-31 18:11:00,126 - INFO - Log de envio criado para leito 6º CMM006 com id 54.
+2025-07-31 18:11:00,128 - INFO - Leito 6º CMM006 inserido na base local.
+2025-07-31 18:11:00,128 - INFO - Leito 6º CMM006 recebido com sucesso!
+2025-07-31 18:11:00,161 - WARNING - Leito UPG.UV002 INATIVO, com data de criacao em None
+2025-07-31 18:11:00,163 - INFO - Log de envio criado para leito UPG.UV002 com id 55.
+2025-07-31 18:11:00,164 - INFO - Leito UPG.UV002 inserido na base local.
+2025-07-31 18:11:00,164 - INFO - Leito UPG.UV002 recebido com sucesso!
+2025-07-31 18:11:00,171 - INFO - Leito 6º CMM012 está ATIVO desde 2023-11-14 13:48:35.
+2025-07-31 18:11:00,175 - INFO - Log de envio criado para leito 6º CMM012 com id 56.
+2025-07-31 18:11:00,177 - INFO - Leito 6º CMM012 inserido na base local.
+2025-07-31 18:11:00,177 - INFO - Leito 6º CMM012 recebido com sucesso!
+2025-07-31 18:11:00,182 - INFO - Leito BOX009 está ATIVO desde 2021-09-01 11:56:50.
+2025-07-31 18:11:00,185 - INFO - Log de envio criado para leito BOX009 com id 57.
+2025-07-31 18:11:00,186 - INFO - Leito BOX009 inserido na base local.
+2025-07-31 18:11:00,186 - INFO - Leito BOX009 recebido com sucesso!
+2025-07-31 18:11:00,191 - WARNING - Leito TESTE002 INATIVO, com data de criacao em 2025-07-31 14:24:30.663000
+2025-07-31 18:11:00,193 - INFO - Log de envio criado para leito TESTE002 com id 58.
+2025-07-31 18:11:00,195 - INFO - Leito TESTE002 inserido na base local.
+2025-07-31 18:11:00,195 - INFO - Leito TESTE002 recebido com sucesso!
+2025-07-31 18:11:00,199 - INFO - Leito CTI I006 está ATIVO desde 2022-10-19 09:13:23.
+2025-07-31 18:11:00,201 - INFO - Log de envio criado para leito CTI I006 com id 59.
+2025-07-31 18:11:00,202 - INFO - Leito CTI I006 inserido na base local.
+2025-07-31 18:11:00,202 - INFO - Leito CTI I006 recebido com sucesso!
+2025-07-31 18:11:00,236 - WARNING - Leito UPG.UV003 INATIVO, com data de criacao em None
+2025-07-31 18:11:00,238 - INFO - Log de envio criado para leito UPG.UV003 com id 60.
+2025-07-31 18:11:00,239 - INFO - Leito UPG.UV003 inserido na base local.
+2025-07-31 18:11:00,240 - INFO - Leito UPG.UV003 recebido com sucesso!
+2025-07-31 18:11:00,244 - INFO - Leito OBSTPPP001 está ATIVO desde 2023-05-03 14:59:28.
+2025-07-31 18:11:00,246 - INFO - Log de envio criado para leito OBSTPPP001 com id 61.
+2025-07-31 18:11:00,247 - INFO - Leito OBSTPPP001 inserido na base local.
+2025-07-31 18:11:00,247 - INFO - Leito OBSTPPP001 recebido com sucesso!
+2025-07-31 18:11:00,251 - INFO - Leito HEMATO003 está ATIVO desde 2021-06-16 14:20:47.
+2025-07-31 18:11:00,253 - INFO - Log de envio criado para leito HEMATO003 com id 62.
+2025-07-31 18:11:00,254 - INFO - Leito HEMATO003 inserido na base local.
+2025-07-31 18:11:00,254 - INFO - Leito HEMATO003 recebido com sucesso!
+2025-07-31 18:11:00,287 - WARNING - Leito UPG.UV004 INATIVO, com data de criacao em None
+2025-07-31 18:11:00,289 - INFO - Log de envio criado para leito UPG.UV004 com id 63.
+2025-07-31 18:11:00,290 - INFO - Leito UPG.UV004 inserido na base local.
+2025-07-31 18:11:00,291 - INFO - Leito UPG.UV004 recebido com sucesso!
+2025-07-31 18:11:00,296 - INFO - Leito OBST006 está ATIVO desde 2022-03-25 13:40:00.
+2025-07-31 18:11:00,297 - INFO - Log de envio criado para leito OBST006 com id 64.
+2025-07-31 18:11:00,299 - INFO - Leito OBST006 inserido na base local.
+2025-07-31 18:11:00,299 - INFO - Leito OBST006 recebido com sucesso!
+2025-07-31 18:11:00,309 - INFO - Leito DIP005 está ATIVO desde 2021-06-15 14:59:05.
+2025-07-31 18:11:00,310 - INFO - Log de envio criado para leito DIP005 com id 65.
+2025-07-31 18:11:00,311 - INFO - Leito DIP005 inserido na base local.
+2025-07-31 18:11:00,311 - INFO - Leito DIP005 recebido com sucesso!
+2025-07-31 18:11:00,316 - INFO - Leito UCINCO003 está ATIVO desde 2025-06-03 15:47:16.
+2025-07-31 18:11:00,317 - INFO - Log de envio criado para leito UCINCO003 com id 66.
+2025-07-31 18:11:00,319 - INFO - Leito UCINCO003 inserido na base local.
+2025-07-31 18:11:00,319 - INFO - Leito UCINCO003 recebido com sucesso!
+2025-07-31 18:11:00,323 - INFO - Leito HEMATO004 está ATIVO desde 2021-06-16 14:20:47.
+2025-07-31 18:11:00,325 - INFO - Log de envio criado para leito HEMATO004 com id 67.
+2025-07-31 18:11:00,326 - INFO - Leito HEMATO004 inserido na base local.
+2025-07-31 18:11:00,326 - INFO - Leito HEMATO004 recebido com sucesso!
+2025-07-31 18:11:00,330 - INFO - Leito CCM011 está ATIVO desde 2022-05-26 13:39:09.
+2025-07-31 18:11:00,332 - INFO - Log de envio criado para leito CCM011 com id 68.
+2025-07-31 18:11:00,334 - INFO - Leito CCM011 inserido na base local.
+2025-07-31 18:11:00,334 - INFO - Leito CCM011 recebido com sucesso!
+2025-07-31 18:11:00,339 - INFO - Leito DIP002 está ATIVO desde 2021-06-15 14:59:04.
+2025-07-31 18:11:00,341 - INFO - Log de envio criado para leito DIP002 com id 69.
+2025-07-31 18:11:00,342 - INFO - Leito DIP002 inserido na base local.
+2025-07-31 18:11:00,343 - INFO - Leito DIP002 recebido com sucesso!
+2025-07-31 18:11:00,347 - INFO - Leito DIP001 está ATIVO desde 2021-06-14 17:21:03.
+2025-07-31 18:11:00,350 - INFO - Log de envio criado para leito DIP001 com id 70.
+2025-07-31 18:11:00,352 - INFO - Leito DIP001 inserido na base local.
+2025-07-31 18:11:00,352 - INFO - Leito DIP001 recebido com sucesso!
+2025-07-31 18:11:00,357 - INFO - Leito CCF006 está ATIVO desde 2021-06-14 15:23:49.
+2025-07-31 18:11:00,359 - INFO - Log de envio criado para leito CCF006 com id 71.
+2025-07-31 18:11:00,360 - INFO - Leito CCF006 inserido na base local.
+2025-07-31 18:11:00,360 - INFO - Leito CCF006 recebido com sucesso!
+2025-07-31 18:11:00,365 - INFO - Leito CCEMI006 está ATIVO desde 2021-06-16 11:32:33.
+2025-07-31 18:11:00,367 - INFO - Log de envio criado para leito CCEMI006 com id 72.
+2025-07-31 18:11:00,368 - INFO - Leito CCEMI006 inserido na base local.
+2025-07-31 18:11:00,368 - INFO - Leito CCEMI006 recebido com sucesso!
+2025-07-31 18:11:00,404 - WARNING - Leito UPG010 INATIVO, com data de criacao em None
+2025-07-31 18:11:00,406 - INFO - Log de envio criado para leito UPG010 com id 73.
+2025-07-31 18:11:00,408 - INFO - Leito UPG010 inserido na base local.
+2025-07-31 18:11:00,408 - INFO - Leito UPG010 recebido com sucesso!
+2025-07-31 18:11:00,414 - WARNING - Leito UTIN006 INATIVO, com data de criacao em None
+2025-07-31 18:11:00,415 - INFO - Log de envio criado para leito UTIN006 com id 74.
+2025-07-31 18:11:00,417 - INFO - Leito UTIN006 inserido na base local.
+2025-07-31 18:11:00,417 - INFO - Leito UTIN006 recebido com sucesso!
+2025-07-31 18:11:00,449 - WARNING - Leito OBRISCO.UV001 INATIVO, com data de criacao em None
+2025-07-31 18:11:00,451 - INFO - Log de envio criado para leito OBRISCO.UV001 com id 75.
+2025-07-31 18:11:00,452 - INFO - Leito OBRISCO.UV001 inserido na base local.
+2025-07-31 18:11:00,453 - INFO - Leito OBRISCO.UV001 recebido com sucesso!
+2025-07-31 18:11:00,484 - WARNING - Leito OBRISCO.UV002 INATIVO, com data de criacao em None
+2025-07-31 18:11:00,486 - INFO - Log de envio criado para leito OBRISCO.UV002 com id 76.
+2025-07-31 18:11:00,487 - INFO - Leito OBRISCO.UV002 inserido na base local.
+2025-07-31 18:11:00,488 - INFO - Leito OBRISCO.UV002 recebido com sucesso!
+2025-07-31 18:11:00,494 - WARNING - Leito HOSPDIA5HD05 INATIVO, com data de criacao em None
+2025-07-31 18:11:00,496 - INFO - Log de envio criado para leito HOSPDIA5HD05 com id 77.
+2025-07-31 18:11:00,497 - INFO - Leito HOSPDIA5HD05 inserido na base local.
+2025-07-31 18:11:00,497 - INFO - Leito HOSPDIA5HD05 recebido com sucesso!
+2025-07-31 18:11:00,504 - WARNING - Leito HOSPDIA5HD06 INATIVO, com data de criacao em None
+2025-07-31 18:11:00,506 - INFO - Log de envio criado para leito HOSPDIA5HD06 com id 78.
+2025-07-31 18:11:00,508 - INFO - Leito HOSPDIA5HD06 inserido na base local.
+2025-07-31 18:11:00,508 - INFO - Leito HOSPDIA5HD06 recebido com sucesso!
+2025-07-31 18:11:00,517 - WARNING - Leito HOSPDIA5HD07 INATIVO, com data de criacao em None
+2025-07-31 18:11:00,520 - INFO - Log de envio criado para leito HOSPDIA5HD07 com id 79.
+2025-07-31 18:11:00,522 - INFO - Leito HOSPDIA5HD07 inserido na base local.
+2025-07-31 18:11:00,522 - INFO - Leito HOSPDIA5HD07 recebido com sucesso!
+2025-07-31 18:11:00,527 - WARNING - Leito HOSPDIA5HD08 INATIVO, com data de criacao em None
+2025-07-31 18:11:00,529 - INFO - Log de envio criado para leito HOSPDIA5HD08 com id 80.
+2025-07-31 18:11:00,530 - INFO - Leito HOSPDIA5HD08 inserido na base local.
+2025-07-31 18:11:00,531 - INFO - Leito HOSPDIA5HD08 recebido com sucesso!
+2025-07-31 18:11:00,537 - WARNING - Leito HOSPDIA5HD04 INATIVO, com data de criacao em None
+2025-07-31 18:11:00,539 - INFO - Log de envio criado para leito HOSPDIA5HD04 com id 81.
+2025-07-31 18:11:00,540 - INFO - Leito HOSPDIA5HD04 inserido na base local.
+2025-07-31 18:11:00,541 - INFO - Leito HOSPDIA5HD04 recebido com sucesso!
+2025-07-31 18:11:00,572 - WARNING - Leito OBRISCO.UV003 INATIVO, com data de criacao em None
+2025-07-31 18:11:00,574 - INFO - Log de envio criado para leito OBRISCO.UV003 com id 82.
+2025-07-31 18:11:00,575 - INFO - Leito OBRISCO.UV003 inserido na base local.
+2025-07-31 18:11:00,575 - INFO - Leito OBRISCO.UV003 recebido com sucesso!
+2025-07-31 18:11:00,606 - WARNING - Leito OBRISCO.UV004 INATIVO, com data de criacao em None
+2025-07-31 18:11:00,608 - INFO - Log de envio criado para leito OBRISCO.UV004 com id 83.
+2025-07-31 18:11:00,609 - INFO - Leito OBRISCO.UV004 inserido na base local.
+2025-07-31 18:11:00,610 - INFO - Leito OBRISCO.UV004 recebido com sucesso!
+2025-07-31 18:11:00,615 - WARNING - Leito EMERGPED001 INATIVO, com data de criacao em None
+2025-07-31 18:11:00,617 - INFO - Log de envio criado para leito EMERGPED001 com id 84.
+2025-07-31 18:11:00,619 - INFO - Leito EMERGPED001 inserido na base local.
+2025-07-31 18:11:00,619 - INFO - Leito EMERGPED001 recebido com sucesso!
+2025-07-31 18:11:00,626 - WARNING - Leito EMERGPED002 INATIVO, com data de criacao em None
+2025-07-31 18:11:00,628 - INFO - Log de envio criado para leito EMERGPED002 com id 85.
+2025-07-31 18:11:00,630 - INFO - Leito EMERGPED002 inserido na base local.
+2025-07-31 18:11:00,630 - INFO - Leito EMERGPED002 recebido com sucesso!
+2025-07-31 18:11:00,636 - WARNING - Leito EMERGPED003 INATIVO, com data de criacao em None
+2025-07-31 18:11:00,638 - INFO - Log de envio criado para leito EMERGPED003 com id 86.
+2025-07-31 18:11:00,639 - INFO - Leito EMERGPED003 inserido na base local.
+2025-07-31 18:11:00,640 - INFO - Leito EMERGPED003 recebido com sucesso!
+2025-07-31 18:11:00,670 - WARNING - Leito OBRISCO.UV005 INATIVO, com data de criacao em None
+2025-07-31 18:11:00,673 - INFO - Log de envio criado para leito OBRISCO.UV005 com id 87.
+2025-07-31 18:11:00,674 - INFO - Leito OBRISCO.UV005 inserido na base local.
+2025-07-31 18:11:00,675 - INFO - Leito OBRISCO.UV005 recebido com sucesso!
+2025-07-31 18:11:00,703 - WARNING - Leito OBRISCO.UV006 INATIVO, com data de criacao em None
+2025-07-31 18:11:00,705 - INFO - Log de envio criado para leito OBRISCO.UV006 com id 88.
+2025-07-31 18:11:00,706 - INFO - Leito OBRISCO.UV006 inserido na base local.
+2025-07-31 18:11:00,707 - INFO - Leito OBRISCO.UV006 recebido com sucesso!
+2025-07-31 18:11:00,736 - WARNING - Leito OBRISCO.UV007 INATIVO, com data de criacao em None
+2025-07-31 18:11:00,738 - INFO - Log de envio criado para leito OBRISCO.UV007 com id 89.
+2025-07-31 18:11:00,739 - INFO - Leito OBRISCO.UV007 inserido na base local.
+2025-07-31 18:11:00,739 - INFO - Leito OBRISCO.UV007 recebido com sucesso!
+2025-07-31 18:11:00,750 - WARNING - Leito PED011 INATIVO, com data de criacao em None
+2025-07-31 18:11:00,752 - INFO - Log de envio criado para leito PED011 com id 90.
+2025-07-31 18:11:00,754 - INFO - Leito PED011 inserido na base local.
+2025-07-31 18:11:00,754 - INFO - Leito PED011 recebido com sucesso!
+2025-07-31 18:11:00,760 - WARNING - Leito PED012 INATIVO, com data de criacao em None
+2025-07-31 18:11:00,766 - INFO - Log de envio criado para leito PED012 com id 91.
+2025-07-31 18:11:00,767 - INFO - Leito PED012 inserido na base local.
+2025-07-31 18:11:00,768 - INFO - Leito PED012 recebido com sucesso!
+2025-07-31 18:11:00,798 - WARNING - Leito OBRISCO.UV008 INATIVO, com data de criacao em None
+2025-07-31 18:11:00,799 - INFO - Log de envio criado para leito OBRISCO.UV008 com id 92.
+2025-07-31 18:11:00,800 - INFO - Leito OBRISCO.UV008 inserido na base local.
+2025-07-31 18:11:00,800 - INFO - Leito OBRISCO.UV008 recebido com sucesso!
+2025-07-31 18:11:00,805 - WARNING - Leito OBST010 INATIVO, com data de criacao em 2022-04-06 09:31:46.693000
+2025-07-31 18:11:00,807 - INFO - Log de envio criado para leito OBST010 com id 93.
+2025-07-31 18:11:00,808 - INFO - Leito OBST010 inserido na base local.
+2025-07-31 18:11:00,808 - INFO - Leito OBST010 recebido com sucesso!
+2025-07-31 18:11:00,813 - WARNING - Leito OBST014 INATIVO, com data de criacao em 2022-04-06 09:31:46.732000
+2025-07-31 18:11:00,816 - INFO - Log de envio criado para leito OBST014 com id 94.
+2025-07-31 18:11:00,817 - INFO - Leito OBST014 inserido na base local.
+2025-07-31 18:11:00,817 - INFO - Leito OBST014 recebido com sucesso!
+2025-07-31 18:11:00,822 - WARNING - Leito OBST016 INATIVO, com data de criacao em 2022-04-06 09:31:46.754000
+2025-07-31 18:11:00,823 - INFO - Log de envio criado para leito OBST016 com id 95.
+2025-07-31 18:11:00,824 - INFO - Leito OBST016 inserido na base local.
+2025-07-31 18:11:00,825 - INFO - Leito OBST016 recebido com sucesso!
+2025-07-31 18:11:00,830 - WARNING - Leito OBST017 INATIVO, com data de criacao em 2022-04-06 09:31:46.764000
+2025-07-31 18:11:00,832 - INFO - Log de envio criado para leito OBST017 com id 96.
+2025-07-31 18:11:00,833 - INFO - Leito OBST017 inserido na base local.
+2025-07-31 18:11:00,833 - INFO - Leito OBST017 recebido com sucesso!
+2025-07-31 18:11:00,838 - WARNING - Leito OBST018 INATIVO, com data de criacao em 2022-04-06 09:31:46.778000
+2025-07-31 18:11:00,840 - INFO - Log de envio criado para leito OBST018 com id 97.
+2025-07-31 18:11:00,842 - INFO - Leito OBST018 inserido na base local.
+2025-07-31 18:11:00,842 - INFO - Leito OBST018 recebido com sucesso!
+2025-07-31 18:11:00,846 - WARNING - Leito OBST020 INATIVO, com data de criacao em 2022-04-06 09:31:46.801000
+2025-07-31 18:11:00,849 - INFO - Log de envio criado para leito OBST020 com id 98.
+2025-07-31 18:11:00,851 - INFO - Leito OBST020 inserido na base local.
+2025-07-31 18:11:00,851 - INFO - Leito OBST020 recebido com sucesso!
+2025-07-31 18:11:00,856 - INFO - Leito HEMATO009 está ATIVO desde 2024-08-19 17:53:53.
+2025-07-31 18:11:00,858 - INFO - Log de envio criado para leito HEMATO009 com id 99.
+2025-07-31 18:11:00,860 - INFO - Leito HEMATO009 inserido na base local.
+2025-07-31 18:11:00,860 - INFO - Leito HEMATO009 recebido com sucesso!
+2025-07-31 18:11:00,865 - WARNING - Leito OFT007 INATIVO, com data de criacao em None
+2025-07-31 18:11:00,866 - INFO - Log de envio criado para leito OFT007 com id 100.
+2025-07-31 18:11:00,867 - INFO - Leito OFT007 inserido na base local.
+2025-07-31 18:11:00,867 - INFO - Leito OFT007 recebido com sucesso!
+2025-07-31 18:11:00,873 - WARNING - Leito OFT008 INATIVO, com data de criacao em None
+2025-07-31 18:11:00,875 - INFO - Log de envio criado para leito OFT008 com id 101.
+2025-07-31 18:11:00,876 - INFO - Leito OFT008 inserido na base local.
+2025-07-31 18:11:00,876 - INFO - Leito OFT008 recebido com sucesso!
+2025-07-31 18:11:00,881 - WARNING - Leito OFT009 INATIVO, com data de criacao em None
+2025-07-31 18:11:00,882 - INFO - Log de envio criado para leito OFT009 com id 102.
+2025-07-31 18:11:00,883 - INFO - Leito OFT009 inserido na base local.
+2025-07-31 18:11:00,883 - INFO - Leito OFT009 recebido com sucesso!
+2025-07-31 18:11:00,888 - WARNING - Leito OFT010 INATIVO, com data de criacao em None
+2025-07-31 18:11:00,890 - INFO - Log de envio criado para leito OFT010 com id 103.
+2025-07-31 18:11:00,891 - INFO - Leito OFT010 inserido na base local.
+2025-07-31 18:11:00,891 - INFO - Leito OFT010 recebido com sucesso!
+2025-07-31 18:11:00,896 - WARNING - Leito UTI II005 INATIVO, com data de criacao em None
+2025-07-31 18:11:00,897 - INFO - Log de envio criado para leito UTI II005 com id 104.
+2025-07-31 18:11:00,898 - INFO - Leito UTI II005 inserido na base local.
+2025-07-31 18:11:00,898 - INFO - Leito UTI II005 recebido com sucesso!
+2025-07-31 18:11:00,903 - WARNING - Leito TRANSRENAL001 INATIVO, com data de criacao em None
+2025-07-31 18:11:00,905 - INFO - Log de envio criado para leito TRANSRENAL001 com id 105.
+2025-07-31 18:11:00,906 - INFO - Leito TRANSRENAL001 inserido na base local.
+2025-07-31 18:11:00,906 - INFO - Leito TRANSRENAL001 recebido com sucesso!
+2025-07-31 18:11:00,911 - WARNING - Leito TRANSRENAL002 INATIVO, com data de criacao em None
+2025-07-31 18:11:00,913 - INFO - Log de envio criado para leito TRANSRENAL002 com id 106.
+2025-07-31 18:11:00,916 - INFO - Leito TRANSRENAL002 inserido na base local.
+2025-07-31 18:11:00,916 - INFO - Leito TRANSRENAL002 recebido com sucesso!
+2025-07-31 18:11:00,922 - WARNING - Leito TRANSRENAL003 INATIVO, com data de criacao em None
+2025-07-31 18:11:00,924 - INFO - Log de envio criado para leito TRANSRENAL003 com id 107.
+2025-07-31 18:11:00,924 - INFO - Leito TRANSRENAL003 inserido na base local.
+2025-07-31 18:11:00,925 - INFO - Leito TRANSRENAL003 recebido com sucesso!
+2025-07-31 18:11:00,930 - WARNING - Leito TRANSRENAL004 INATIVO, com data de criacao em None
+2025-07-31 18:11:00,931 - INFO - Log de envio criado para leito TRANSRENAL004 com id 108.
+2025-07-31 18:11:00,933 - INFO - Leito TRANSRENAL004 inserido na base local.
+2025-07-31 18:11:00,933 - INFO - Leito TRANSRENAL004 recebido com sucesso!
+2025-07-31 18:11:00,937 - WARNING - Leito TRANSRENAL005 INATIVO, com data de criacao em None
+2025-07-31 18:11:00,939 - INFO - Log de envio criado para leito TRANSRENAL005 com id 109.
+2025-07-31 18:11:00,940 - INFO - Leito TRANSRENAL005 inserido na base local.
+2025-07-31 18:11:00,940 - INFO - Leito TRANSRENAL005 recebido com sucesso!
+2025-07-31 18:11:00,945 - WARNING - Leito TRANSRENAL006 INATIVO, com data de criacao em None
+2025-07-31 18:11:00,946 - INFO - Log de envio criado para leito TRANSRENAL006 com id 110.
+2025-07-31 18:11:00,947 - INFO - Leito TRANSRENAL006 inserido na base local.
+2025-07-31 18:11:00,947 - INFO - Leito TRANSRENAL006 recebido com sucesso!
+2025-07-31 18:11:00,952 - WARNING - Leito HEMATO015 INATIVO, com data de criacao em 2024-04-17 12:41:09.665000
+2025-07-31 18:11:00,953 - INFO - Log de envio criado para leito HEMATO015 com id 111.
+2025-07-31 18:11:00,955 - INFO - Leito HEMATO015 inserido na base local.
+2025-07-31 18:11:00,955 - INFO - Leito HEMATO015 recebido com sucesso!
+2025-07-31 18:11:00,989 - WARNING - Leito OBRISCO.UV009 INATIVO, com data de criacao em None
+2025-07-31 18:11:00,991 - INFO - Log de envio criado para leito OBRISCO.UV009 com id 112.
+2025-07-31 18:11:00,992 - INFO - Leito OBRISCO.UV009 inserido na base local.
+2025-07-31 18:11:00,992 - INFO - Leito OBRISCO.UV009 recebido com sucesso!
+2025-07-31 18:11:00,997 - WARNING - Leito HEMATO013 INATIVO, com data de criacao em None
+2025-07-31 18:11:00,999 - INFO - Log de envio criado para leito HEMATO013 com id 113.
+2025-07-31 18:11:01,001 - INFO - Leito HEMATO013 inserido na base local.
+2025-07-31 18:11:01,001 - INFO - Leito HEMATO013 recebido com sucesso!
+2025-07-31 18:11:01,007 - WARNING - Leito HEMATO014 INATIVO, com data de criacao em None
+2025-07-31 18:11:01,009 - INFO - Log de envio criado para leito HEMATO014 com id 114.
+2025-07-31 18:11:01,010 - INFO - Leito HEMATO014 inserido na base local.
+2025-07-31 18:11:01,010 - INFO - Leito HEMATO014 recebido com sucesso!
+2025-07-31 18:11:01,014 - INFO - Leito CCEMI013 está ATIVO desde 2023-12-08 09:39:58.
+2025-07-31 18:11:01,016 - INFO - Log de envio criado para leito CCEMI013 com id 115.
+2025-07-31 18:11:01,019 - INFO - Leito CCEMI013 inserido na base local.
+2025-07-31 18:11:01,019 - INFO - Leito CCEMI013 recebido com sucesso!
+2025-07-31 18:11:01,024 - INFO - Leito 6º CMM015 está ATIVO desde 2023-11-17 16:11:28.
+2025-07-31 18:11:01,026 - INFO - Log de envio criado para leito 6º CMM015 com id 116.
+2025-07-31 18:11:01,027 - INFO - Leito 6º CMM015 inserido na base local.
+2025-07-31 18:11:01,027 - INFO - Leito 6º CMM015 recebido com sucesso!
+2025-07-31 18:11:01,058 - WARNING - Leito OBRISCO.UV010 INATIVO, com data de criacao em None
+2025-07-31 18:11:01,061 - INFO - Log de envio criado para leito OBRISCO.UV010 com id 117.
+2025-07-31 18:11:01,062 - INFO - Leito OBRISCO.UV010 inserido na base local.
+2025-07-31 18:11:01,062 - INFO - Leito OBRISCO.UV010 recebido com sucesso!
+2025-07-31 18:11:01,068 - WARNING - Leito UTI II006 INATIVO, com data de criacao em None
+2025-07-31 18:11:01,073 - INFO - Log de envio criado para leito UTI II006 com id 118.
+2025-07-31 18:11:01,074 - INFO - Leito UTI II006 inserido na base local.
+2025-07-31 18:11:01,074 - INFO - Leito UTI II006 recebido com sucesso!
+2025-07-31 18:11:01,079 - WARNING - Leito UTI II007 INATIVO, com data de criacao em None
+2025-07-31 18:11:01,081 - INFO - Log de envio criado para leito UTI II007 com id 119.
+2025-07-31 18:11:01,082 - INFO - Leito UTI II007 inserido na base local.
+2025-07-31 18:11:01,082 - INFO - Leito UTI II007 recebido com sucesso!
+2025-07-31 18:11:01,086 - WARNING - Leito UTI II008 INATIVO, com data de criacao em None
+2025-07-31 18:11:01,088 - INFO - Log de envio criado para leito UTI II008 com id 120.
+2025-07-31 18:11:01,089 - INFO - Leito UTI II008 inserido na base local.
+2025-07-31 18:11:01,089 - INFO - Leito UTI II008 recebido com sucesso!
+2025-07-31 18:11:01,094 - INFO - Leito HEMATO010 está ATIVO desde 2024-08-19 17:53:54.
+2025-07-31 18:11:01,096 - INFO - Log de envio criado para leito HEMATO010 com id 121.
+2025-07-31 18:11:01,097 - INFO - Leito HEMATO010 inserido na base local.
+2025-07-31 18:11:01,097 - INFO - Leito HEMATO010 recebido com sucesso!
+2025-07-31 18:11:01,101 - INFO - Leito HEMATO011 está ATIVO desde 2024-11-04 09:33:44.
+2025-07-31 18:11:01,104 - INFO - Log de envio criado para leito HEMATO011 com id 122.
+2025-07-31 18:11:01,105 - INFO - Leito HEMATO011 inserido na base local.
+2025-07-31 18:11:01,105 - INFO - Leito HEMATO011 recebido com sucesso!
+2025-07-31 18:11:01,110 - INFO - Leito CTI I005 está ATIVO desde 2021-06-16 09:55:44.
+2025-07-31 18:11:01,112 - INFO - Log de envio criado para leito CTI I005 com id 123.
+2025-07-31 18:11:01,113 - INFO - Leito CTI I005 inserido na base local.
+2025-07-31 18:11:01,113 - INFO - Leito CTI I005 recebido com sucesso!
+2025-07-31 18:11:01,117 - INFO - Leito UTIN003 está ATIVO desde 2020-05-13 10:37:02.
+2025-07-31 18:11:01,119 - INFO - Log de envio criado para leito UTIN003 com id 124.
+2025-07-31 18:11:01,120 - INFO - Leito UTIN003 inserido na base local.
+2025-07-31 18:11:01,121 - INFO - Leito UTIN003 recebido com sucesso!
+2025-07-31 18:11:01,125 - INFO - Leito HEMATO002 está ATIVO desde 2021-06-16 14:20:47.
+2025-07-31 18:11:01,127 - INFO - Log de envio criado para leito HEMATO002 com id 125.
+2025-07-31 18:11:01,128 - INFO - Leito HEMATO002 inserido na base local.
+2025-07-31 18:11:01,128 - INFO - Leito HEMATO002 recebido com sucesso!
+2025-07-31 18:11:01,132 - WARNING - Leito UCINCO008 INATIVO, com data de criacao em 2024-07-11 11:22:30.877000
+2025-07-31 18:11:01,134 - INFO - Log de envio criado para leito UCINCO008 com id 126.
+2025-07-31 18:11:01,135 - INFO - Leito UCINCO008 inserido na base local.
+2025-07-31 18:11:01,135 - INFO - Leito UCINCO008 recebido com sucesso!
+2025-07-31 18:11:01,139 - INFO - Leito UCO009 está ATIVO desde 2023-04-12 08:49:42.
+2025-07-31 18:11:01,140 - INFO - Log de envio criado para leito UCO009 com id 127.
+2025-07-31 18:11:01,141 - INFO - Leito UCO009 inserido na base local.
+2025-07-31 18:11:01,142 - INFO - Leito UCO009 recebido com sucesso!
+2025-07-31 18:11:01,146 - INFO - Leito UCO005 está ATIVO desde 2021-06-16 14:18:54.
+2025-07-31 18:11:01,147 - INFO - Log de envio criado para leito UCO005 com id 128.
+2025-07-31 18:11:01,148 - INFO - Leito UCO005 inserido na base local.
+2025-07-31 18:11:01,148 - INFO - Leito UCO005 recebido com sucesso!
+2025-07-31 18:11:01,152 - INFO - Leito UPG004 está ATIVO desde 2024-01-15 13:54:36.
+2025-07-31 18:11:01,154 - INFO - Log de envio criado para leito UPG004 com id 129.
+2025-07-31 18:11:01,154 - INFO - Leito UPG004 inserido na base local.
+2025-07-31 18:11:01,155 - INFO - Leito UPG004 recebido com sucesso!
+2025-07-31 18:11:01,159 - INFO - Leito CCF013 está ATIVO desde 2022-05-26 16:45:12.
+2025-07-31 18:11:01,161 - INFO - Log de envio criado para leito CCF013 com id 130.
+2025-07-31 18:11:01,162 - INFO - Leito CCF013 inserido na base local.
+2025-07-31 18:11:01,163 - INFO - Leito CCF013 recebido com sucesso!
+2025-07-31 18:11:01,169 - INFO - Leito OFT002 está ATIVO desde 2022-05-26 10:55:25.
+2025-07-31 18:11:01,177 - INFO - Log de envio criado para leito OFT002 com id 131.
+2025-07-31 18:11:01,182 - INFO - Leito OFT002 inserido na base local.
+2025-07-31 18:11:01,183 - INFO - Leito OFT002 recebido com sucesso!
+2025-07-31 18:11:01,188 - INFO - Leito BOX008 está ATIVO desde 2021-09-01 11:56:50.
+2025-07-31 18:11:01,190 - INFO - Log de envio criado para leito BOX008 com id 132.
+2025-07-31 18:11:01,191 - INFO - Leito BOX008 inserido na base local.
+2025-07-31 18:11:01,191 - INFO - Leito BOX008 recebido com sucesso!
+2025-07-31 18:11:01,196 - INFO - Leito 6º CMM011 está ATIVO desde 2023-11-14 13:48:34.
+2025-07-31 18:11:01,197 - INFO - Log de envio criado para leito 6º CMM011 com id 133.
+2025-07-31 18:11:01,198 - INFO - Leito 6º CMM011 inserido na base local.
+2025-07-31 18:11:01,198 - INFO - Leito 6º CMM011 recebido com sucesso!
+2025-07-31 18:11:01,202 - INFO - Leito CD003 está ATIVO desde 2021-06-16 13:54:01.
+2025-07-31 18:11:01,203 - INFO - Log de envio criado para leito CD003 com id 134.
+2025-07-31 18:11:01,204 - INFO - Leito CD003 inserido na base local.
+2025-07-31 18:11:01,204 - INFO - Leito CD003 recebido com sucesso!
+2025-07-31 18:11:01,208 - INFO - Leito UCINCO001 está ATIVO desde 2022-06-27 17:15:41.
+2025-07-31 18:11:01,210 - INFO - Log de envio criado para leito UCINCO001 com id 135.
+2025-07-31 18:11:01,211 - INFO - Leito UCINCO001 inserido na base local.
+2025-07-31 18:11:01,211 - INFO - Leito UCINCO001 recebido com sucesso!
+2025-07-31 18:11:01,215 - INFO - Leito HEMATO008 está ATIVO desde 2022-01-07 15:37:11.
+2025-07-31 18:11:01,217 - INFO - Log de envio criado para leito HEMATO008 com id 136.
+2025-07-31 18:11:01,218 - INFO - Leito HEMATO008 inserido na base local.
+2025-07-31 18:11:01,219 - INFO - Leito HEMATO008 recebido com sucesso!
+2025-07-31 18:11:01,223 - INFO - Leito CCM001 está ATIVO desde 2023-12-08 09:29:15.
+2025-07-31 18:11:01,226 - INFO - Log de envio criado para leito CCM001 com id 137.
+2025-07-31 18:11:01,227 - INFO - Leito CCM001 inserido na base local.
+2025-07-31 18:11:01,227 - INFO - Leito CCM001 recebido com sucesso!
+2025-07-31 18:11:01,259 - WARNING - Leito UPG.UV005 INATIVO, com data de criacao em None
+2025-07-31 18:11:01,261 - INFO - Log de envio criado para leito UPG.UV005 com id 138.
+2025-07-31 18:11:01,262 - INFO - Leito UPG.UV005 inserido na base local.
+2025-07-31 18:11:01,262 - INFO - Leito UPG.UV005 recebido com sucesso!
+2025-07-31 18:11:01,268 - WARNING - Leito HIPOADUL001 INATIVO, com data de criacao em None
+2025-07-31 18:11:01,270 - INFO - Log de envio criado para leito HIPOADUL001 com id 139.
+2025-07-31 18:11:01,271 - INFO - Leito HIPOADUL001 inserido na base local.
+2025-07-31 18:11:01,271 - INFO - Leito HIPOADUL001 recebido com sucesso!
+2025-07-31 18:11:01,276 - INFO - Leito CCEMI010 está ATIVO desde 2021-06-16 11:32:33.
+2025-07-31 18:11:01,277 - INFO - Log de envio criado para leito CCEMI010 com id 140.
+2025-07-31 18:11:01,278 - INFO - Leito CCEMI010 inserido na base local.
+2025-07-31 18:11:01,279 - INFO - Leito CCEMI010 recebido com sucesso!
+2025-07-31 18:11:01,309 - WARNING - Leito UPG.UV006 INATIVO, com data de criacao em None
+2025-07-31 18:11:01,311 - INFO - Log de envio criado para leito UPG.UV006 com id 141.
+2025-07-31 18:11:01,313 - INFO - Leito UPG.UV006 inserido na base local.
+2025-07-31 18:11:01,313 - INFO - Leito UPG.UV006 recebido com sucesso!
+2025-07-31 18:11:01,344 - WARNING - Leito UPG.UV007 INATIVO, com data de criacao em None
+2025-07-31 18:11:01,346 - INFO - Log de envio criado para leito UPG.UV007 com id 142.
+2025-07-31 18:11:01,348 - INFO - Leito UPG.UV007 inserido na base local.
+2025-07-31 18:11:01,348 - INFO - Leito UPG.UV007 recebido com sucesso!
+2025-07-31 18:11:01,379 - WARNING - Leito UPG.UV008 INATIVO, com data de criacao em None
+2025-07-31 18:11:01,382 - INFO - Log de envio criado para leito UPG.UV008 com id 143.
+2025-07-31 18:11:01,384 - INFO - Leito UPG.UV008 inserido na base local.
+2025-07-31 18:11:01,384 - INFO - Leito UPG.UV008 recebido com sucesso!
+2025-07-31 18:11:01,390 - INFO - Leito DIP009 está ATIVO desde 2021-06-15 14:59:05.
+2025-07-31 18:11:01,393 - INFO - Log de envio criado para leito DIP009 com id 144.
+2025-07-31 18:11:01,394 - INFO - Leito DIP009 inserido na base local.
+2025-07-31 18:11:01,394 - INFO - Leito DIP009 recebido com sucesso!
+2025-07-31 18:11:01,418 - INFO - Leito 6º CMM010 está ATIVO desde 2023-11-08 17:10:54.
+2025-07-31 18:11:01,420 - INFO - Log de envio criado para leito 6º CMM010 com id 145.
+2025-07-31 18:11:01,422 - INFO - Leito 6º CMM010 inserido na base local.
+2025-07-31 18:11:01,422 - INFO - Leito 6º CMM010 recebido com sucesso!
+2025-07-31 18:11:01,434 - WARNING - Leito HIPOADUL002 INATIVO, com data de criacao em None
+2025-07-31 18:11:01,436 - INFO - Log de envio criado para leito HIPOADUL002 com id 146.
+2025-07-31 18:11:01,437 - INFO - Leito HIPOADUL002 inserido na base local.
+2025-07-31 18:11:01,438 - INFO - Leito HIPOADUL002 recebido com sucesso!
+2025-07-31 18:11:01,443 - WARNING - Leito HIPOADUL003 INATIVO, com data de criacao em None
+2025-07-31 18:11:01,445 - INFO - Log de envio criado para leito HIPOADUL003 com id 147.
+2025-07-31 18:11:01,446 - INFO - Leito HIPOADUL003 inserido na base local.
+2025-07-31 18:11:01,446 - INFO - Leito HIPOADUL003 recebido com sucesso!
+2025-07-31 18:11:01,451 - WARNING - Leito UCINCA003 INATIVO, com data de criacao em 2023-05-04 12:07:50.899000
+2025-07-31 18:11:01,453 - INFO - Log de envio criado para leito UCINCA003 com id 148.
+2025-07-31 18:11:01,454 - INFO - Leito UCINCA003 inserido na base local.
+2025-07-31 18:11:01,454 - INFO - Leito UCINCA003 recebido com sucesso!
+2025-07-31 18:11:01,459 - INFO - Leito CTI I003 está ATIVO desde 2021-06-16 09:55:44.
+2025-07-31 18:11:01,460 - INFO - Log de envio criado para leito CTI I003 com id 149.
+2025-07-31 18:11:01,461 - INFO - Leito CTI I003 inserido na base local.
+2025-07-31 18:11:01,461 - INFO - Leito CTI I003 recebido com sucesso!
+2025-07-31 18:11:01,467 - WARNING - Leito HIPOCOVID001 INATIVO, com data de criacao em 2022-02-14 11:08:26.931000
+2025-07-31 18:11:01,469 - INFO - Log de envio criado para leito HIPOCOVID001 com id 150.
+2025-07-31 18:11:01,470 - INFO - Leito HIPOCOVID001 inserido na base local.
+2025-07-31 18:11:01,470 - INFO - Leito HIPOCOVID001 recebido com sucesso!
+2025-07-31 18:11:01,474 - WARNING - Leito HIPOCOVID002 INATIVO, com data de criacao em 2022-02-14 11:08:26.950000
+2025-07-31 18:11:01,475 - INFO - Log de envio criado para leito HIPOCOVID002 com id 151.
+2025-07-31 18:11:01,476 - INFO - Leito HIPOCOVID002 inserido na base local.
+2025-07-31 18:11:01,476 - INFO - Leito HIPOCOVID002 recebido com sucesso!
+2025-07-31 18:11:01,481 - WARNING - Leito HIPOCOVID003 INATIVO, com data de criacao em 2022-02-14 11:08:26.968000
+2025-07-31 18:11:01,483 - INFO - Log de envio criado para leito HIPOCOVID003 com id 152.
+2025-07-31 18:11:01,484 - INFO - Leito HIPOCOVID003 inserido na base local.
+2025-07-31 18:11:01,484 - INFO - Leito HIPOCOVID003 recebido com sucesso!
+2025-07-31 18:11:01,488 - WARNING - Leito HIPOCOVID004 INATIVO, com data de criacao em 2022-02-14 11:08:26.985000
+2025-07-31 18:11:01,490 - INFO - Log de envio criado para leito HIPOCOVID004 com id 153.
+2025-07-31 18:11:01,491 - INFO - Leito HIPOCOVID004 inserido na base local.
+2025-07-31 18:11:01,491 - INFO - Leito HIPOCOVID004 recebido com sucesso!
+2025-07-31 18:11:01,495 - WARNING - Leito HIPOCOVID005 INATIVO, com data de criacao em 2022-06-27 17:45:24.535000
+2025-07-31 18:11:01,497 - INFO - Log de envio criado para leito HIPOCOVID005 com id 154.
+2025-07-31 18:11:01,497 - INFO - Leito HIPOCOVID005 inserido na base local.
+2025-07-31 18:11:01,498 - INFO - Leito HIPOCOVID005 recebido com sucesso!
+2025-07-31 18:11:01,503 - WARNING - Leito HIPOCOVID006 INATIVO, com data de criacao em 2022-06-27 17:45:24.554000
+2025-07-31 18:11:01,505 - INFO - Log de envio criado para leito HIPOCOVID006 com id 155.
+2025-07-31 18:11:01,506 - INFO - Leito HIPOCOVID006 inserido na base local.
+2025-07-31 18:11:01,506 - INFO - Leito HIPOCOVID006 recebido com sucesso!
+2025-07-31 18:11:01,511 - INFO - Leito OFT004 está ATIVO desde 2022-05-26 10:55:25.
+2025-07-31 18:11:01,512 - INFO - Log de envio criado para leito OFT004 com id 156.
+2025-07-31 18:11:01,514 - INFO - Leito OFT004 inserido na base local.
+2025-07-31 18:11:01,514 - INFO - Leito OFT004 recebido com sucesso!
+2025-07-31 18:11:01,519 - INFO - Leito CD002 está ATIVO desde 2021-06-16 13:54:01.
+2025-07-31 18:11:01,521 - INFO - Log de envio criado para leito CD002 com id 157.
+2025-07-31 18:11:01,522 - INFO - Leito CD002 inserido na base local.
+2025-07-31 18:11:01,522 - INFO - Leito CD002 recebido com sucesso!
+2025-07-31 18:11:01,528 - WARNING - Leito OBST011 INATIVO, com data de criacao em 2022-04-06 09:31:46.703000
+2025-07-31 18:11:01,530 - INFO - Log de envio criado para leito OBST011 com id 158.
+2025-07-31 18:11:01,531 - INFO - Leito OBST011 inserido na base local.
+2025-07-31 18:11:01,531 - INFO - Leito OBST011 recebido com sucesso!
+2025-07-31 18:11:01,539 - WARNING - Leito OBST012 INATIVO, com data de criacao em 2022-04-06 09:31:46.713000
+2025-07-31 18:11:01,541 - INFO - Log de envio criado para leito OBST012 com id 159.
+2025-07-31 18:11:01,542 - INFO - Leito OBST012 inserido na base local.
+2025-07-31 18:11:01,542 - INFO - Leito OBST012 recebido com sucesso!
+2025-07-31 18:11:01,548 - INFO - Leito PED004 está ATIVO desde 2021-09-01 09:28:11.
+2025-07-31 18:11:01,551 - INFO - Log de envio criado para leito PED004 com id 160.
+2025-07-31 18:11:01,552 - INFO - Leito PED004 inserido na base local.
+2025-07-31 18:11:01,552 - INFO - Leito PED004 recebido com sucesso!
+2025-07-31 18:11:01,557 - INFO - Leito DIP008 está ATIVO desde 2022-08-02 07:23:34.
+2025-07-31 18:11:01,559 - INFO - Log de envio criado para leito DIP008 com id 161.
+2025-07-31 18:11:01,560 - INFO - Leito DIP008 inserido na base local.
+2025-07-31 18:11:01,560 - INFO - Leito DIP008 recebido com sucesso!
+2025-07-31 18:11:01,565 - WARNING - Leito HIPOADUL006 INATIVO, com data de criacao em None
+2025-07-31 18:11:01,567 - INFO - Log de envio criado para leito HIPOADUL006 com id 162.
+2025-07-31 18:11:01,569 - INFO - Leito HIPOADUL006 inserido na base local.
+2025-07-31 18:11:01,569 - INFO - Leito HIPOADUL006 recebido com sucesso!
+2025-07-31 18:11:01,599 - INFO - Leito OBST.UV003 está ATIVO desde 2025-01-03 13:51:51.
+2025-07-31 18:11:01,601 - INFO - Log de envio criado para leito OBST.UV003 com id 163.
+2025-07-31 18:11:01,602 - INFO - Leito OBST.UV003 inserido na base local.
+2025-07-31 18:11:01,603 - INFO - Leito OBST.UV003 recebido com sucesso!
+2025-07-31 18:11:01,608 - INFO - Leito CCM015 está ATIVO desde 2023-12-08 09:29:16.
+2025-07-31 18:11:01,610 - INFO - Log de envio criado para leito CCM015 com id 164.
+2025-07-31 18:11:01,611 - INFO - Leito CCM015 inserido na base local.
+2025-07-31 18:11:01,611 - INFO - Leito CCM015 recebido com sucesso!
+2025-07-31 18:11:01,616 - WARNING - Leito OBST021 INATIVO, com data de criacao em 2022-04-06 09:31:46.813000
+2025-07-31 18:11:01,618 - INFO - Log de envio criado para leito OBST021 com id 165.
+2025-07-31 18:11:01,619 - INFO - Leito OBST021 inserido na base local.
+2025-07-31 18:11:01,619 - INFO - Leito OBST021 recebido com sucesso!
+2025-07-31 18:11:01,625 - WARNING - Leito OBST022 INATIVO, com data de criacao em 2022-04-06 09:31:46.826000
+2025-07-31 18:11:01,626 - INFO - Log de envio criado para leito OBST022 com id 166.
+2025-07-31 18:11:01,628 - INFO - Leito OBST022 inserido na base local.
+2025-07-31 18:11:01,628 - INFO - Leito OBST022 recebido com sucesso!
+2025-07-31 18:11:01,635 - INFO - Leito PED009 está ATIVO desde 2022-03-15 17:27:15.
+2025-07-31 18:11:01,638 - INFO - Log de envio criado para leito PED009 com id 167.
+2025-07-31 18:11:01,639 - INFO - Leito PED009 inserido na base local.
+2025-07-31 18:11:01,639 - INFO - Leito PED009 recebido com sucesso!
+2025-07-31 18:11:01,646 - INFO - Leito HEMATO001 está ATIVO desde 2022-01-07 16:06:38.
+2025-07-31 18:11:01,649 - INFO - Log de envio criado para leito HEMATO001 com id 168.
+2025-07-31 18:11:01,650 - INFO - Leito HEMATO001 inserido na base local.
+2025-07-31 18:11:01,650 - INFO - Leito HEMATO001 recebido com sucesso!
+2025-07-31 18:11:01,656 - WARNING - Leito HIPOADUL004 INATIVO, com data de criacao em None
+2025-07-31 18:11:01,659 - INFO - Log de envio criado para leito HIPOADUL004 com id 169.
+2025-07-31 18:11:01,660 - INFO - Leito HIPOADUL004 inserido na base local.
+2025-07-31 18:11:01,660 - INFO - Leito HIPOADUL004 recebido com sucesso!
+2025-07-31 18:11:01,667 - WARNING - Leito HIPOADUL005 INATIVO, com data de criacao em 2022-01-19 15:53:59.108000
+2025-07-31 18:11:01,669 - INFO - Log de envio criado para leito HIPOADUL005 com id 170.
+2025-07-31 18:11:01,670 - INFO - Leito HIPOADUL005 inserido na base local.
+2025-07-31 18:11:01,670 - INFO - Leito HIPOADUL005 recebido com sucesso!
+2025-07-31 18:11:01,684 - INFO - Leito 6º CMM009 está ATIVO desde 2023-11-08 17:10:53.
+2025-07-31 18:11:01,687 - INFO - Log de envio criado para leito 6º CMM009 com id 171.
+2025-07-31 18:11:01,688 - INFO - Leito 6º CMM009 inserido na base local.
+2025-07-31 18:11:01,688 - INFO - Leito 6º CMM009 recebido com sucesso!
+2025-07-31 18:11:01,695 - WARNING - Leito DIP012 INATIVO, com data de criacao em None
+2025-07-31 18:11:01,697 - INFO - Log de envio criado para leito DIP012 com id 172.
+2025-07-31 18:11:01,698 - INFO - Leito DIP012 inserido na base local.
+2025-07-31 18:11:01,698 - INFO - Leito DIP012 recebido com sucesso!
+2025-07-31 18:11:01,703 - INFO - Leito HEMATO007 está ATIVO desde 2022-01-07 16:06:38.
+2025-07-31 18:11:01,705 - INFO - Log de envio criado para leito HEMATO007 com id 173.
+2025-07-31 18:11:01,706 - INFO - Leito HEMATO007 inserido na base local.
+2025-07-31 18:11:01,706 - INFO - Leito HEMATO007 recebido com sucesso!
+2025-07-31 18:11:01,711 - INFO - Leito CTI I002 está ATIVO desde 2021-06-16 09:19:19.
+2025-07-31 18:11:01,712 - INFO - Log de envio criado para leito CTI I002 com id 174.
+2025-07-31 18:11:01,713 - INFO - Leito CTI I002 inserido na base local.
+2025-07-31 18:11:01,713 - INFO - Leito CTI I002 recebido com sucesso!
+2025-07-31 18:11:01,717 - INFO - Leito PED001 está ATIVO desde 2021-09-01 09:28:11.
+2025-07-31 18:11:01,718 - INFO - Log de envio criado para leito PED001 com id 175.
+2025-07-31 18:11:01,719 - INFO - Leito PED001 inserido na base local.
+2025-07-31 18:11:01,719 - INFO - Leito PED001 recebido com sucesso!
+2025-07-31 18:11:01,724 - INFO - Leito UCO008 está ATIVO desde 2021-06-16 14:18:54.
+2025-07-31 18:11:01,728 - INFO - Log de envio criado para leito UCO008 com id 176.
+2025-07-31 18:11:01,730 - INFO - Leito UCO008 inserido na base local.
+2025-07-31 18:11:01,730 - INFO - Leito UCO008 recebido com sucesso!
+2025-07-31 18:11:01,736 - INFO - Leito PED005 está ATIVO desde 2021-09-01 09:28:11.
+2025-07-31 18:11:01,737 - INFO - Log de envio criado para leito PED005 com id 177.
+2025-07-31 18:11:01,739 - INFO - Leito PED005 inserido na base local.
+2025-07-31 18:11:01,739 - INFO - Leito PED005 recebido com sucesso!
+2025-07-31 18:11:01,744 - WARNING - Leito UTIN008 INATIVO, com data de criacao em None
+2025-07-31 18:11:01,747 - INFO - Log de envio criado para leito UTIN008 com id 178.
+2025-07-31 18:11:01,749 - INFO - Leito UTIN008 inserido na base local.
+2025-07-31 18:11:01,749 - INFO - Leito UTIN008 recebido com sucesso!
+2025-07-31 18:11:01,754 - INFO - Leito CD004 está ATIVO desde 2024-04-17 12:52:15.
+2025-07-31 18:11:01,755 - INFO - Log de envio criado para leito CD004 com id 179.
+2025-07-31 18:11:01,756 - INFO - Leito CD004 inserido na base local.
+2025-07-31 18:11:01,757 - INFO - Leito CD004 recebido com sucesso!
+2025-07-31 18:11:01,761 - INFO - Leito PED008 está ATIVO desde 2021-09-01 09:28:12.
+2025-07-31 18:11:01,762 - INFO - Log de envio criado para leito PED008 com id 180.
+2025-07-31 18:11:01,763 - INFO - Leito PED008 inserido na base local.
+2025-07-31 18:11:01,764 - INFO - Leito PED008 recebido com sucesso!
+2025-07-31 18:11:01,768 - INFO - Leito PED010 está ATIVO desde 2022-03-15 17:27:15.
+2025-07-31 18:11:01,770 - INFO - Log de envio criado para leito PED010 com id 181.
+2025-07-31 18:11:01,771 - INFO - Leito PED010 inserido na base local.
+2025-07-31 18:11:01,771 - INFO - Leito PED010 recebido com sucesso!
+2025-07-31 18:11:01,800 - INFO - Leito OBST.UV001 está ATIVO desde 2025-01-03 13:51:51.
+2025-07-31 18:11:01,803 - INFO - Log de envio criado para leito OBST.UV001 com id 182.
+2025-07-31 18:11:01,804 - INFO - Leito OBST.UV001 inserido na base local.
+2025-07-31 18:11:01,804 - INFO - Leito OBST.UV001 recebido com sucesso!
+2025-07-31 18:11:01,809 - INFO - Leito 6º CMM001 está ATIVO desde 2023-11-17 16:11:27.
+2025-07-31 18:11:01,812 - INFO - Log de envio criado para leito 6º CMM001 com id 183.
+2025-07-31 18:11:01,814 - INFO - Leito 6º CMM001 inserido na base local.
+2025-07-31 18:11:01,814 - INFO - Leito 6º CMM001 recebido com sucesso!
+2025-07-31 18:11:01,819 - INFO - Leito DIP004 está ATIVO desde 2022-04-27 14:18:00.
+2025-07-31 18:11:01,820 - INFO - Log de envio criado para leito DIP004 com id 184.
+2025-07-31 18:11:01,821 - INFO - Leito DIP004 inserido na base local.
+2025-07-31 18:11:01,821 - INFO - Leito DIP004 recebido com sucesso!
+2025-07-31 18:11:01,825 - INFO - Leito CD001 está ATIVO desde 2021-06-14 17:19:13.
+2025-07-31 18:11:01,827 - INFO - Log de envio criado para leito CD001 com id 185.
+2025-07-31 18:11:01,828 - INFO - Leito CD001 inserido na base local.
+2025-07-31 18:11:01,828 - INFO - Leito CD001 recebido com sucesso!
+2025-07-31 18:11:01,832 - INFO - Leito PED007 está ATIVO desde 2022-05-17 00:02:00.
+2025-07-31 18:11:01,833 - INFO - Log de envio criado para leito PED007 com id 186.
+2025-07-31 18:11:01,834 - INFO - Leito PED007 inserido na base local.
+2025-07-31 18:11:01,834 - INFO - Leito PED007 recebido com sucesso!
+2025-07-31 18:11:01,839 - INFO - Leito CCM010 está ATIVO desde 2022-05-26 13:39:09.
+2025-07-31 18:11:01,841 - INFO - Log de envio criado para leito CCM010 com id 187.
+2025-07-31 18:11:01,842 - INFO - Leito CCM010 inserido na base local.
+2025-07-31 18:11:01,842 - INFO - Leito CCM010 recebido com sucesso!
+2025-07-31 18:11:01,846 - INFO - Leito CCM004 está ATIVO desde 2022-05-27 15:49:55.
+2025-07-31 18:11:01,847 - INFO - Log de envio criado para leito CCM004 com id 188.
+2025-07-31 18:11:01,848 - INFO - Leito CCM004 inserido na base local.
+2025-07-31 18:11:01,848 - INFO - Leito CCM004 recebido com sucesso!
+2025-07-31 18:11:01,876 - INFO - Leito OBST.UV002 está ATIVO desde 2025-01-03 13:51:51.
+2025-07-31 18:11:01,878 - INFO - Log de envio criado para leito OBST.UV002 com id 189.
+2025-07-31 18:11:01,881 - INFO - Leito OBST.UV002 inserido na base local.
+2025-07-31 18:11:01,882 - INFO - Leito OBST.UV002 recebido com sucesso!
+2025-07-31 18:11:01,886 - INFO - Leito UPG003 está ATIVO desde 2024-01-15 13:54:36.
+2025-07-31 18:11:01,888 - INFO - Log de envio criado para leito UPG003 com id 190.
+2025-07-31 18:11:01,889 - INFO - Leito UPG003 inserido na base local.
+2025-07-31 18:11:01,889 - INFO - Leito UPG003 recebido com sucesso!
+2025-07-31 18:11:01,893 - INFO - Leito CCM002 está ATIVO desde 2023-12-08 09:29:15.
+2025-07-31 18:11:01,894 - INFO - Log de envio criado para leito CCM002 com id 191.
+2025-07-31 18:11:01,896 - INFO - Leito CCM002 inserido na base local.
+2025-07-31 18:11:01,896 - INFO - Leito CCM002 recebido com sucesso!
+2025-07-31 18:11:01,900 - INFO - Leito CCF014 está ATIVO desde 2022-05-26 16:45:12.
+2025-07-31 18:11:01,902 - INFO - Log de envio criado para leito CCF014 com id 192.
+2025-07-31 18:11:01,903 - INFO - Leito CCF014 inserido na base local.
+2025-07-31 18:11:01,903 - INFO - Leito CCF014 recebido com sucesso!
+2025-07-31 18:11:01,907 - INFO - Leito UCO007 está ATIVO desde 2021-06-16 14:18:54.
+2025-07-31 18:11:01,908 - INFO - Log de envio criado para leito UCO007 com id 193.
+2025-07-31 18:11:01,909 - INFO - Leito UCO007 inserido na base local.
+2025-07-31 18:11:01,909 - INFO - Leito UCO007 recebido com sucesso!
+2025-07-31 18:11:01,914 - WARNING - Leito HOSPDIA008 INATIVO, com data de criacao em None
+2025-07-31 18:11:01,916 - INFO - Log de envio criado para leito HOSPDIA008 com id 194.
+2025-07-31 18:11:01,917 - INFO - Leito HOSPDIA008 inserido na base local.
+2025-07-31 18:11:01,917 - INFO - Leito HOSPDIA008 recebido com sucesso!
+2025-07-31 18:11:01,922 - WARNING - Leito HOSPDIA007 INATIVO, com data de criacao em None
+2025-07-31 18:11:01,924 - INFO - Log de envio criado para leito HOSPDIA007 com id 195.
+2025-07-31 18:11:01,925 - INFO - Leito HOSPDIA007 inserido na base local.
+2025-07-31 18:11:01,925 - INFO - Leito HOSPDIA007 recebido com sucesso!
+2025-07-31 18:11:01,958 - WARNING - Leito UPG.UV009 INATIVO, com data de criacao em None
+2025-07-31 18:11:01,960 - INFO - Log de envio criado para leito UPG.UV009 com id 196.
+2025-07-31 18:11:01,962 - INFO - Leito UPG.UV009 inserido na base local.
+2025-07-31 18:11:01,962 - INFO - Leito UPG.UV009 recebido com sucesso!
+2025-07-31 18:11:01,993 - WARNING - Leito UPG.UV010 INATIVO, com data de criacao em None
+2025-07-31 18:11:01,995 - INFO - Log de envio criado para leito UPG.UV010 com id 197.
+2025-07-31 18:11:01,996 - INFO - Leito UPG.UV010 inserido na base local.
+2025-07-31 18:11:01,997 - INFO - Leito UPG.UV010 recebido com sucesso!
+2025-07-31 18:11:02,002 - INFO - Leito CTI I012 está ATIVO desde 2023-11-16 09:26:50.
+2025-07-31 18:11:02,004 - INFO - Log de envio criado para leito CTI I012 com id 198.
+2025-07-31 18:11:02,005 - INFO - Leito CTI I012 inserido na base local.
+2025-07-31 18:11:02,005 - INFO - Leito CTI I012 recebido com sucesso!
+2025-07-31 18:11:02,012 - INFO - Leito UCINCO005 está ATIVO desde 2024-07-11 11:22:30.
+2025-07-31 18:11:02,015 - INFO - Log de envio criado para leito UCINCO005 com id 199.
+2025-07-31 18:11:02,016 - INFO - Leito UCINCO005 inserido na base local.
+2025-07-31 18:11:02,016 - INFO - Leito UCINCO005 recebido com sucesso!
+2025-07-31 18:11:02,020 - INFO - Leito UTIN005 está ATIVO desde 2023-06-22 15:29:21.
+2025-07-31 18:11:02,021 - INFO - Log de envio criado para leito UTIN005 com id 200.
+2025-07-31 18:11:02,022 - INFO - Leito UTIN005 inserido na base local.
+2025-07-31 18:11:02,022 - INFO - Leito UTIN005 recebido com sucesso!
+2025-07-31 18:11:02,026 - INFO - Leito CTI I015 está ATIVO desde 2024-11-04 09:13:55.
+2025-07-31 18:11:02,027 - INFO - Log de envio criado para leito CTI I015 com id 201.
+2025-07-31 18:11:02,029 - INFO - Leito CTI I015 inserido na base local.
+2025-07-31 18:11:02,029 - INFO - Leito CTI I015 recebido com sucesso!
+2025-07-31 18:11:02,033 - INFO - Leito CTI I014 está ATIVO desde 2022-07-14 14:25:23.
+2025-07-31 18:11:02,034 - INFO - Log de envio criado para leito CTI I014 com id 202.
+2025-07-31 18:11:02,035 - INFO - Leito CTI I014 inserido na base local.
+2025-07-31 18:11:02,035 - INFO - Leito CTI I014 recebido com sucesso!
+2025-07-31 18:11:02,039 - INFO - Leito CTI I013 está ATIVO desde 2022-10-19 08:53:24.
+2025-07-31 18:11:02,041 - INFO - Log de envio criado para leito CTI I013 com id 203.
+2025-07-31 18:11:02,042 - INFO - Leito CTI I013 inserido na base local.
+2025-07-31 18:11:02,042 - INFO - Leito CTI I013 recebido com sucesso!
+2025-07-31 18:11:02,046 - INFO - Leito 6º CMM004 está ATIVO desde 2023-02-06 16:51:40.
+2025-07-31 18:11:02,048 - INFO - Log de envio criado para leito 6º CMM004 com id 204.
+2025-07-31 18:11:02,049 - INFO - Leito 6º CMM004 inserido na base local.
+2025-07-31 18:11:02,049 - INFO - Leito 6º CMM004 recebido com sucesso!
+2025-07-31 18:11:02,054 - INFO - Leito BOX003 está ATIVO desde 2021-09-01 11:56:50.
+2025-07-31 18:11:02,056 - INFO - Log de envio criado para leito BOX003 com id 205.
+2025-07-31 18:11:02,057 - INFO - Leito BOX003 inserido na base local.
+2025-07-31 18:11:02,057 - INFO - Leito BOX003 recebido com sucesso!
+2025-07-31 18:11:02,062 - INFO - Leito UTIN001 está ATIVO desde 2023-06-22 15:29:21.
+2025-07-31 18:11:02,064 - INFO - Log de envio criado para leito UTIN001 com id 206.
+2025-07-31 18:11:02,065 - INFO - Leito UTIN001 inserido na base local.
+2025-07-31 18:11:02,065 - INFO - Leito UTIN001 recebido com sucesso!
+2025-07-31 18:11:02,069 - INFO - Leito PED002 está ATIVO desde 2021-09-01 09:28:11.
+2025-07-31 18:11:02,070 - INFO - Log de envio criado para leito PED002 com id 207.
+2025-07-31 18:11:02,071 - INFO - Leito PED002 inserido na base local.
+2025-07-31 18:11:02,071 - INFO - Leito PED002 recebido com sucesso!
+2025-07-31 18:11:02,103 - WARNING - Leito OBST023 INATIVO, com data de criacao em None
+2025-07-31 18:11:02,105 - INFO - Log de envio criado para leito OBST023 com id 208.
+2025-07-31 18:11:02,106 - INFO - Leito OBST023 inserido na base local.
+2025-07-31 18:11:02,106 - INFO - Leito OBST023 recebido com sucesso!
+2025-07-31 18:11:02,137 - WARNING - Leito OBST024 INATIVO, com data de criacao em None
+2025-07-31 18:11:02,139 - INFO - Log de envio criado para leito OBST024 com id 209.
+2025-07-31 18:11:02,140 - INFO - Leito OBST024 inserido na base local.
+2025-07-31 18:11:02,140 - INFO - Leito OBST024 recebido com sucesso!
+2025-07-31 18:11:02,171 - WARNING - Leito OBST025 INATIVO, com data de criacao em None
+2025-07-31 18:11:02,174 - INFO - Log de envio criado para leito OBST025 com id 210.
+2025-07-31 18:11:02,176 - INFO - Leito OBST025 inserido na base local.
+2025-07-31 18:11:02,176 - INFO - Leito OBST025 recebido com sucesso!
+2025-07-31 18:11:02,211 - WARNING - Leito CMF019 INATIVO, com data de criacao em None
+2025-07-31 18:11:02,215 - INFO - Log de envio criado para leito CMF019 com id 211.
+2025-07-31 18:11:02,218 - INFO - Leito CMF019 inserido na base local.
+2025-07-31 18:11:02,218 - INFO - Leito CMF019 recebido com sucesso!
+2025-07-31 18:11:02,250 - WARNING - Leito CMF020 INATIVO, com data de criacao em None
+2025-07-31 18:11:02,255 - INFO - Log de envio criado para leito CMF020 com id 212.
+2025-07-31 18:11:02,257 - INFO - Leito CMF020 inserido na base local.
+2025-07-31 18:11:02,257 - INFO - Leito CMF020 recebido com sucesso!
+2025-07-31 18:11:02,288 - WARNING - Leito CMF021 INATIVO, com data de criacao em None
+2025-07-31 18:11:02,290 - INFO - Log de envio criado para leito CMF021 com id 213.
+2025-07-31 18:11:02,291 - INFO - Leito CMF021 inserido na base local.
+2025-07-31 18:11:02,291 - INFO - Leito CMF021 recebido com sucesso!
+2025-07-31 18:11:02,322 - WARNING - Leito CMF022 INATIVO, com data de criacao em None
+2025-07-31 18:11:02,324 - INFO - Log de envio criado para leito CMF022 com id 214.
+2025-07-31 18:11:02,325 - INFO - Leito CMF022 inserido na base local.
+2025-07-31 18:11:02,325 - INFO - Leito CMF022 recebido com sucesso!
+2025-07-31 18:11:02,355 - WARNING - Leito CMF023 INATIVO, com data de criacao em None
+2025-07-31 18:11:02,357 - INFO - Log de envio criado para leito CMF023 com id 215.
+2025-07-31 18:11:02,358 - INFO - Leito CMF023 inserido na base local.
+2025-07-31 18:11:02,358 - INFO - Leito CMF023 recebido com sucesso!
+2025-07-31 18:11:02,387 - WARNING - Leito OBRISCO.UV011 INATIVO, com data de criacao em None
+2025-07-31 18:11:02,389 - INFO - Log de envio criado para leito OBRISCO.UV011 com id 216.
+2025-07-31 18:11:02,391 - INFO - Leito OBRISCO.UV011 inserido na base local.
+2025-07-31 18:11:02,391 - INFO - Leito OBRISCO.UV011 recebido com sucesso!
+2025-07-31 18:11:02,420 - INFO - Leito OBST.UV006 está ATIVO desde 2025-01-03 13:51:51.
+2025-07-31 18:11:02,422 - INFO - Log de envio criado para leito OBST.UV006 com id 217.
+2025-07-31 18:11:02,423 - INFO - Leito OBST.UV006 inserido na base local.
+2025-07-31 18:11:02,423 - INFO - Leito OBST.UV006 recebido com sucesso!
+2025-07-31 18:11:02,451 - WARNING - Leito OBRISCO.UV012 INATIVO, com data de criacao em None
+2025-07-31 18:11:02,453 - INFO - Log de envio criado para leito OBRISCO.UV012 com id 218.
+2025-07-31 18:11:02,454 - INFO - Leito OBRISCO.UV012 inserido na base local.
+2025-07-31 18:11:02,454 - INFO - Leito OBRISCO.UV012 recebido com sucesso!
+2025-07-31 18:11:02,458 - INFO - Leito CCF017 está ATIVO desde 2022-10-18 09:13:16.
+2025-07-31 18:11:02,460 - INFO - Log de envio criado para leito CCF017 com id 219.
+2025-07-31 18:11:02,461 - INFO - Leito CCF017 inserido na base local.
+2025-07-31 18:11:02,461 - INFO - Leito CCF017 recebido com sucesso!
+2025-07-31 18:11:02,490 - WARNING - Leito OBRISCO.UV013 INATIVO, com data de criacao em None
+2025-07-31 18:11:02,493 - INFO - Log de envio criado para leito OBRISCO.UV013 com id 220.
+2025-07-31 18:11:02,494 - INFO - Leito OBRISCO.UV013 inserido na base local.
+2025-07-31 18:11:02,494 - INFO - Leito OBRISCO.UV013 recebido com sucesso!
+2025-07-31 18:11:02,522 - WARNING - Leito OBRISCO.UV014 INATIVO, com data de criacao em None
+2025-07-31 18:11:02,524 - INFO - Log de envio criado para leito OBRISCO.UV014 com id 221.
+2025-07-31 18:11:02,525 - INFO - Leito OBRISCO.UV014 inserido na base local.
+2025-07-31 18:11:02,525 - INFO - Leito OBRISCO.UV014 recebido com sucesso!
+2025-07-31 18:11:02,530 - INFO - Leito DIP007 está ATIVO desde 2022-10-11 10:19:42.
+2025-07-31 18:11:02,532 - INFO - Log de envio criado para leito DIP007 com id 222.
+2025-07-31 18:11:02,533 - INFO - Leito DIP007 inserido na base local.
+2025-07-31 18:11:02,533 - INFO - Leito DIP007 recebido com sucesso!
+2025-07-31 18:11:02,561 - WARNING - Leito OBRISCO.UV015 INATIVO, com data de criacao em None
+2025-07-31 18:11:02,563 - INFO - Log de envio criado para leito OBRISCO.UV015 com id 223.
+2025-07-31 18:11:02,565 - INFO - Leito OBRISCO.UV015 inserido na base local.
+2025-07-31 18:11:02,565 - INFO - Leito OBRISCO.UV015 recebido com sucesso!
+2025-07-31 18:11:02,593 - WARNING - Leito OBRISCO.UV016 INATIVO, com data de criacao em None
+2025-07-31 18:11:02,595 - INFO - Log de envio criado para leito OBRISCO.UV016 com id 224.
+2025-07-31 18:11:02,596 - INFO - Leito OBRISCO.UV016 inserido na base local.
+2025-07-31 18:11:02,596 - INFO - Leito OBRISCO.UV016 recebido com sucesso!
+2025-07-31 18:11:02,623 - INFO - Leito OBST.UV004 está ATIVO desde 2025-01-03 13:51:51.
+2025-07-31 18:11:02,625 - INFO - Log de envio criado para leito OBST.UV004 com id 225.
+2025-07-31 18:11:02,627 - INFO - Leito OBST.UV004 inserido na base local.
+2025-07-31 18:11:02,627 - INFO - Leito OBST.UV004 recebido com sucesso!
+2025-07-31 18:11:02,655 - WARNING - Leito OBRISCO.UV017 INATIVO, com data de criacao em None
+2025-07-31 18:11:02,658 - INFO - Log de envio criado para leito OBRISCO.UV017 com id 226.
+2025-07-31 18:11:02,659 - INFO - Leito OBRISCO.UV017 inserido na base local.
+2025-07-31 18:11:02,659 - INFO - Leito OBRISCO.UV017 recebido com sucesso!
+2025-07-31 18:11:02,688 - WARNING - Leito OBRISCO.UV018 INATIVO, com data de criacao em None
+2025-07-31 18:11:02,690 - INFO - Log de envio criado para leito OBRISCO.UV018 com id 227.
+2025-07-31 18:11:02,691 - INFO - Leito OBRISCO.UV018 inserido na base local.
+2025-07-31 18:11:02,691 - INFO - Leito OBRISCO.UV018 recebido com sucesso!
+2025-07-31 18:11:02,696 - WARNING - Leito CMF001 INATIVO, com data de criacao em 2023-05-03 14:59:06.010000
+2025-07-31 18:11:02,697 - INFO - Log de envio criado para leito CMF001 com id 228.
+2025-07-31 18:11:02,698 - INFO - Leito CMF001 inserido na base local.
+2025-07-31 18:11:02,699 - INFO - Leito CMF001 recebido com sucesso!
+2025-07-31 18:11:02,703 - INFO - Leito CCF007 está ATIVO desde 2022-05-26 16:35:32.
+2025-07-31 18:11:02,705 - INFO - Log de envio criado para leito CCF007 com id 229.
+2025-07-31 18:11:02,706 - INFO - Leito CCF007 inserido na base local.
+2025-07-31 18:11:02,706 - INFO - Leito CCF007 recebido com sucesso!
+2025-07-31 18:11:02,710 - WARNING - Leito CMF008 INATIVO, com data de criacao em 2023-05-03 14:59:06.667000
+2025-07-31 18:11:02,712 - INFO - Log de envio criado para leito CMF008 com id 230.
+2025-07-31 18:11:02,713 - INFO - Leito CMF008 inserido na base local.
+2025-07-31 18:11:02,713 - INFO - Leito CMF008 recebido com sucesso!
+2025-07-31 18:11:02,719 - INFO - Leito CTI I004 está ATIVO desde 2021-06-16 09:55:44.
+2025-07-31 18:11:02,724 - INFO - Log de envio criado para leito CTI I004 com id 231.
+2025-07-31 18:11:02,728 - INFO - Leito CTI I004 inserido na base local.
+2025-07-31 18:11:02,728 - INFO - Leito CTI I004 recebido com sucesso!
+2025-07-31 18:11:02,735 - INFO - Leito UCO006 está ATIVO desde 2021-06-16 14:18:54.
+2025-07-31 18:11:02,737 - INFO - Log de envio criado para leito UCO006 com id 232.
+2025-07-31 18:11:02,739 - INFO - Leito UCO006 inserido na base local.
+2025-07-31 18:11:02,739 - INFO - Leito UCO006 recebido com sucesso!
+2025-07-31 18:11:02,744 - INFO - Leito OFT003 está ATIVO desde 2022-05-26 10:55:25.
+2025-07-31 18:11:02,747 - INFO - Log de envio criado para leito OFT003 com id 233.
+2025-07-31 18:11:02,748 - INFO - Leito OFT003 inserido na base local.
+2025-07-31 18:11:02,749 - INFO - Leito OFT003 recebido com sucesso!
+2025-07-31 18:11:02,753 - WARNING - Leito UCINCA002 INATIVO, com data de criacao em 2023-05-04 12:07:50.883000
+2025-07-31 18:11:02,756 - INFO - Log de envio criado para leito UCINCA002 com id 234.
+2025-07-31 18:11:02,758 - INFO - Leito UCINCA002 inserido na base local.
+2025-07-31 18:11:02,758 - INFO - Leito UCINCA002 recebido com sucesso!
+2025-07-31 18:11:02,764 - WARNING - Leito UCINCA004 INATIVO, com data de criacao em 2023-05-04 12:07:50.919000
+2025-07-31 18:11:02,767 - INFO - Log de envio criado para leito UCINCA004 com id 235.
+2025-07-31 18:11:02,768 - INFO - Leito UCINCA004 inserido na base local.
+2025-07-31 18:11:02,769 - INFO - Leito UCINCA004 recebido com sucesso!
+2025-07-31 18:11:02,773 - INFO - Leito CCEMI004 está ATIVO desde 2021-06-16 11:32:33.
+2025-07-31 18:11:02,775 - INFO - Log de envio criado para leito CCEMI004 com id 236.
+2025-07-31 18:11:02,776 - INFO - Leito CCEMI004 inserido na base local.
+2025-07-31 18:11:02,776 - INFO - Leito CCEMI004 recebido com sucesso!
+2025-07-31 18:11:02,781 - INFO - Leito 6º CMM013 está ATIVO desde 2023-11-17 16:11:28.
+2025-07-31 18:11:02,782 - INFO - Log de envio criado para leito 6º CMM013 com id 237.
+2025-07-31 18:11:02,783 - INFO - Leito 6º CMM013 inserido na base local.
+2025-07-31 18:11:02,783 - INFO - Leito 6º CMM013 recebido com sucesso!
+2025-07-31 18:11:02,788 - INFO - Leito CCEMI002 está ATIVO desde 2021-06-16 11:32:33.
+2025-07-31 18:11:02,790 - INFO - Log de envio criado para leito CCEMI002 com id 238.
+2025-07-31 18:11:02,791 - INFO - Leito CCEMI002 inserido na base local.
+2025-07-31 18:11:02,791 - INFO - Leito CCEMI002 recebido com sucesso!
+2025-07-31 18:11:02,821 - INFO - Leito OBST.UV007 está ATIVO desde 2025-01-03 13:51:51.
+2025-07-31 18:11:02,823 - INFO - Log de envio criado para leito OBST.UV007 com id 239.
+2025-07-31 18:11:02,824 - INFO - Leito OBST.UV007 inserido na base local.
+2025-07-31 18:11:02,824 - INFO - Leito OBST.UV007 recebido com sucesso!
+2025-07-31 18:11:02,829 - INFO - Leito HEMATO012 está ATIVO desde 2024-11-04 09:33:45.
+2025-07-31 18:11:02,831 - INFO - Log de envio criado para leito HEMATO012 com id 240.
+2025-07-31 18:11:02,832 - INFO - Leito HEMATO012 inserido na base local.
+2025-07-31 18:11:02,832 - INFO - Leito HEMATO012 recebido com sucesso!
+2025-07-31 18:11:02,836 - INFO - Leito PED006 está ATIVO desde 2022-05-16 16:05:00.
+2025-07-31 18:11:02,838 - INFO - Log de envio criado para leito PED006 com id 241.
+2025-07-31 18:11:02,840 - INFO - Leito PED006 inserido na base local.
+2025-07-31 18:11:02,840 - INFO - Leito PED006 recebido com sucesso!
+2025-07-31 18:11:02,846 - INFO - Leito CCEMI003 está ATIVO desde 2021-06-16 11:32:33.
+2025-07-31 18:11:02,847 - INFO - Log de envio criado para leito CCEMI003 com id 242.
+2025-07-31 18:11:02,848 - INFO - Leito CCEMI003 inserido na base local.
+2025-07-31 18:11:02,849 - INFO - Leito CCEMI003 recebido com sucesso!
+2025-07-31 18:11:02,853 - INFO - Leito DIP010 está ATIVO desde 2022-08-02 07:24:35.
+2025-07-31 18:11:02,855 - INFO - Log de envio criado para leito DIP010 com id 243.
+2025-07-31 18:11:02,856 - INFO - Leito DIP010 inserido na base local.
+2025-07-31 18:11:02,856 - INFO - Leito DIP010 recebido com sucesso!
+2025-07-31 18:11:02,861 - INFO - Leito CCF021 está ATIVO desde 2022-10-18 09:13:16.
+2025-07-31 18:11:02,864 - INFO - Log de envio criado para leito CCF021 com id 244.
+2025-07-31 18:11:02,865 - INFO - Leito CCF021 inserido na base local.
+2025-07-31 18:11:02,865 - INFO - Leito CCF021 recebido com sucesso!
+2025-07-31 18:11:02,870 - INFO - Leito HOSPDIA5HD03 está ATIVO desde 2022-06-22 09:58:15.
+2025-07-31 18:11:02,872 - INFO - Log de envio criado para leito HOSPDIA5HD03 com id 245.
+2025-07-31 18:11:02,874 - INFO - Leito HOSPDIA5HD03 inserido na base local.
+2025-07-31 18:11:02,874 - INFO - Leito HOSPDIA5HD03 recebido com sucesso!
+2025-07-31 18:11:02,879 - INFO - Leito UCO003 está ATIVO desde 2021-06-16 14:18:54.
+2025-07-31 18:11:02,881 - INFO - Log de envio criado para leito UCO003 com id 246.
+2025-07-31 18:11:02,882 - INFO - Leito UCO003 inserido na base local.
+2025-07-31 18:11:02,882 - INFO - Leito UCO003 recebido com sucesso!
+2025-07-31 18:11:02,890 - INFO - Leito CCEMI005 está ATIVO desde 2021-06-16 11:32:33.
+2025-07-31 18:11:02,892 - INFO - Log de envio criado para leito CCEMI005 com id 247.
+2025-07-31 18:11:02,893 - INFO - Leito CCEMI005 inserido na base local.
+2025-07-31 18:11:02,893 - INFO - Leito CCEMI005 recebido com sucesso!
+2025-07-31 18:11:02,898 - INFO - Leito CCF022 está ATIVO desde 2023-02-06 16:49:49.
+2025-07-31 18:11:02,901 - INFO - Log de envio criado para leito CCF022 com id 248.
+2025-07-31 18:11:02,903 - INFO - Leito CCF022 inserido na base local.
+2025-07-31 18:11:02,903 - INFO - Leito CCF022 recebido com sucesso!
+2025-07-31 18:11:02,909 - INFO - Leito CCF011 está ATIVO desde 2022-05-26 16:45:12.
+2025-07-31 18:11:02,911 - INFO - Log de envio criado para leito CCF011 com id 249.
+2025-07-31 18:11:02,912 - INFO - Leito CCF011 inserido na base local.
+2025-07-31 18:11:02,913 - INFO - Leito CCF011 recebido com sucesso!
+2025-07-31 18:11:02,942 - INFO - Leito OBST.UV005 está ATIVO desde 2025-01-03 13:51:51.
+2025-07-31 18:11:02,944 - INFO - Log de envio criado para leito OBST.UV005 com id 250.
+2025-07-31 18:11:02,945 - INFO - Leito OBST.UV005 inserido na base local.
+2025-07-31 18:11:02,945 - INFO - Leito OBST.UV005 recebido com sucesso!
+2025-07-31 18:11:02,950 - WARNING - Leito CMF009 INATIVO, com data de criacao em 2023-05-03 14:59:06.831000
+2025-07-31 18:11:02,952 - INFO - Log de envio criado para leito CMF009 com id 251.
+2025-07-31 18:11:02,953 - INFO - Leito CMF009 inserido na base local.
+2025-07-31 18:11:02,953 - INFO - Leito CMF009 recebido com sucesso!
+2025-07-31 18:11:02,957 - INFO - Leito 6º CMM005 está ATIVO desde 2023-02-06 16:51:40.
+2025-07-31 18:11:02,958 - INFO - Log de envio criado para leito 6º CMM005 com id 252.
+2025-07-31 18:11:02,959 - INFO - Leito 6º CMM005 inserido na base local.
+2025-07-31 18:11:02,960 - INFO - Leito 6º CMM005 recebido com sucesso!
+2025-07-31 18:11:02,964 - INFO - Leito 6º CMM007 está ATIVO desde 2023-02-06 16:51:40.
+2025-07-31 18:11:02,965 - INFO - Log de envio criado para leito 6º CMM007 com id 253.
+2025-07-31 18:11:02,966 - INFO - Leito 6º CMM007 inserido na base local.
+2025-07-31 18:11:02,966 - INFO - Leito 6º CMM007 recebido com sucesso!
+2025-07-31 18:11:02,971 - INFO - Leito DIP011 está ATIVO desde 2021-06-15 14:59:05.
+2025-07-31 18:11:02,973 - INFO - Log de envio criado para leito DIP011 com id 254.
+2025-07-31 18:11:02,974 - INFO - Leito DIP011 inserido na base local.
+2025-07-31 18:11:02,974 - INFO - Leito DIP011 recebido com sucesso!
+2025-07-31 18:11:03,004 - INFO - Leito OBST.UV008 está ATIVO desde 2025-01-03 13:51:51.
+2025-07-31 18:11:03,008 - INFO - Log de envio criado para leito OBST.UV008 com id 255.
+2025-07-31 18:11:03,009 - INFO - Leito OBST.UV008 inserido na base local.
+2025-07-31 18:11:03,010 - INFO - Leito OBST.UV008 recebido com sucesso!
+2025-07-31 18:11:03,043 - INFO - Leito OBST.UV009 está ATIVO desde 2025-01-03 13:51:51.
+2025-07-31 18:11:03,045 - INFO - Log de envio criado para leito OBST.UV009 com id 256.
+2025-07-31 18:11:03,046 - INFO - Leito OBST.UV009 inserido na base local.
+2025-07-31 18:11:03,046 - INFO - Leito OBST.UV009 recebido com sucesso!
+2025-07-31 18:11:03,052 - INFO - Leito UCO001 está ATIVO desde 2022-05-24 16:25:00.
+2025-07-31 18:11:03,053 - INFO - Log de envio criado para leito UCO001 com id 257.
+2025-07-31 18:11:03,054 - INFO - Leito UCO001 inserido na base local.
+2025-07-31 18:11:03,054 - INFO - Leito UCO001 recebido com sucesso!
+2025-07-31 18:11:03,058 - INFO - Leito UCO002 está ATIVO desde 2021-06-16 14:18:54.
+2025-07-31 18:11:03,060 - INFO - Log de envio criado para leito UCO002 com id 258.
+2025-07-31 18:11:03,060 - INFO - Leito UCO002 inserido na base local.
+2025-07-31 18:11:03,060 - INFO - Leito UCO002 recebido com sucesso!
+2025-07-31 18:11:03,065 - INFO - Leito 6º CMM014 está ATIVO desde 2023-11-17 16:11:28.
+2025-07-31 18:11:03,067 - INFO - Log de envio criado para leito 6º CMM014 com id 259.
+2025-07-31 18:11:03,068 - INFO - Leito 6º CMM014 inserido na base local.
+2025-07-31 18:11:03,068 - INFO - Leito 6º CMM014 recebido com sucesso!
+2025-07-31 18:11:03,072 - INFO - Leito CTI I009 está ATIVO desde 2023-07-14 09:46:52.
+2025-07-31 18:11:03,074 - INFO - Log de envio criado para leito CTI I009 com id 260.
+2025-07-31 18:11:03,075 - INFO - Leito CTI I009 inserido na base local.
+2025-07-31 18:11:03,075 - INFO - Leito CTI I009 recebido com sucesso!
+2025-07-31 18:11:03,080 - INFO - Leito HOSPDIA5HD02 está ATIVO desde 2022-06-22 09:58:15.
+2025-07-31 18:11:03,082 - INFO - Log de envio criado para leito HOSPDIA5HD02 com id 261.
+2025-07-31 18:11:03,083 - INFO - Leito HOSPDIA5HD02 inserido na base local.
+2025-07-31 18:11:03,083 - INFO - Leito HOSPDIA5HD02 recebido com sucesso!
+2025-07-31 18:11:03,087 - INFO - Leito CTI I016 está ATIVO desde 2025-02-24 16:19:26.
+2025-07-31 18:11:03,088 - INFO - Log de envio criado para leito CTI I016 com id 262.
+2025-07-31 18:11:03,089 - INFO - Leito CTI I016 inserido na base local.
+2025-07-31 18:11:03,089 - INFO - Leito CTI I016 recebido com sucesso!
+2025-07-31 18:11:03,093 - INFO - Leito CCEMI014 está ATIVO desde 2023-12-08 09:39:58.
+2025-07-31 18:11:03,094 - INFO - Log de envio criado para leito CCEMI014 com id 263.
+2025-07-31 18:11:03,095 - INFO - Leito CCEMI014 inserido na base local.
+2025-07-31 18:11:03,095 - INFO - Leito CCEMI014 recebido com sucesso!
+2025-07-31 18:11:03,099 - INFO - Leito CCF019 está ATIVO desde 2022-10-18 09:13:16.
+2025-07-31 18:11:03,101 - INFO - Log de envio criado para leito CCF019 com id 264.
+2025-07-31 18:11:03,101 - INFO - Leito CCF019 inserido na base local.
+2025-07-31 18:11:03,101 - INFO - Leito CCF019 recebido com sucesso!
+2025-07-31 18:11:03,105 - INFO - Leito CTI I011 está ATIVO desde 2023-11-16 09:53:10.
+2025-07-31 18:11:03,107 - INFO - Log de envio criado para leito CTI I011 com id 265.
+2025-07-31 18:11:03,108 - INFO - Leito CTI I011 inserido na base local.
+2025-07-31 18:11:03,108 - INFO - Leito CTI I011 recebido com sucesso!
+2025-07-31 18:11:03,112 - INFO - Leito BOX002 está ATIVO desde 2021-09-01 11:56:50.
+2025-07-31 18:11:03,114 - INFO - Log de envio criado para leito BOX002 com id 266.
+2025-07-31 18:11:03,114 - INFO - Leito BOX002 inserido na base local.
+2025-07-31 18:11:03,115 - INFO - Leito BOX002 recebido com sucesso!
+2025-07-31 18:11:03,135 - INFO - Leito BOX011 está ATIVO desde 2024-04-17 12:38:21.
+2025-07-31 18:11:03,137 - INFO - Log de envio criado para leito BOX011 com id 267.
+2025-07-31 18:11:03,138 - INFO - Leito BOX011 inserido na base local.
+2025-07-31 18:11:03,138 - INFO - Leito BOX011 recebido com sucesso!
+2025-07-31 18:11:03,144 - INFO - Leito UPG002 está ATIVO desde 2024-01-15 13:54:36.
+2025-07-31 18:11:03,146 - INFO - Log de envio criado para leito UPG002 com id 268.
+2025-07-31 18:11:03,147 - INFO - Leito UPG002 inserido na base local.
+2025-07-31 18:11:03,147 - INFO - Leito UPG002 recebido com sucesso!
+2025-07-31 18:11:03,152 - WARNING - Leito UPG.UV001 INATIVO, com data de criacao em 2025-01-20 13:33:40.592000
+2025-07-31 18:11:03,153 - INFO - Log de envio criado para leito UPG.UV001 com id 269.
+2025-07-31 18:11:03,154 - INFO - Leito UPG.UV001 inserido na base local.
+2025-07-31 18:11:03,155 - INFO - Leito UPG.UV001 recebido com sucesso!
+2025-07-31 18:11:03,159 - INFO - Leito CCM009 está ATIVO desde 2022-05-26 13:39:09.
+2025-07-31 18:11:03,163 - INFO - Log de envio criado para leito CCM009 com id 270.
+2025-07-31 18:11:03,165 - INFO - Leito CCM009 inserido na base local.
+2025-07-31 18:11:03,165 - INFO - Leito CCM009 recebido com sucesso!
+2025-07-31 18:11:03,184 - INFO - Leito UPG008 está ATIVO desde 2024-01-15 14:14:20.
+2025-07-31 18:11:03,185 - INFO - Log de envio criado para leito UPG008 com id 271.
+2025-07-31 18:11:03,187 - INFO - Leito UPG008 inserido na base local.
+2025-07-31 18:11:03,187 - INFO - Leito UPG008 recebido com sucesso!
+2025-07-31 18:11:03,191 - INFO - Leito CCM005 está ATIVO desde 2022-09-19 16:26:17.
+2025-07-31 18:11:03,193 - INFO - Log de envio criado para leito CCM005 com id 272.
+2025-07-31 18:11:03,194 - INFO - Leito CCM005 inserido na base local.
+2025-07-31 18:11:03,194 - INFO - Leito CCM005 recebido com sucesso!
+2025-07-31 18:11:03,199 - INFO - Leito BOX007 está ATIVO desde 2022-05-13 14:09:00.
+2025-07-31 18:11:03,201 - INFO - Log de envio criado para leito BOX007 com id 273.
+2025-07-31 18:11:03,202 - INFO - Leito BOX007 inserido na base local.
+2025-07-31 18:11:03,202 - INFO - Leito BOX007 recebido com sucesso!
+2025-07-31 18:11:03,211 - INFO - Leito UPG001 está ATIVO desde 2024-01-15 13:54:36.
+2025-07-31 18:11:03,215 - INFO - Log de envio criado para leito UPG001 com id 274.
+2025-07-31 18:11:03,216 - INFO - Leito UPG001 inserido na base local.
+2025-07-31 18:11:03,216 - INFO - Leito UPG001 recebido com sucesso!
+2025-07-31 18:11:03,221 - INFO - Leito CCEMI011 está ATIVO desde 2023-11-22 15:46:22.
+2025-07-31 18:11:03,222 - INFO - Log de envio criado para leito CCEMI011 com id 275.
+2025-07-31 18:11:03,223 - INFO - Leito CCEMI011 inserido na base local.
+2025-07-31 18:11:03,224 - INFO - Leito CCEMI011 recebido com sucesso!
+2025-07-31 18:11:03,230 - WARNING - Leito CMF004 INATIVO, com data de criacao em 2023-05-03 14:59:06.576000
+2025-07-31 18:11:03,233 - INFO - Log de envio criado para leito CMF004 com id 276.
+2025-07-31 18:11:03,236 - INFO - Leito CMF004 inserido na base local.
+2025-07-31 18:11:03,236 - INFO - Leito CMF004 recebido com sucesso!
+2025-07-31 18:11:03,243 - WARNING - Leito CMF007 INATIVO, com data de criacao em 2023-05-03 14:59:06.642000
+2025-07-31 18:11:03,246 - INFO - Log de envio criado para leito CMF007 com id 277.
+2025-07-31 18:11:03,249 - INFO - Leito CMF007 inserido na base local.
+2025-07-31 18:11:03,249 - INFO - Leito CMF007 recebido com sucesso!
+2025-07-31 18:11:03,255 - WARNING - Leito CMF012 INATIVO, com data de criacao em 2023-05-03 14:59:06.882000
+2025-07-31 18:11:03,256 - INFO - Log de envio criado para leito CMF012 com id 278.
+2025-07-31 18:11:03,257 - INFO - Leito CMF012 inserido na base local.
+2025-07-31 18:11:03,257 - INFO - Leito CMF012 recebido com sucesso!
+2025-07-31 18:11:03,262 - INFO - Leito UPG006 está ATIVO desde 2024-01-15 13:54:36.
+2025-07-31 18:11:03,263 - INFO - Log de envio criado para leito UPG006 com id 279.
+2025-07-31 18:11:03,264 - INFO - Leito UPG006 inserido na base local.
+2025-07-31 18:11:03,264 - INFO - Leito UPG006 recebido com sucesso!
+2025-07-31 18:11:03,268 - INFO - Leito CCF002 está ATIVO desde 2020-11-03 12:23:33.
+2025-07-31 18:11:03,270 - INFO - Log de envio criado para leito CCF002 com id 280.
+2025-07-31 18:11:03,271 - INFO - Leito CCF002 inserido na base local.
+2025-07-31 18:11:03,271 - INFO - Leito CCF002 recebido com sucesso!
+2025-07-31 18:11:03,276 - WARNING - Leito CMF013 INATIVO, com data de criacao em 2023-05-03 14:59:06.897000
+2025-07-31 18:11:03,278 - INFO - Log de envio criado para leito CMF013 com id 281.
+2025-07-31 18:11:03,279 - INFO - Leito CMF013 inserido na base local.
+2025-07-31 18:11:03,279 - INFO - Leito CMF013 recebido com sucesso!
+2025-07-31 18:11:03,283 - WARNING - Leito CMF016 INATIVO, com data de criacao em 2023-05-03 14:59:06.924000
+2025-07-31 18:11:03,285 - INFO - Log de envio criado para leito CMF016 com id 282.
+2025-07-31 18:11:03,286 - INFO - Leito CMF016 inserido na base local.
+2025-07-31 18:11:03,286 - INFO - Leito CMF016 recebido com sucesso!
+2025-07-31 18:11:03,311 - WARNING - Leito CMF017 INATIVO, com data de criacao em None
+2025-07-31 18:11:03,313 - INFO - Log de envio criado para leito CMF017 com id 283.
+2025-07-31 18:11:03,315 - INFO - Leito CMF017 inserido na base local.
+2025-07-31 18:11:03,315 - INFO - Leito CMF017 recebido com sucesso!
+2025-07-31 18:11:03,319 - INFO - Leito CCF012 está ATIVO desde 2022-05-27 15:26:05.
+2025-07-31 18:11:03,321 - INFO - Log de envio criado para leito CCF012 com id 284.
+2025-07-31 18:11:03,322 - INFO - Leito CCF012 inserido na base local.
+2025-07-31 18:11:03,322 - INFO - Leito CCF012 recebido com sucesso!
+2025-07-31 18:11:03,327 - INFO - Leito HOSPDIA001 está ATIVO desde 2022-04-27 08:00:00.
+2025-07-31 18:11:03,330 - INFO - Log de envio criado para leito HOSPDIA001 com id 285.
+2025-07-31 18:11:03,331 - INFO - Leito HOSPDIA001 inserido na base local.
+2025-07-31 18:11:03,331 - INFO - Leito HOSPDIA001 recebido com sucesso!
+2025-07-31 18:11:03,336 - INFO - Leito CTI I010 está ATIVO desde 2022-03-16 09:26:54.
+2025-07-31 18:11:03,338 - INFO - Log de envio criado para leito CTI I010 com id 286.
+2025-07-31 18:11:03,340 - INFO - Leito CTI I010 inserido na base local.
+2025-07-31 18:11:03,340 - INFO - Leito CTI I010 recebido com sucesso!
+2025-07-31 18:11:03,344 - INFO - Leito HOSPDIA004 está ATIVO desde 2022-02-15 17:29:47.
+2025-07-31 18:11:03,346 - INFO - Log de envio criado para leito HOSPDIA004 com id 287.
+2025-07-31 18:11:03,348 - INFO - Leito HOSPDIA004 inserido na base local.
+2025-07-31 18:11:03,348 - INFO - Leito HOSPDIA004 recebido com sucesso!
+2025-07-31 18:11:03,353 - INFO - Leito HOSPDIA002 está ATIVO desde 2022-02-15 17:29:47.
+2025-07-31 18:11:03,355 - INFO - Log de envio criado para leito HOSPDIA002 com id 288.
+2025-07-31 18:11:03,356 - INFO - Leito HOSPDIA002 inserido na base local.
+2025-07-31 18:11:03,356 - INFO - Leito HOSPDIA002 recebido com sucesso!
+2025-07-31 18:11:03,361 - INFO - Leito HOSPDIA003 está ATIVO desde 2022-04-27 08:07:00.
+2025-07-31 18:11:03,363 - INFO - Log de envio criado para leito HOSPDIA003 com id 289.
+2025-07-31 18:11:03,364 - INFO - Leito HOSPDIA003 inserido na base local.
+2025-07-31 18:11:03,364 - INFO - Leito HOSPDIA003 recebido com sucesso!
+2025-07-31 18:11:03,368 - INFO - Leito OFT005 está ATIVO desde 2022-05-26 10:55:25.
+2025-07-31 18:11:03,370 - INFO - Log de envio criado para leito OFT005 com id 290.
+2025-07-31 18:11:03,371 - INFO - Leito OFT005 inserido na base local.
+2025-07-31 18:11:03,372 - INFO - Leito OFT005 recebido com sucesso!
+2025-07-31 18:11:03,375 - INFO - Leito CTI I001 está ATIVO desde 2022-07-14 14:25:23.
+2025-07-31 18:11:03,377 - INFO - Log de envio criado para leito CTI I001 com id 291.
+2025-07-31 18:11:03,378 - INFO - Leito CTI I001 inserido na base local.
+2025-07-31 18:11:03,378 - INFO - Leito CTI I001 recebido com sucesso!
+2025-07-31 18:11:03,382 - INFO - Leito BOX004 está ATIVO desde 2021-09-01 11:56:50.
+2025-07-31 18:11:03,386 - INFO - Log de envio criado para leito BOX004 com id 292.
+2025-07-31 18:11:03,387 - INFO - Leito BOX004 inserido na base local.
+2025-07-31 18:11:03,387 - INFO - Leito BOX004 recebido com sucesso!
+2025-07-31 18:11:03,391 - INFO - Leito CCM014 está ATIVO desde 2023-07-14 09:44:02.
+2025-07-31 18:11:03,392 - INFO - Log de envio criado para leito CCM014 com id 293.
+2025-07-31 18:11:03,393 - INFO - Leito CCM014 inserido na base local.
+2025-07-31 18:11:03,394 - INFO - Leito CCM014 recebido com sucesso!
+2025-07-31 18:11:03,397 - INFO - Leito OBST002 está ATIVO desde 2020-05-20 15:49:00.
+2025-07-31 18:11:03,399 - INFO - Log de envio criado para leito OBST002 com id 294.
+2025-07-31 18:11:03,400 - INFO - Leito OBST002 inserido na base local.
+2025-07-31 18:11:03,401 - INFO - Leito OBST002 recebido com sucesso!
+2025-07-31 18:11:03,405 - INFO - Leito HOSPDIA5HD01 está ATIVO desde 2022-06-22 09:50:18.
+2025-07-31 18:11:03,407 - INFO - Log de envio criado para leito HOSPDIA5HD01 com id 295.
+2025-07-31 18:11:03,408 - INFO - Leito HOSPDIA5HD01 inserido na base local.
+2025-07-31 18:11:03,408 - INFO - Leito HOSPDIA5HD01 recebido com sucesso!
+2025-07-31 18:11:03,414 - INFO - Leito OFT006 está ATIVO desde 2022-12-05 13:39:26.
+2025-07-31 18:11:03,416 - INFO - Log de envio criado para leito OFT006 com id 296.
+2025-07-31 18:11:03,417 - INFO - Leito OFT006 inserido na base local.
+2025-07-31 18:11:03,418 - INFO - Leito OFT006 recebido com sucesso!
+2025-07-31 18:11:03,423 - INFO - Leito OBST003 está ATIVO desde 2020-05-13 17:10:55.
+2025-07-31 18:11:03,425 - INFO - Log de envio criado para leito OBST003 com id 297.
+2025-07-31 18:11:03,426 - INFO - Leito OBST003 inserido na base local.
+2025-07-31 18:11:03,426 - INFO - Leito OBST003 recebido com sucesso!
+2025-07-31 18:11:03,431 - INFO - Leito CCEMI015 está ATIVO desde 2023-12-08 09:39:58.
+2025-07-31 18:11:03,432 - INFO - Log de envio criado para leito CCEMI015 com id 298.
+2025-07-31 18:11:03,434 - INFO - Leito CCEMI015 inserido na base local.
+2025-07-31 18:11:03,434 - INFO - Leito CCEMI015 recebido com sucesso!
+2025-07-31 18:11:03,456 - INFO - Leito CCEMI012 está ATIVO desde 2023-12-08 09:39:58.
+2025-07-31 18:11:03,459 - INFO - Log de envio criado para leito CCEMI012 com id 299.
+2025-07-31 18:11:03,460 - INFO - Leito CCEMI012 inserido na base local.
+2025-07-31 18:11:03,460 - INFO - Leito CCEMI012 recebido com sucesso!
+2025-07-31 18:11:03,475 - INFO - Leito OBST004 está ATIVO desde 2020-05-13 17:10:55.
+2025-07-31 18:11:03,477 - INFO - Log de envio criado para leito OBST004 com id 300.
+2025-07-31 18:11:03,479 - INFO - Leito OBST004 inserido na base local.
+2025-07-31 18:11:03,479 - INFO - Leito OBST004 recebido com sucesso!
+2025-07-31 18:11:03,487 - INFO - Leito OBST001 está ATIVO desde 2020-05-13 17:10:54.
+2025-07-31 18:11:03,490 - INFO - Log de envio criado para leito OBST001 com id 301.
+2025-07-31 18:11:03,491 - INFO - Leito OBST001 inserido na base local.
+2025-07-31 18:11:03,491 - INFO - Leito OBST001 recebido com sucesso!
+2025-07-31 18:11:03,496 - INFO - Leito OFT001 está ATIVO desde 2022-05-26 10:34:44.
+2025-07-31 18:11:03,498 - INFO - Log de envio criado para leito OFT001 com id 302.
+2025-07-31 18:11:03,499 - INFO - Leito OFT001 inserido na base local.
+2025-07-31 18:11:03,499 - INFO - Leito OFT001 recebido com sucesso!
+2025-07-31 18:11:03,504 - INFO - Leito 6º CMM016 está ATIVO desde 2023-11-17 16:11:28.
+2025-07-31 18:11:03,505 - INFO - Log de envio criado para leito 6º CMM016 com id 303.
+2025-07-31 18:11:03,506 - INFO - Leito 6º CMM016 inserido na base local.
+2025-07-31 18:11:03,506 - INFO - Leito 6º CMM016 recebido com sucesso!
+2025-07-31 18:11:03,513 - INFO - Leito BOX005 está ATIVO desde 2021-09-01 11:56:50.
+2025-07-31 18:11:03,515 - INFO - Log de envio criado para leito BOX005 com id 304.
+2025-07-31 18:11:03,515 - INFO - Leito BOX005 inserido na base local.
+2025-07-31 18:11:03,515 - INFO - Leito BOX005 recebido com sucesso!
+2025-07-31 18:11:03,520 - INFO - Leito CCF004 está ATIVO desde 2021-06-14 15:08:15.
+2025-07-31 18:11:03,522 - INFO - Log de envio criado para leito CCF004 com id 305.
+2025-07-31 18:11:03,522 - INFO - Leito CCF004 inserido na base local.
+2025-07-31 18:11:03,523 - INFO - Leito CCF004 recebido com sucesso!
+2025-07-31 18:11:03,527 - WARNING - Leito CMF002 INATIVO, com data de criacao em 2023-05-03 14:59:06.527000
+2025-07-31 18:11:03,528 - INFO - Log de envio criado para leito CMF002 com id 306.
+2025-07-31 18:11:03,529 - INFO - Leito CMF002 inserido na base local.
+2025-07-31 18:11:03,529 - INFO - Leito CMF002 recebido com sucesso!
+2025-07-31 18:11:03,533 - WARNING - Leito CMF006 INATIVO, com data de criacao em 2023-05-03 14:59:06.621000
+2025-07-31 18:11:03,534 - INFO - Log de envio criado para leito CMF006 com id 307.
+2025-07-31 18:11:03,535 - INFO - Leito CMF006 inserido na base local.
+2025-07-31 18:11:03,535 - INFO - Leito CMF006 recebido com sucesso!
+2025-07-31 18:11:03,539 - INFO - Leito UCO010 está ATIVO desde 2023-05-17 09:33:28.
+2025-07-31 18:11:03,541 - INFO - Log de envio criado para leito UCO010 com id 308.
+2025-07-31 18:11:03,542 - INFO - Leito UCO010 inserido na base local.
+2025-07-31 18:11:03,542 - INFO - Leito UCO010 recebido com sucesso!
+2025-07-31 18:11:03,546 - WARNING - Leito CMF011 INATIVO, com data de criacao em 2023-05-03 14:59:06.862000
+2025-07-31 18:11:03,547 - INFO - Log de envio criado para leito CMF011 com id 309.
+2025-07-31 18:11:03,548 - INFO - Leito CMF011 inserido na base local.
+2025-07-31 18:11:03,549 - INFO - Leito CMF011 recebido com sucesso!
+2025-07-31 18:11:03,552 - WARNING - Leito CMF014 INATIVO, com data de criacao em 2023-11-16 09:24:26.944000
+2025-07-31 18:11:03,554 - INFO - Log de envio criado para leito CMF014 com id 310.
+2025-07-31 18:11:03,555 - INFO - Leito CMF014 inserido na base local.
+2025-07-31 18:11:03,555 - INFO - Leito CMF014 recebido com sucesso!
+2025-07-31 18:11:03,560 - WARNING - Leito CMF015 INATIVO, com data de criacao em 2023-05-03 14:59:06.911000
+2025-07-31 18:11:03,561 - INFO - Log de envio criado para leito CMF015 com id 311.
+2025-07-31 18:11:03,562 - INFO - Leito CMF015 inserido na base local.
+2025-07-31 18:11:03,562 - INFO - Leito CMF015 recebido com sucesso!
+2025-07-31 18:11:03,589 - WARNING - Leito CMF018 INATIVO, com data de criacao em None
+2025-07-31 18:11:03,592 - INFO - Log de envio criado para leito CMF018 com id 312.
+2025-07-31 18:11:03,594 - INFO - Leito CMF018 inserido na base local.
+2025-07-31 18:11:03,594 - INFO - Leito CMF018 recebido com sucesso!
+2025-07-31 18:11:03,598 - INFO - Leito CCEMI016 está ATIVO desde 2023-12-08 09:39:58.
+2025-07-31 18:11:03,600 - INFO - Log de envio criado para leito CCEMI016 com id 313.
+2025-07-31 18:11:03,601 - INFO - Leito CCEMI016 inserido na base local.
+2025-07-31 18:11:03,602 - INFO - Leito CCEMI016 recebido com sucesso!
+2025-07-31 18:11:03,606 - INFO - Leito CTI I007 está ATIVO desde 2024-07-22 08:58:28.
+2025-07-31 18:11:03,608 - INFO - Log de envio criado para leito CTI I007 com id 314.
+2025-07-31 18:11:03,609 - INFO - Leito CTI I007 inserido na base local.
+2025-07-31 18:11:03,610 - INFO - Leito CTI I007 recebido com sucesso!
+2025-07-31 18:11:03,614 - INFO - Leito CCF005 está ATIVO desde 2021-06-14 15:16:25.
+2025-07-31 18:11:03,615 - INFO - Log de envio criado para leito CCF005 com id 315.
+2025-07-31 18:11:03,616 - INFO - Leito CCF005 inserido na base local.
+2025-07-31 18:11:03,616 - INFO - Leito CCF005 recebido com sucesso!
+2025-07-31 18:11:03,620 - INFO - Leito CCF008 está ATIVO desde 2022-05-26 16:45:12.
+2025-07-31 18:11:03,621 - INFO - Log de envio criado para leito CCF008 com id 316.
+2025-07-31 18:11:03,622 - INFO - Leito CCF008 inserido na base local.
+2025-07-31 18:11:03,623 - INFO - Leito CCF008 recebido com sucesso!
+2025-07-31 18:11:03,627 - INFO - Leito CCM006 está ATIVO desde 2022-05-26 13:39:09.
+2025-07-31 18:11:03,628 - INFO - Log de envio criado para leito CCM006 com id 317.
+2025-07-31 18:11:03,629 - INFO - Leito CCM006 inserido na base local.
+2025-07-31 18:11:03,629 - INFO - Leito CCM006 recebido com sucesso!
+2025-07-31 18:11:03,632 - INFO - Leito CCM012 está ATIVO desde 2022-09-19 16:26:17.
+2025-07-31 18:11:03,634 - INFO - Log de envio criado para leito CCM012 com id 318.
+2025-07-31 18:11:03,636 - INFO - Leito CCM012 inserido na base local.
+2025-07-31 18:11:03,636 - INFO - Leito CCM012 recebido com sucesso!
+2025-07-31 18:11:03,639 - INFO - Leito 6º CMM003 está ATIVO desde 2023-02-06 16:51:40.
+2025-07-31 18:11:03,640 - INFO - Log de envio criado para leito 6º CMM003 com id 319.
+2025-07-31 18:11:03,641 - INFO - Leito 6º CMM003 inserido na base local.
+2025-07-31 18:11:03,641 - INFO - Leito 6º CMM003 recebido com sucesso!
+2025-07-31 18:11:03,644 - INFO - Leito CCF010 está ATIVO desde 2022-05-26 16:45:12.
+2025-07-31 18:11:03,646 - INFO - Log de envio criado para leito CCF010 com id 320.
+2025-07-31 18:11:03,647 - INFO - Leito CCF010 inserido na base local.
+2025-07-31 18:11:03,647 - INFO - Leito CCF010 recebido com sucesso!
+2025-07-31 18:11:03,651 - INFO - Leito BOX006 está ATIVO desde 2021-09-01 11:56:50.
+2025-07-31 18:11:03,652 - INFO - Log de envio criado para leito BOX006 com id 321.
+2025-07-31 18:11:03,653 - INFO - Leito BOX006 inserido na base local.
+2025-07-31 18:11:03,653 - INFO - Leito BOX006 recebido com sucesso!
+2025-07-31 18:11:03,657 - INFO - Leito UPG005 está ATIVO desde 2024-01-15 13:54:36.
+2025-07-31 18:11:03,659 - INFO - Log de envio criado para leito UPG005 com id 322.
+2025-07-31 18:11:03,660 - INFO - Leito UPG005 inserido na base local.
+2025-07-31 18:11:03,660 - INFO - Leito UPG005 recebido com sucesso!
+2025-07-31 18:11:03,664 - INFO - Leito OBST008 está ATIVO desde 2022-03-21 15:17:00.
+2025-07-31 18:11:03,665 - INFO - Log de envio criado para leito OBST008 com id 323.
+2025-07-31 18:11:03,667 - INFO - Leito OBST008 inserido na base local.
+2025-07-31 18:11:03,667 - INFO - Leito OBST008 recebido com sucesso!
+2025-07-31 18:11:03,671 - INFO - Leito CCF018 está ATIVO desde 2022-10-18 09:13:16.
+2025-07-31 18:11:03,673 - INFO - Log de envio criado para leito CCF018 com id 324.
+2025-07-31 18:11:03,674 - INFO - Leito CCF018 inserido na base local.
+2025-07-31 18:11:03,674 - INFO - Leito CCF018 recebido com sucesso!
+2025-07-31 18:11:03,678 - INFO - Leito CCF020 está ATIVO desde 2022-10-18 09:13:16.
+2025-07-31 18:11:03,680 - INFO - Log de envio criado para leito CCF020 com id 325.
+2025-07-31 18:11:03,681 - INFO - Leito CCF020 inserido na base local.
+2025-07-31 18:11:03,681 - INFO - Leito CCF020 recebido com sucesso!
+2025-07-31 18:11:03,685 - INFO - Leito BOX001 está ATIVO desde 2021-09-01 11:56:50.
+2025-07-31 18:11:03,687 - INFO - Log de envio criado para leito BOX001 com id 326.
+2025-07-31 18:11:03,688 - INFO - Leito BOX001 inserido na base local.
+2025-07-31 18:11:03,688 - INFO - Leito BOX001 recebido com sucesso!
+2025-07-31 18:11:03,693 - INFO - Leito CCM016 está ATIVO desde 2023-12-08 09:29:16.
+2025-07-31 18:11:03,694 - INFO - Log de envio criado para leito CCM016 com id 327.
+2025-07-31 18:11:03,695 - INFO - Leito CCM016 inserido na base local.
+2025-07-31 18:11:03,695 - INFO - Leito CCM016 recebido com sucesso!
+2025-07-31 18:11:03,701 - INFO - Leito CCF015 está ATIVO desde 2022-05-26 16:45:12.
+2025-07-31 18:11:03,703 - INFO - Log de envio criado para leito CCF015 com id 328.
+2025-07-31 18:11:03,704 - INFO - Leito CCF015 inserido na base local.
+2025-07-31 18:11:03,704 - INFO - Leito CCF015 recebido com sucesso!
+2025-07-31 18:11:03,709 - INFO - Leito OBST005 está ATIVO desde 2022-03-22 16:26:00.
+2025-07-31 18:11:03,711 - INFO - Log de envio criado para leito OBST005 com id 329.
+2025-07-31 18:11:03,712 - INFO - Leito OBST005 inserido na base local.
+2025-07-31 18:11:03,713 - INFO - Leito OBST005 recebido com sucesso!
+2025-07-31 18:11:03,717 - WARNING - Leito CMF010 INATIVO, com data de criacao em 2023-05-03 14:59:06.850000
+2025-07-31 18:11:03,719 - INFO - Log de envio criado para leito CMF010 com id 330.
+2025-07-31 18:11:03,720 - INFO - Leito CMF010 inserido na base local.
+2025-07-31 18:11:03,720 - INFO - Leito CMF010 recebido com sucesso!
+2025-07-31 18:11:03,741 - INFO - Leito BOX012 está ATIVO desde 2024-04-17 15:33:00.
+2025-07-31 18:11:03,743 - INFO - Log de envio criado para leito BOX012 com id 331.
+2025-07-31 18:11:03,744 - INFO - Leito BOX012 inserido na base local.
+2025-07-31 18:11:03,744 - INFO - Leito BOX012 recebido com sucesso!
+2025-07-31 18:11:03,749 - INFO - Leito OBST009 está ATIVO desde 2020-05-19 14:24:00.
+2025-07-31 18:11:03,750 - INFO - Log de envio criado para leito OBST009 com id 332.
+2025-07-31 18:11:03,752 - INFO - Leito OBST009 inserido na base local.
+2025-07-31 18:11:03,755 - INFO - Leito OBST009 recebido com sucesso!
+2025-07-31 18:11:03,761 - INFO - Leito CCF003 está ATIVO desde 2020-11-03 15:50:42.
+2025-07-31 18:11:03,762 - INFO - Log de envio criado para leito CCF003 com id 333.
+2025-07-31 18:11:03,763 - INFO - Leito CCF003 inserido na base local.
+2025-07-31 18:11:03,763 - INFO - Leito CCF003 recebido com sucesso!
+2025-07-31 18:11:03,767 - INFO - Leito CCM008 está ATIVO desde 2022-05-26 13:39:09.
+2025-07-31 18:11:03,769 - INFO - Log de envio criado para leito CCM008 com id 334.
+2025-07-31 18:11:03,771 - INFO - Leito CCM008 inserido na base local.
+2025-07-31 18:11:03,771 - INFO - Leito CCM008 recebido com sucesso!
+2025-07-31 18:11:03,777 - INFO - Leito BOX010 está ATIVO desde 2021-09-01 11:56:50.
+2025-07-31 18:11:03,779 - INFO - Log de envio criado para leito BOX010 com id 335.
+2025-07-31 18:11:03,780 - INFO - Leito BOX010 inserido na base local.
+2025-07-31 18:11:03,780 - INFO - Leito BOX010 recebido com sucesso!
+2025-07-31 18:11:03,785 - INFO - Leito UPG007 está ATIVO desde 2024-01-15 13:54:36.
+2025-07-31 18:11:03,787 - INFO - Log de envio criado para leito UPG007 com id 336.
+2025-07-31 18:11:03,788 - INFO - Leito UPG007 inserido na base local.
+2025-07-31 18:11:03,788 - INFO - Leito UPG007 recebido com sucesso!
+2025-07-31 18:11:03,793 - INFO - Leito CCEMI001 está ATIVO desde 2021-06-14 16:19:16.
+2025-07-31 18:11:03,795 - INFO - Log de envio criado para leito CCEMI001 com id 337.
+2025-07-31 18:11:03,796 - INFO - Leito CCEMI001 inserido na base local.
+2025-07-31 18:11:03,796 - INFO - Leito CCEMI001 recebido com sucesso!
+2025-07-31 18:11:03,800 - INFO - Leito CCF009 está ATIVO desde 2022-05-26 16:45:12.
+2025-07-31 18:11:03,802 - INFO - Log de envio criado para leito CCF009 com id 338.
+2025-07-31 18:11:03,803 - INFO - Leito CCF009 inserido na base local.
+2025-07-31 18:11:03,804 - INFO - Leito CCF009 recebido com sucesso!
+2025-07-31 18:11:03,808 - WARNING - Leito CMF005 INATIVO, com data de criacao em 2023-05-03 14:59:06.601000
+2025-07-31 18:11:03,810 - INFO - Log de envio criado para leito CMF005 com id 339.
+2025-07-31 18:11:03,811 - INFO - Leito CMF005 inserido na base local.
+2025-07-31 18:11:03,811 - INFO - Leito CMF005 recebido com sucesso!
+2025-07-31 18:11:03,814 - INFO - Conexões com os bancos de dados encerradas.
+2025-07-31 18:11:03,815 - INFO - (2)-INICIANDO ROTINA DE VERIFICAÇÃO DE MUDANÇA DE STATUS DO LEITO.
+2025-07-31 18:11:03,926 - INFO - Nenhuma alteração de status detectada.
+2025-07-31 18:11:03,926 - INFO - Conexões com os bancos de dados encerradas.
