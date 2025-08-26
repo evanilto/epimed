@@ -332,6 +332,11 @@ def verificar_leitos_novos():
             updatetimestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             status = "pendente"  
 
+            dta = obter_data_ativacao(conn_aghu, leito_id)
+            if not dta:
+                dta = obter_data_criacao(conn_aghu, leito_id)
+            activebeddate = dta.strftime("%Y-%m-%d %H:%M:%S")
+
             #verifica se alguma vez esteve inativo
             dti = None
             dta = obter_data_ativacao(conn_aghu, leito_id)
@@ -340,30 +345,21 @@ def verificar_leitos_novos():
             disablebeddate = dti.strftime("%Y-%m-%d %H:%M:%S") if dti else None
 
             if ind_situacao == "A":  
-                dta = obter_data_ativacao(conn_aghu, leito_id)
-                if not dta:
-                    dta = obter_data_criacao(conn_aghu, leito_id)
-
-                activebeddate = dta.strftime("%Y-%m-%d %H:%M:%S")
-
                 registrar_log(f"Leito {leito_id} está ATIVO desde {activebeddate}.")
             else:
+                if not dti:
+                    dti = obter_data_inativacao(conn_aghu, leito_id)
+                disablebeddate = dti.strftime("%Y-%m-%d %H:%M:%S") if dti else None
 
-                dti = obter_data_inativacao(conn_aghu, leito_id)
-                if dti:
-                   disablebeddate = dti.strftime("%Y-%m-%d %H:%M:%S") if dti else None
-                   registrar_log(f"Leito {leito_id} INATIVO, com data de inativação em {dti}", nivel="warning")
-                else:
-                    dta = obter_data_criacao(conn_aghu, leito_id)
-                    registrar_log(f"Leito {leito_id} INATIVO, com data de criação em {dta}", nivel="warning")
+                registrar_log(f"Leito {leito_id} INATIVO, com data de criacao em {dta}", nivel="warning")
 
             try:
                 resposta = None
 
                 with conn_epimed: #commit e rollback automáticos
 
-                    #if ind_situacao == "A":  #só envia leitos ativos
-                    if ind_situacao in ("A", "I") :  #carga inicial de leitos ativos e inativos
+                    if ind_situacao == "A":  #só envia leitos ativos
+                    #if ind_situacao in ("A", "I") :  #carga inicial de leitos ativos e inativos
 
                         log_id = salvar_log_envio(leito_id, conn_epimed)
                         clientid = log_id
@@ -377,8 +373,8 @@ def verificar_leitos_novos():
                             clientid, type_map.get(typebedcode), status_map.get(ind_situacao)
                         )
 
-                        #resposta = enviar_mensagem_hl7(log_id, mensagem, conn_epimed)
-                        resposta = 'AA' #carga inicial
+                        resposta = enviar_mensagem_hl7(log_id, mensagem, conn_epimed)
+                        #resposta = 'AA' #carga inicial
 
                         if resposta == "AA":  # ACK de sucesso
                             inserir_leito_epimed(conn_epimed, leito_id, ind_situacao, activebeddate, disablebeddate)

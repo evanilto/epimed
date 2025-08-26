@@ -1,4 +1,0 @@
-Nenhum novo leito detectado.
-Rotina de inclusão de leitos novos executada com sucesso!
-Nenhuma alteração de status detectada.
-Rotina de verificação de alterações de status concluída com sucesso!

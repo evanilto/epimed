@@ -1,0 +1,16 @@
+# Linux
+*~
+
+#-------------------------
+# Environment Files
+#-------------------------
+# These should never be under version control,
+# as it poses a security risk.
+.env
+
+# Visual Studio Code
+.vscode/
+
+#App
+logs
+backup
