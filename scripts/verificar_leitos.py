@@ -340,6 +340,7 @@ def verificar_leitos_novos():
             disablebeddate = dti.strftime("%Y-%m-%d %H:%M:%S") if dti else None
 
             if ind_situacao == "A":  
+
                 dta = obter_data_ativacao(conn_aghu, leito_id)
                 if not dta:
                     dta = obter_data_criacao(conn_aghu, leito_id)
@@ -362,8 +363,8 @@ def verificar_leitos_novos():
 
                 with conn_epimed: #commit e rollback automáticos
 
-                    #if ind_situacao == "A":  #só envia leitos ativos
-                    if ind_situacao in ("A", "I") :  #carga inicial de leitos ativos e inativos
+                    if ind_situacao == "A":  #só envia leitos ativos
+                    #if ind_situacao in ("A", "I") :  #carga inicial de leitos ativos e inativos
 
                         log_id = salvar_log_envio(leito_id, conn_epimed)
                         clientid = log_id
@@ -377,8 +378,8 @@ def verificar_leitos_novos():
                             clientid, type_map.get(typebedcode), status_map.get(ind_situacao)
                         )
 
-                        #resposta = enviar_mensagem_hl7(log_id, mensagem, conn_epimed)
-                        resposta = 'AA' #carga inicial
+                        resposta = enviar_mensagem_hl7(log_id, mensagem, conn_epimed)
+                        #resposta = 'AA' #carga inicial
 
                         if resposta == "AA":  # ACK de sucesso
                             inserir_leito_epimed(conn_epimed, leito_id, ind_situacao, activebeddate, disablebeddate)
@@ -439,19 +440,28 @@ def verificar_alteracoes_status():
             activebeddate = disablebeddate = None
 
             if novo_status == "A":  # Ativo
-                dta = obter_data_ativacao(conn_aghu, leito_id)
-                if not dta:
-                    dta = obter_data_criacao(conn_aghu, leito_id)
-                activebeddate = dta.strftime("%Y-%m-%d %H:%M:%S") if dta else None
-                registrar_log(f"Leito {leito_id} está ATIVO desde {activebeddate}.")
-            elif novo_status == "I":  # Inativo
+
                 dta = obter_data_ativacao(conn_aghu, leito_id)
                 if not dta:
                     dta = obter_data_criacao(conn_aghu, leito_id)
 
                 activebeddate = dta.strftime("%Y-%m-%d %H:%M:%S") if dta else None
+
+                registrar_log(f"Leito {leito_id} está ATIVO desde {activebeddate}.")
+
+            elif novo_status == "I":  # Inativo
+
                 dti = obter_data_inativacao(conn_aghu, leito_id)
+
                 disablebeddate = dti.strftime("%Y-%m-%d %H:%M:%S") if dti else None
+
+                # envia também a data de ativação anterior à desativação
+                dta = obter_data_ativacao(conn_aghu, leito_id)
+                if not dta:
+                    dta = obter_data_criacao(conn_aghu, leito_id)
+
+                activebeddate = dta.strftime("%Y-%m-%d %H:%M:%S") if dta else None
+
                 registrar_log(f"Leito {leito_id} INATIVO, desde {disablebeddate}")
 
             updatetimestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -477,6 +487,7 @@ def verificar_alteracoes_status():
                     )
 
                     resposta = enviar_mensagem_hl7(log_id, mensagem, conn_epimed)
+                    #resposta = "AA" #testes
 
                     if resposta == "AA":  # ACK de sucesso
                         atualizar_status_leito(conn_epimed, leito_id, novo_status, activebeddate, disablebeddate)
@@ -501,6 +512,14 @@ def verificar_alteracoes_status():
         conn_aghu.close()
         registrar_log("Conexões com os bancos de dados encerradas.")
 
+#-----------------------------------------------------------------------------------------------#
+# Main                                                                                          #
+#                                                                                               #
+# Informa somente leitos novos ativos                                                           #
+# Recupera sempre as datas mais recentes de alterações de status dos leitos                     #
+#                                                                                               #
+#-----------------------------------------------------------------------------------------------#
 if __name__ == "__main__":
     verificar_leitos_novos()
     verificar_alteracoes_status()
+#-----------------------------------------------------------------------------------------------#
