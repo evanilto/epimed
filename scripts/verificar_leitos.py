@@ -90,7 +90,7 @@ def enviar_mensagem_hl7(log_id, mensagem, conexao):
 }
     url = os.getenv("EPIMED_ENDPOINT")
     token = os.getenv("EPIMED_TOKEN")
-    integrationId = os.getenv("EPIMED_INTEGRATION_ID")
+    integrationId = os.getenv("EPIMED_INTEGRATION_PRODUCAO_ID")
 
     headers = {
         "Content-Type": "application/soap+xml; charset=utf-8"
