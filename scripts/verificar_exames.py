@@ -184,7 +184,7 @@ def obter_internacoes_aghu(conn, data_referencia=None):
                     medicalrecord,
                     hospitaladmissionnumber,
                     hospitaladmissiondate
-                FROM internacoes
+                FROM vw_epimed
                 WHERE hospitaladmissiondate >= %s;
             """, (data_referencia,))
         else:
@@ -193,7 +193,7 @@ def obter_internacoes_aghu(conn, data_referencia=None):
                     medicalrecord,
                     hospitaladmissionnumber,
                     hospitaladmissiondate
-                FROM internacoes;
+                FROM vw_epimed;
             """)
 
         for row in cur.fetchall():
@@ -250,7 +250,7 @@ def obter_admissoes_aghu(conn, data_referencia=None):
                     unitcode,
                     bedcode,
                     unitadmissiondatetime
-                FROM admissoes
+                FROM vw_epimed
                 WHERE unitadmissiondatetime >= %s;
             """, (data_referencia,))
         else:
@@ -260,7 +260,7 @@ def obter_admissoes_aghu(conn, data_referencia=None):
                     unitcode,
                     bedcode,
                     unitadmissiondatetime
-                FROM admissoes;
+                FROM vw_epimed;
             """)
 
         for row in cur.fetchall():
@@ -538,7 +538,7 @@ def verificar_e_enviar_exames():
         registrar_log(f"Novo processamento iniciado às: {data_inicio}")
 
         # === 1. OBTER DADOS (com filtro por data) ===
-        registrar_log(f"Obtendo dados atualizados a partir da data de referência {ultima_data}")
+        registrar_log(f"Etapa 1 - Obtendo dados atualizados a partir da data de referência {ultima_data}")
 
         registrar_log("Obtendo novas internações epimed")
         internacoes_epimed = obter_internacoes_epimed(conn_epimed, ultima_data)
@@ -554,6 +554,8 @@ def verificar_e_enviar_exames():
         exames_aghu = obter_exames_aghu(conn_epimed, ultima_data)
 
         # === 2. INTERNACOES NOVAS ===
+        registrar_log("Etapa 2 - Internações Novas")
+
         chaves_internacoes_epimed = {
             (i["medicalrecord"], i["hospitaladmissionnumber"], i["hospitaladmissiondate"])
             for i in internacoes_epimed
@@ -568,6 +570,8 @@ def verificar_e_enviar_exames():
         registrar_log(f"Novas internações detectadas: {qnt_internacoes}")
 
         # === 3. ADMISSOES NOVAS ===
+        registrar_log("Etapa 3 - Admissões Novas")
+
         chaves_admissoes_epimed = {
             (a["hospitaladmissionnumber"], a["unitcode"], a["bedcode"], a["unitadmissiondatetime"])
             for a in admissoes_epimed
@@ -582,6 +586,8 @@ def verificar_e_enviar_exames():
         registrar_log(f"Novas admissões detectadas: {qnt_admissoes}")
 
         # === 4. EXAMES NOVOS ===
+        registrar_log("Etapa 4 - Exames Novos")
+
         chaves_exames_epimed = {
             (e["adm_id"], e["idexame"], e["dthrexame"])
             for e in exames_epimed
@@ -595,6 +601,8 @@ def verificar_e_enviar_exames():
         registrar_log(f"Novos exames detectados: {qnt_exames}")
 
         # === 5. INSERÇÕES ===
+        registrar_log("Etapa 5 - Inserções e envio de msg hl7")
+
         with conn_epimed:
             inserir_internacoes(conn_epimed, novas_internacoes)
             inserir_admissoes(conn_epimed, novas_admissoes)
