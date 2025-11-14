@@ -443,165 +443,119 @@ def verificar_e_enviar_exames():
     status_execucao = 'SUCESSO'
     mensagem_execucao = None
 
-    # === CONTROLE DE PROCESSAMENTO ===
-    registrar_log("Iniciando rotina de sincronização…")
-
-    ultima_data = obter_data_ultimo_processamento(conn_epimed)
-    registrar_log(f"Último processamento bem-sucedido em: {ultima_data}")
-
-    id_proc = registrar_inicio_processamento(conn_epimed)
-    data_inicio = datetime.now()
-    registrar_log(f"Novo processamento iniciado às: {data_inicio}")
-
     try:
-        # === ETAPA 1: COLETA DE DADOS ===
-        registrar_log("=== ETAPA 1 — COLETA DE DADOS ===")
-        registrar_log(f"Obtendo dados atualizados desde {ultima_data}")
+        # === CONTROLE DE PROCESSAMENTO ===
+        ultima_data = obter_data_ultimo_processamento(conn_epimed)
+        #ultima_data_str = '2025-01-01 00:00:00'
+        #ultima_data = datetime.strptime(ultima_data_str, '%Y-%m-%d %H:%M:%S')
+        registrar_log(f"Último processamento bem-sucedido em: {ultima_data}")
 
-        registrar_log("Buscando internações Epimed…")
+        id_proc = registrar_inicio_processamento(conn_epimed)
+        data_inicio = datetime.now() 
+        registrar_log(f"Novo processamento iniciado às: {data_inicio}")
+
+        # === 1. OBTER DADOS (com filtro por data) ===
+        registrar_log(f"Etapa 1 - Obtendo dados atualizados a partir da data de referência {ultima_data}")
+
+        registrar_log("Obtendo novas internações epimed")
         internacoes_epimed = obter_internacoes_baselocal(conn_epimed, ultima_data)
-        registrar_log(f"Internações Epimed obtidas: {len(internacoes_epimed)}")
-
-        registrar_log("Buscando internações AGHU…")
+        registrar_log("Obtendo novas internações aghu")
         internacoes_aghu = obter_internacoes_aghu(conn_epimed, ultima_data)
-        registrar_log(f"Internações AGHU obtidas: {len(internacoes_aghu)}")
-
-        registrar_log("Buscando admissões Epimed…")
+        registrar_log("Obtendo novas admissões epimed")
         admissoes_epimed = obter_admissoes_baselocal(conn_epimed, ultima_data)
-        registrar_log(f"Admissões Epimed obtidas: {len(admissoes_epimed)}")
-
-        registrar_log("Buscando admissões AGHU…")
+        registrar_log("Obtendo novas admissões aghu")
         admissoes_aghu = obter_admissoes_aghu(conn_epimed, ultima_data)
-        registrar_log(f"Admissões AGHU obtidas: {len(admissoes_aghu)}")
-
-        registrar_log("Buscando exames Epimed…")
+        registrar_log("Obtendo novos exames epimed")
         exames_epimed = obter_exames_baselocal(conn_epimed, ultima_data)
-        registrar_log(f"Exames Epimed obtidos: {len(exames_epimed)}")
-
-        registrar_log("Buscando exames AGHU…")
+        registrar_log("Obtendo novos exames aghu")
         exames_aghu = obter_exames_aghu(conn_epimed, ultima_data)
-        registrar_log(f"Exames AGHU obtidos: {len(exames_aghu)}")
 
-        # === ETAPA 2: INTERNACOES NOVAS ===
-        registrar_log("=== ETAPA 2 — INTERNACOES NOVAS ===")
+        # === 2. INTERNACOES NOVAS ===
+        registrar_log("Etapa 2 - Internações Novas")
 
         chaves_internacoes_epimed = {
-            (i["medicalrecord"], i["hospitaladmissionnumber"])
+            (i["medicalrecord"], i["hospitaladmissionnumber"], i["hospitaladmissiondate"])
             for i in internacoes_epimed
         }
 
         novas_internacoes = [
             i for i in internacoes_aghu
-            if (i["medicalrecord"], i["hospitaladmissionnumber"])
+            if (i["medicalrecord"], i["hospitaladmissionnumber"], i["hospitaladmissiondate"])
             not in chaves_internacoes_epimed
         ]
+        qnt_internacoes = len(novas_internacoes)
+        registrar_log(f"Novas internações detectadas: {qnt_internacoes}")
 
-        registrar_log(
-            f"Novas internações detectadas: {len(novas_internacoes)}"
-        )
-
-        # === ETAPA 3: ADMISSOES NOVAS ===
-        registrar_log("=== ETAPA 3 — ADMISSÕES NOVAS ===")
+        # === 3. ADMISSOES NOVAS ===
+        registrar_log("Etapa 3 - Admissões Novas")
 
         chaves_admissoes_epimed = {
-            (
-                a["hospitaladmissionnumber"],
-                a["unitcode"],
-                a["bedcode"],
-                a["unitadmissiondatetime"].replace(tzinfo=None, microsecond=0)
-            )
+            (a["hospitaladmissionnumber"], a["unitcode"], a["bedcode"], a["unitadmissiondatetime"])
             for a in admissoes_epimed
         }
 
         novas_admissoes = [
             a for a in admissoes_aghu
-            if (
-                a["hospitaladmissionnumber"],
-                a["unitcode"],
-                a["bedcode"],
-                a["unitadmissiondatetime"].replace(tzinfo=None, microsecond=0)
-            ) not in chaves_admissoes_epimed
+            if (a["hospitaladmissionnumber"], a["unitcode"], a["bedcode"], a["unitadmissiondatetime"])
+            not in chaves_admissoes_epimed
         ]
+        qnt_admissoes = len(novas_admissoes)
+        registrar_log(f"Novas admissões detectadas: {qnt_admissoes}")
 
-        registrar_log(
-            f"Novas admissões detectadas: {len(novas_admissoes)}"
-        )
-
-        # === ETAPA 4: EXAMES NOVOS ===
-        registrar_log("=== ETAPA 4 — EXAMES NOVOS ===")
+        # === 4. EXAMES NOVOS ===
+        registrar_log("Etapa 4 - Exames Novos")
 
         chaves_exames_epimed = {
-            (e["adm_id"], e["idexame"], e["dthrexame"].replace(tzinfo=None, microsecond=0))
+            (e["adm_id"], e["idexame"], e["dthrexame"])
             for e in exames_epimed
         }
 
         novos_exames = [
             e for e in exames_aghu
-            if (e["adm_id"], e["idexame"], e["dthrexame"].replace(tzinfo=None, microsecond=0))
+            if (e["adm_id"], e["idexame"], e["dthrexame"])
             not in chaves_exames_epimed
         ]
+        qnt_exames = len(novos_exames)
+        registrar_log(f"Novos exames detectados: {qnt_exames}")
 
-        registrar_log(
-            f"Novos exames detectados: {len(novos_exames)}"
-        )
-
-        # === ETAPA 5: INSERÇÕES ===
-        registrar_log("=== ETAPA 5 — INSERÇÕES ===")
+        # === 5. INSERÇÕES ===
+        registrar_log("Etapa 5 - Inserções e envio de msg hl7")
 
         with conn_epimed:
-
-            # --- INTERNACOES ---
-            if novas_internacoes:
-                registrar_log(f"Inserindo {len(novas_internacoes)} novas internações…")
-                inserir_internacoes(conn_epimed, novas_internacoes)
-                registrar_log("Internações inseridas com sucesso.")
-            else:
+            if not novas_internacoes:
                 registrar_log("Nenhuma nova internação para inserir.")
-
-            # --- ADMISSOES ---
-            if novas_admissoes:
-                registrar_log(f"Inserindo {len(novas_admissoes)} novas admissões…")
-                inserir_admissoes(conn_epimed, novas_admissoes)
-                registrar_log("Admissões inseridas com sucesso.")
             else:
+                registrar_log("Inserindo novas internações.")
+                inserir_internacoes(conn_epimed, novas_internacoes)
+
+            if not novas_admissoes:
                 registrar_log("Nenhuma nova admissão para inserir.")
+            else:
+                registrar_log("Inserindo novas admissões.")
+                inserir_admissoes(conn_epimed, novas_admissoes)
 
-            # --- EXAMES ---
-            if novos_exames:
-                registrar_log(f"Processando {len(novos_exames)} novos exames…")
-
+            if not novos_exames:
+                registrar_log("Nenhum novo exame para inserir.")
+            else:
+                registrar_log("Processando novos exames.")
                 for e in novos_exames:
                     try:
-                        registrar_log(f"Gerando HL7 para exame {e['idexame']}…")
                         mensagem = gerar_mensagem_hl7(e)
-
-                        registrar_log("Enviando HL7…")
                         ack = enviar_mensagem_hl7(mensagem)
 
                         if ack == "AA":
-                            registrar_log(f"ACK=AA recebido. Inserindo exame {e['idexame']}…")
                             inserir_exame(conn_epimed, e)
-
+                            conn_epimed.commit()
+                            registrar_log(f"Exame {e['idexame']} inserido com sucesso (ACK=AA).")
                         else:
-                            registrar_log(
-                                f"Exame {e['idexame']} rejeitado (ACK={ack}).",
-                                nivel="error"
-                            )
+                            registrar_log(f"Exame {e['idexame']} falhou no envio (ACK={ack}).", nivel="error")
 
                     except Exception as erro:
-                        registrar_log(
-                            f"Erro ao processar exame {e['idexame']}: {erro}",
-                            nivel="error"
-                        )
-                        raise
+                        registrar_log(f"Erro ao processar exame {e['idexame']}: {erro}", nivel="error")
+                        raise Exception(f"Erro ao processar exame {e['idexame']}") from erro
 
-                registrar_log("Todos os exames processados.")
-            else:
-                registrar_log("Nenhum novo exame para inserir.")
-
-        # === FINALIZAÇÃO ===
-        registrar_fim_processamento(conn_epimed, id_proc, "SUCESSO")
-        registrar_log("Rotina concluída com sucesso ✔️")
+        registrar_fim_processamento(conn_epimed, id_proc, 'SUCESSO')
+        registrar_log("Rotina concluída com sucesso ✅")
 
     except Exception as e:
         conn_epimed.rollback()

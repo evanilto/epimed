@@ -55,6 +55,7 @@ def conectar_db(config):
 
 def registrar_log(mensagem, nivel="info"):
     print(f"[{nivel.upper()}] {datetime.now():%Y-%m-%d %H:%M:%S} - {mensagem}")
+
     if nivel == "info":
         logger.info(mensagem)
     elif nivel == "error":
@@ -66,13 +67,16 @@ def salvar_log_envio(exame_id, conexao):
     try:
         with conexao.cursor() as cursor:
             cursor.execute("""
-                INSERT INTO exa.log_envio_hl7 (exame_id, data_envio, status)
+                INSERT INTO log_envio_exames_hl7 (exame_id, data_envio, status)
                 VALUES (%s, NOW(), 'pendente')
                 RETURNING id
             """, (exame_id,))
             log_id = cursor.fetchone()[0]
+
         registrar_log(f"Log de envio criado para o exame {exame_id} com id {log_id}.", nivel="info")
+
         return log_id
+
     except Exception as e:
         registrar_log(f"Erro ao salvar log de envio para o exame {exame_id}: {e}", nivel="error")
         raise
@@ -82,29 +86,29 @@ def salvar_log_resposta(log_id, mensagem, resposta, conexao):
         with conexao.cursor() as cursor:
             cursor.execute(
                 """
-                UPDATE exa.log_exames_hl7
+                UPDATE log_envio_exames_hl7
                 SET mensagem = %s, resposta = %s, status = %s
                 WHERE id = %s
                 """,
                 (mensagem, resposta, 'enviado', log_id)
             )
+
         registrar_log(f"Log de resposta atualizado para id {log_id}.", nivel="info")
+
     except Exception as e:
         registrar_log(f"Erro ao atualizar log de resposta para id {log_id}: {e}", nivel="error")
         raise
   
 def obter_data_ultimo_processamento(conn):
     with conn.cursor() as cur:
-        cur.execute("""SELECT MAX(data_inicio) 
-                        FROM exa.controle_processamento ctrl
-                        WHERE status = 'SUCESSO';""")
+        cur.execute("SELECT MAX(data_inicio) FROM controle_processamento;")
         res = cur.fetchone()
-        return res[0] if res and res[0] else datetime(2025, 1, 1)
+        return res[0] if res and res[0] else datetime(2000, 1, 1)
 
 def registrar_inicio_processamento(conn):
     with conn.cursor() as cur:
         cur.execute(
-            "INSERT INTO exa.controle_processamento (data_inicio, status) VALUES (%s, %s) RETURNING id;",
+            "INSERT INTO controle_processamento (data_inicio, status) VALUES (%s, %s) RETURNING id;",
             (datetime.now(), 'EM_EXECUCAO')
         )
         pid = cur.fetchone()[0]
@@ -114,7 +118,7 @@ def registrar_inicio_processamento(conn):
 def registrar_fim_processamento(conn, pid, status):
     with conn.cursor() as cur:
         cur.execute(
-            "UPDATE exa.controle_processamento SET data_fim = %s, status = %s WHERE id = %s;",
+            "UPDATE controle_processamento SET data_fim = %s, status = %s WHERE id = %s;",
             (datetime.now(), status, pid)
         )
     conn.commit()
@@ -122,38 +126,42 @@ def registrar_fim_processamento(conn, pid, status):
 def registrar_auditoria(conn, novas_internacoes, novas_admissoes, novos_exames, duracao, status, mensagem=None):
     with conn.cursor() as cur:
         cur.execute("""
-            INSERT INTO exa.log_execucoes 
+            INSERT INTO log_execucoes 
             (data_execucao, novas_internacoes, novas_admissoes, novos_exames, duracao, status, mensagem)
             VALUES (%s, %s, %s, %s, %s, %s, %s);
         """, (datetime.now(), novas_internacoes, novas_admissoes, novos_exames, duracao, status, mensagem))
     conn.commit()
     registrar_log(f"Log de auditoria registrado: {status}")
 
-def obter_internacoes_baselocal(conn, data_referencia=None):
+def obter_internacoes_epimed(conn, data_referencia=None):
+    """Obtém internações da base Epimed, opcionalmente filtradas pela data de processamento."""
     internacoes = []
     with conn.cursor() as cur:
         if data_referencia:
             cur.execute("""
-                SELECT hospitaladmissionnumber,
-                 medicalrecord,
-                 hospitaladmissiondate,
-                 medicaldischargedate
-                FROM exa.internacoes
+                SELECT 
+                    hospitaladmissionnumber,
+                    medicalrecord,
+                    hospitaladmissiondate,
+                    medicaldischarge
+                FROM public.internacoes
                 WHERE hospitaladmissiondate >= %s;
             """, (data_referencia,))
         else:
             cur.execute("""
-                SELECT hospitaladmissionnumber,
-                medicalrecord,
-                hospitaladmissiondate,
-                medicaldischargedate
-                FROM exa.internacoes;""")
+                SELECT 
+                    hospitaladmissionnumber,
+                    medicalrecord,
+                    hospitaladmissiondate,
+                    medicaldischarge
+                FROM public.internacoes;
+            """)
         for row in cur.fetchall():
             internacoes.append({
                 "hospitaladmissionnumber": row[0],
                 "medicalrecord": row[1],
                 "hospitaladmissiondate": row[2],
-                "medicaldischargedate": row[3]
+                "medicaldischarge": row[3]
             })
     return internacoes
 
@@ -166,43 +174,52 @@ def obter_internacoes_aghu(conn, data_referencia=None):
                 SELECT 
                     medicalrecord,
                     hospitaladmissionnumber,
-                    hospitaladmissiondate,
-                    medicaldischargedate
-                FROM public.vw_epimed
-                WHERE hospitaladmissiondate >= %s
-                AND medicaldischargedate is null;
+                    hospitaladmissiondate
+                FROM vw_epimed
+                WHERE hospitaladmissiondate >= %s;
             """, (data_referencia,))
         else:
             cur.execute("""
                 SELECT 
                     medicalrecord,
                     hospitaladmissionnumber,
-                    hospitaladmissiondate,
-                    medicaldischargedate
-                FROM public.vw_epimed;
+                    hospitaladmissiondate
+                FROM vw_epimed;
             """)
 
         for row in cur.fetchall():
             internacoes.append({
                 "medicalrecord": row[0],
                 "hospitaladmissionnumber": row[1],
-                "hospitaladmissiondate": row[2],
-                "medicaldischargedate": row[3]
-
+                "hospitaladmissiondate": row[2]
             })
     return internacoes
 
-def obter_admissoes_baselocal(conn, data_referencia=None):
+def obter_admissoes_epimed(conn, data_referencia=None):
+    """Obtém admissões da base Epimed, filtradas pela data se informada."""
     admissoes = []
     with conn.cursor() as cur:
         if data_referencia:
             cur.execute("""
-                SELECT id, hospitaladmissionnumber, unitcode, bedcode, unitadmissiondatetime
-                FROM exa.admissoes
+                SELECT 
+                    id,
+                    hospitaladmissionnumber,
+                    unitcode,
+                    bedcode,
+                    unitadmissiondatetime
+                FROM public.admissoes
                 WHERE unitadmissiondatetime >= %s;
             """, (data_referencia,))
         else:
-            cur.execute("SELECT id, hospitaladmissionnumber, unitcode, bedcode, unitadmissiondatetime FROM exa.admissoes;")
+            cur.execute("""
+                SELECT 
+                    id,
+                    hospitaladmissionnumber,
+                    unitcode,
+                    bedcode,
+                    unitadmissiondatetime
+                FROM public.admissoes;
+            """)
         for row in cur.fetchall():
             admissoes.append({
                 "id": row[0],
@@ -224,7 +241,7 @@ def obter_admissoes_aghu(conn, data_referencia=None):
                     unitcode,
                     bedcode,
                     unitadmissiondatetime
-                FROM public.vw_epimed
+                FROM vw_epimed
                 WHERE unitadmissiondatetime >= %s;
             """, (data_referencia,))
         else:
@@ -234,7 +251,7 @@ def obter_admissoes_aghu(conn, data_referencia=None):
                     unitcode,
                     bedcode,
                     unitadmissiondatetime
-                FROM public.vw_epimed;
+                FROM vw_epimed;
             """)
 
         for row in cur.fetchall():
@@ -246,21 +263,38 @@ def obter_admissoes_aghu(conn, data_referencia=None):
             })
     return admissoes
 
-def obter_exames_baselocal(conn, data_referencia=None):
+def obter_exames_epimed(conn, data_referencia=None):
+    """Obtém exames da base Epimed, filtrando por data de processamento se informada."""
     exames = []
     with conn.cursor() as cur:
         if data_referencia:
             cur.execute("""
-                SELECT adm_id, idexame, dthrexame, descricao_usual, valor, tipo_inf_valor,
-                       result_sigla_exa, result_material_exa_cod, ind_anulacao_laudo
-                FROM exa.exames
+                SELECT 
+                    adm_id,
+                    idexame,
+                    dthrexame,
+                    descricao_usual,
+                    valor,
+                    tipo_inf_valor,
+                    result_sigla_exa,
+                    result_material_exa_cod,
+                    ind_anulacao_laudo
+                FROM public.exames
                 WHERE dthrexame >= %s;
             """, (data_referencia,))
         else:
             cur.execute("""
-                SELECT adm_id, idexame, dthrexame, descricao_usual, valor, tipo_inf_valor,
-                       result_sigla_exa, result_material_exa_cod, ind_anulacao_laudo
-                FROM exa.exames;
+                SELECT 
+                    adm_id,
+                    idexame,
+                    dthrexame,
+                    descricao_usual,
+                    valor,
+                    tipo_inf_valor,
+                    result_sigla_exa,
+                    result_material_exa_cod,
+                    ind_anulacao_laudo
+                FROM public.exames;
             """)
         for row in cur.fetchall():
             exames.append({
@@ -277,25 +311,15 @@ def obter_exames_baselocal(conn, data_referencia=None):
     return exames
 
 def obter_exames_aghu(conn, data_referencia=None):
-    """Obtém exames dentro do intervalo de ±4h da última admissão de cada internação."""
-
+    """Obtém exames dentro do intervalo de ±4h da admissão, filtrando por data base."""
     exames = []
     with conn.cursor() as cur:
-
         if data_referencia:
             cur.execute("""
-                WITH ultima_admissao AS (
-                    SELECT DISTINCT ON (hospitaladmissionnumber)
-                           id,
-                           hospitaladmissionnumber,
-                           unitcode,
-                           unitadmissiondatetime
-                    FROM exa.admissoes
-                    ORDER BY hospitaladmissionnumber, unitadmissiondatetime DESC
-                )
                 SELECT 
                     a.id AS adm_id,
-                    ve.prontuario,
+                    a.hospitaladmissionnumber,
+                    i.medicalrecord,
                     ve.campo_laudo_nome AS idexame,
                     ve.descricao_usual,
                     ve.are_valor AS valor,
@@ -304,32 +328,22 @@ def obter_exames_aghu(conn, data_referencia=None):
                     ve.result_material_exa_cod,
                     ve.ind_anulacao_laudo,
                     ve.criado_em AS dthrexame
-                FROM exa.internacoes i
-                JOIN ultima_admissao a 
-                    ON a.hospitaladmissionnumber = i.hospitaladmissionnumber
-                JOIN exa.vw_exames ve 
+                FROM admissoes a
+                JOIN internacoes i 
+                    ON i.hospitaladmissionnumber = a.hospitaladmissionnumber
+                JOIN vw_exames ve 
                     ON ve.prontuario::varchar = i.medicalrecord
                    AND ve.criado_em BETWEEN a.unitadmissiondatetime - INTERVAL '4 hours'
                                        AND a.unitadmissiondatetime + INTERVAL '3 hours'
                 WHERE ve.ind_anulacao_laudo <> 'S'
-                  AND ve.criado_em >= %s
-                ORDER BY ve.criado_em;
+                  AND ve.criado_em >= %s;
             """, (data_referencia,))
-        
         else:
             cur.execute("""
-                WITH ultima_admissao AS (
-                    SELECT DISTINCT ON (hospitaladmissionnumber)
-                           id,
-                           hospitaladmissionnumber,
-                           unitcode,
-                           unitadmissiondatetime
-                    FROM exa.admissoes
-                    ORDER BY hospitaladmissionnumber, unitadmissiondatetime DESC
-                )
                 SELECT 
                     a.id AS adm_id,
-                    ve.prontuario,
+                    a.hospitaladmissionnumber,
+                    i.medicalrecord,
                     ve.campo_laudo_nome AS idexame,
                     ve.descricao_usual,
                     ve.are_valor AS valor,
@@ -338,31 +352,30 @@ def obter_exames_aghu(conn, data_referencia=None):
                     ve.result_material_exa_cod,
                     ve.ind_anulacao_laudo,
                     ve.criado_em AS dthrexame
-                FROM exa.internacoes i
-                JOIN ultima_admissao a 
-                    ON a.hospitaladmissionnumber = i.hospitaladmissionnumber
-                JOIN exa.vw_exames ve 
+                FROM admissoes a
+                JOIN internacoes i 
+                    ON i.hospitaladmissionnumber = a.hospitaladmissionnumber
+                JOIN vw_exames ve 
                     ON ve.prontuario::varchar = i.medicalrecord
                    AND ve.criado_em BETWEEN a.unitadmissiondatetime - INTERVAL '4 hours'
                                        AND a.unitadmissiondatetime + INTERVAL '3 hours'
-                WHERE ve.ind_anulacao_laudo <> 'S'
-                ORDER BY ve.criado_em;
+                WHERE ve.ind_anulacao_laudo <> 'S';
             """)
 
         for row in cur.fetchall():
             exames.append({
                 "adm_id": row[0],
-                "prontuario": row[1],
-                "idexame": row[2],
-                "descricao_usual": row[3],
-                "valor": row[4],
-                "tipo_inf_valor": row[5],
-                "result_sigla_exa": row[6],
-                "result_material_exa_cod": row[7],
-                "ind_anulacao_laudo": row[8],
-                "dthrexame": row[9]
+                "hospitaladmissionnumber": row[1],
+                "medicalrecord": row[2],
+                "idexame": row[3],
+                "descricao_usual": row[4],
+                "valor": row[5],
+                "tipo_inf_valor": row[6],
+                "result_sigla_exa": row[7],
+                "result_material_exa_cod": row[8],
+                "ind_anulacao_laudo": row[9],
+                "dthrexame": row[10]
             })
-
     return exames
 
 def gerar_mensagem_hl7(exame):
@@ -378,54 +391,98 @@ def inserir_internacoes(conn, internacoes):
     if not internacoes:
         registrar_log("Nenhuma nova internação para inserir.")
         return 0
+
     count = 0
     for i in internacoes:
-        with conn.cursor() as cur:
-            cur.execute("""
-                INSERT INTO exa.internacoes (
-                    hospitaladmissionnumber,
-                    medicalrecord,
-                    hospitaladmissiondate,
-                    medicaldischargedate
-                ) VALUES (%s, %s, %s, %s)
-                ON CONFLICT (hospitaladmissionnumber) DO NOTHING;
-            """, (i["hospitaladmissionnumber"], i["medicalrecord"], i["hospitaladmissiondate"], i["medicaldischargedate"]))
-        conn.commit()
-        count += 1
-        
+        try:
+            with conn.cursor() as cur:
+                cur.execute("""
+                    INSERT INTO public.internacoes (
+                        hospitaladmissionnumber,
+                        medicalrecord,
+                        hospitaladmissiondate,
+                        medicaldischarge
+                    ) VALUES (%s, %s, %s, %s)
+                    ON CONFLICT (hospitaladmissionnumber) DO NOTHING;
+                """, (
+                    i["hospitaladmissionnumber"],
+                    i["medicalrecord"],
+                    i["hospitaladmissiondate"],
+                    i["medicaldischarge"]
+                ))
+            conn.commit()
+            count += 1
+            registrar_log(f"Internação {i['hospitaladmissionnumber']} inserida com sucesso.")
+        except Exception as e:
+            conn.rollback()
+            registrar_log(f"Erro ao inserir internação {i['hospitaladmissionnumber']}: {e}", nivel="error")
     return count
 
 def inserir_admissoes(conn, admissoes):
     if not admissoes:
         registrar_log("Nenhuma nova admissão para inserir.")
         return 0
+
     count = 0
     for a in admissoes:
-        with conn.cursor() as cur:
-            cur.execute("""
-                INSERT INTO exa.admissoes (
-                    hospitaladmissionnumber, unitcode, bedcode, unitadmissiondatetime
-                ) VALUES (%s, %s, %s, %s)
-                ON CONFLICT (hospitaladmissionnumber, unitcode, bedcode, unitadmissiondatetime) DO NOTHING;
-            """, (a["hospitaladmissionnumber"], a["unitcode"], a["bedcode"], a["unitadmissiondatetime"]))
-        conn.commit()
-        count += 1
-       
+        try:
+            with conn.cursor() as cur:
+                cur.execute("""
+                    INSERT INTO public.admissoes (
+                        hospitaladmissionnumber,
+                        unitcode,
+                        bedcode,
+                        unitadmissiondatetime
+                    ) VALUES (%s, %s, %s, %s)
+                    ON CONFLICT (hospitaladmissionnumber, unitcode, bedcode, unitadmissiondatetime) DO NOTHING;
+                """, (
+                    a["hospitaladmissionnumber"],
+                    a["unitcode"],
+                    a["bedcode"],
+                    a["unitadmissiondatetime"]
+                ))
+            conn.commit()
+            count += 1
+            registrar_log(f"Admissão da internação {a['hospitaladmissionnumber']} inserida com sucesso.")
+        except Exception as e:
+            conn.rollback()
+            registrar_log(f"Erro ao inserir admissão da internação {a['hospitaladmissionnumber']}: {e}", nivel="error")
     return count
 
 def inserir_exame(conn, exame):
-    with conn.cursor() as cur:
-        cur.execute("""
-            INSERT INTO exa.exames (
-                adm_id, prontuario,idexame, dthrexame, descricao_usual, valor, tipo_inf_valor,
-                result_sigla_exa, result_material_exa_cod, ind_anulacao_laudo
-            ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
-            ON CONFLICT (adm_id, idexame, dthrexame) DO NOTHING;
-        """, (exame["adm_id"], exame["prontuario"], exame["idexame"], exame["dthrexame"], exame["descricao_usual"],
-                exame["valor"], exame["tipo_inf_valor"], exame["result_sigla_exa"],
-                exame["result_material_exa_cod"], exame["ind_anulacao_laudo"]))
-    conn.commit()
-    return True
+    try:
+        with conn.cursor() as cur:
+            cur.execute("""
+                INSERT INTO public.exames (
+                    adm_id,
+                    idexame,
+                    dthrexame,
+                    descricao_usual,
+                    valor,
+                    tipo_inf_valor,
+                    result_sigla_exa,
+                    result_material_exa_cod,
+                    ind_anulacao_laudo
+                ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
+                ON CONFLICT (adm_id, idexame, dthrexame) DO NOTHING;
+            """, (
+                exame["adm_id"],
+                exame["idexame"],
+                exame["dthrexame"],
+                exame["descricao_usual"],
+                exame["valor"],
+                exame["tipo_inf_valor"],
+                exame["result_sigla_exa"],
+                exame["result_material_exa_cod"],
+                exame["ind_anulacao_laudo"]
+            ))
+        conn.commit()
+        registrar_log(f"Exame {exame['idexame']} da admissão {exame['adm_id']} inserido com sucesso.")
+        return True
+    except Exception as e:
+        conn.rollback()
+        registrar_log(f"Erro ao inserir exame {exame['idexame']} da admissão {exame['adm_id']}: {e}", nivel="error")
+        return False
 
 # =====================================================================
 # ROTINA PRINCIPAL
@@ -443,165 +500,109 @@ def verificar_e_enviar_exames():
     status_execucao = 'SUCESSO'
     mensagem_execucao = None
 
-    # === CONTROLE DE PROCESSAMENTO ===
-    registrar_log("Iniciando rotina de sincronização…")
-
-    ultima_data = obter_data_ultimo_processamento(conn_epimed)
-    registrar_log(f"Último processamento bem-sucedido em: {ultima_data}")
-
-    id_proc = registrar_inicio_processamento(conn_epimed)
-    data_inicio = datetime.now()
-    registrar_log(f"Novo processamento iniciado às: {data_inicio}")
-
     try:
-        # === ETAPA 1: COLETA DE DADOS ===
-        registrar_log("=== ETAPA 1 — COLETA DE DADOS ===")
-        registrar_log(f"Obtendo dados atualizados desde {ultima_data}")
+        # === CONTROLE DE PROCESSAMENTO ===
+        ultima_data = obter_data_ultimo_processamento(conn_epimed)
+        ultima_data_str = '2025-01-01 00:00:00'
+        ultima_data = datetime.strptime(ultima_data_str, '%Y-%m-%d %H:%M:%S')
+        registrar_log(f"Último processamento bem-sucedido em: {ultima_data}")
 
-        registrar_log("Buscando internações Epimed…")
-        internacoes_epimed = obter_internacoes_baselocal(conn_epimed, ultima_data)
-        registrar_log(f"Internações Epimed obtidas: {len(internacoes_epimed)}")
+        id_proc = registrar_inicio_processamento(conn_epimed)
+        data_inicio = datetime.now() 
+        registrar_log(f"Novo processamento iniciado às: {data_inicio}")
 
-        registrar_log("Buscando internações AGHU…")
+        # === 1. OBTER DADOS (com filtro por data) ===
+        registrar_log(f"Etapa 1 - Obtendo dados atualizados a partir da data de referência {ultima_data}")
+
+        registrar_log("Obtendo novas internações epimed")
+        internacoes_epimed = obter_internacoes_epimed(conn_epimed, ultima_data)
+        registrar_log("Obtendo novas internações aghu")
         internacoes_aghu = obter_internacoes_aghu(conn_epimed, ultima_data)
-        registrar_log(f"Internações AGHU obtidas: {len(internacoes_aghu)}")
-
-        registrar_log("Buscando admissões Epimed…")
-        admissoes_epimed = obter_admissoes_baselocal(conn_epimed, ultima_data)
-        registrar_log(f"Admissões Epimed obtidas: {len(admissoes_epimed)}")
-
-        registrar_log("Buscando admissões AGHU…")
+        registrar_log("Obtendo novas admissões epimed")
+        admissoes_epimed = obter_admissoes_epimed(conn_epimed, ultima_data)
+        registrar_log("Obtendo novas admissões aghu")
         admissoes_aghu = obter_admissoes_aghu(conn_epimed, ultima_data)
-        registrar_log(f"Admissões AGHU obtidas: {len(admissoes_aghu)}")
-
-        registrar_log("Buscando exames Epimed…")
-        exames_epimed = obter_exames_baselocal(conn_epimed, ultima_data)
-        registrar_log(f"Exames Epimed obtidos: {len(exames_epimed)}")
-
-        registrar_log("Buscando exames AGHU…")
+        registrar_log("Obtendo novos exames epimed")
+        exames_epimed = obter_exames_epimed(conn_epimed, ultima_data)
+        registrar_log("Obtendo novos exames aghu")
         exames_aghu = obter_exames_aghu(conn_epimed, ultima_data)
-        registrar_log(f"Exames AGHU obtidos: {len(exames_aghu)}")
 
-        # === ETAPA 2: INTERNACOES NOVAS ===
-        registrar_log("=== ETAPA 2 — INTERNACOES NOVAS ===")
+        # === 2. INTERNACOES NOVAS ===
+        registrar_log("Etapa 2 - Internações Novas")
 
         chaves_internacoes_epimed = {
-            (i["medicalrecord"], i["hospitaladmissionnumber"])
+            (i["medicalrecord"], i["hospitaladmissionnumber"], i["hospitaladmissiondate"])
             for i in internacoes_epimed
         }
 
         novas_internacoes = [
             i for i in internacoes_aghu
-            if (i["medicalrecord"], i["hospitaladmissionnumber"])
+            if (i["medicalrecord"], i["hospitaladmissionnumber"], i["hospitaladmissiondate"])
             not in chaves_internacoes_epimed
         ]
+        qnt_internacoes = len(novas_internacoes)
+        registrar_log(f"Novas internações detectadas: {qnt_internacoes}")
 
-        registrar_log(
-            f"Novas internações detectadas: {len(novas_internacoes)}"
-        )
-
-        # === ETAPA 3: ADMISSOES NOVAS ===
-        registrar_log("=== ETAPA 3 — ADMISSÕES NOVAS ===")
+        # === 3. ADMISSOES NOVAS ===
+        registrar_log("Etapa 3 - Admissões Novas")
 
         chaves_admissoes_epimed = {
-            (
-                a["hospitaladmissionnumber"],
-                a["unitcode"],
-                a["bedcode"],
-                a["unitadmissiondatetime"].replace(tzinfo=None, microsecond=0)
-            )
+            (a["hospitaladmissionnumber"], a["unitcode"], a["bedcode"], a["unitadmissiondatetime"])
             for a in admissoes_epimed
         }
 
         novas_admissoes = [
             a for a in admissoes_aghu
-            if (
-                a["hospitaladmissionnumber"],
-                a["unitcode"],
-                a["bedcode"],
-                a["unitadmissiondatetime"].replace(tzinfo=None, microsecond=0)
-            ) not in chaves_admissoes_epimed
+            if (a["hospitaladmissionnumber"], a["unitcode"], a["bedcode"], a["unitadmissiondatetime"])
+            not in chaves_admissoes_epimed
         ]
+        qnt_admissoes = len(novas_admissoes)
+        registrar_log(f"Novas admissões detectadas: {qnt_admissoes}")
 
-        registrar_log(
-            f"Novas admissões detectadas: {len(novas_admissoes)}"
-        )
-
-        # === ETAPA 4: EXAMES NOVOS ===
-        registrar_log("=== ETAPA 4 — EXAMES NOVOS ===")
+        # === 4. EXAMES NOVOS ===
+        registrar_log("Etapa 4 - Exames Novos")
 
         chaves_exames_epimed = {
-            (e["adm_id"], e["idexame"], e["dthrexame"].replace(tzinfo=None, microsecond=0))
+            (e["adm_id"], e["idexame"], e["dthrexame"])
             for e in exames_epimed
         }
 
         novos_exames = [
             e for e in exames_aghu
-            if (e["adm_id"], e["idexame"], e["dthrexame"].replace(tzinfo=None, microsecond=0))
+            if (e["adm_id"], e["idexame"], e["dthrexame"])
             not in chaves_exames_epimed
         ]
+        qnt_exames = len(novos_exames)
+        registrar_log(f"Novos exames detectados: {qnt_exames}")
 
-        registrar_log(
-            f"Novos exames detectados: {len(novos_exames)}"
-        )
-
-        # === ETAPA 5: INSERÇÕES ===
-        registrar_log("=== ETAPA 5 — INSERÇÕES ===")
+        # === 5. INSERÇÕES ===
+        registrar_log("Etapa 5 - Inserções e envio de msg hl7")
 
         with conn_epimed:
+            inserir_internacoes(conn_epimed, novas_internacoes)
+            inserir_admissoes(conn_epimed, novas_admissoes)
 
-            # --- INTERNACOES ---
-            if novas_internacoes:
-                registrar_log(f"Inserindo {len(novas_internacoes)} novas internações…")
-                inserir_internacoes(conn_epimed, novas_internacoes)
-                registrar_log("Internações inseridas com sucesso.")
+            if not novos_exames:
+                registrar_log("Nenhum novo exame para inserir.")
             else:
-                registrar_log("Nenhuma nova internação para inserir.")
-
-            # --- ADMISSOES ---
-            if novas_admissoes:
-                registrar_log(f"Inserindo {len(novas_admissoes)} novas admissões…")
-                inserir_admissoes(conn_epimed, novas_admissoes)
-                registrar_log("Admissões inseridas com sucesso.")
-            else:
-                registrar_log("Nenhuma nova admissão para inserir.")
-
-            # --- EXAMES ---
-            if novos_exames:
-                registrar_log(f"Processando {len(novos_exames)} novos exames…")
-
                 for e in novos_exames:
                     try:
-                        registrar_log(f"Gerando HL7 para exame {e['idexame']}…")
                         mensagem = gerar_mensagem_hl7(e)
-
-                        registrar_log("Enviando HL7…")
                         ack = enviar_mensagem_hl7(mensagem)
 
                         if ack == "AA":
-                            registrar_log(f"ACK=AA recebido. Inserindo exame {e['idexame']}…")
                             inserir_exame(conn_epimed, e)
-
+                            conn_epimed.commit()
+                            registrar_log(f"Exame {e['idexame']} inserido com sucesso (ACK=AA).")
                         else:
-                            registrar_log(
-                                f"Exame {e['idexame']} rejeitado (ACK={ack}).",
-                                nivel="error"
-                            )
+                            registrar_log(f"Exame {e['idexame']} falhou no envio (ACK={ack}).", nivel="error")
 
                     except Exception as erro:
-                        registrar_log(
-                            f"Erro ao processar exame {e['idexame']}: {erro}",
-                            nivel="error"
-                        )
-                        raise
+                        conn_epimed.rollback()
+                        registrar_log(f"Erro ao processar exame {e['idexame']}: {erro}", nivel="error")
 
-                registrar_log("Todos os exames processados.")
-            else:
-                registrar_log("Nenhum novo exame para inserir.")
-
-        # === FINALIZAÇÃO ===
-        registrar_fim_processamento(conn_epimed, id_proc, "SUCESSO")
-        registrar_log("Rotina concluída com sucesso ✔️")
+        registrar_fim_processamento(conn_epimed, id_proc, 'SUCESSO')
+        registrar_log("Rotina concluída com sucesso ✅")
 
     except Exception as e:
         conn_epimed.rollback()
