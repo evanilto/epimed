@@ -308,9 +308,9 @@ def obter_exames_aghu(conn, data_referencia=None):
                 JOIN ultima_admissao a 
                     ON a.hospitaladmissionnumber = i.hospitaladmissionnumber
                 JOIN exa.vw_exames ve 
-                    ON ve.prontuario::varchar = i.medicalrecord
+                    ON ve.prontuario = i.medicalrecord
                    AND ve.criado_em BETWEEN a.unitadmissiondatetime - INTERVAL '4 hours'
-                                       AND a.unitadmissiondatetime + INTERVAL '3 hours'
+                                       AND a.unitadmissiondatetime + INTERVAL '24 hours'
                 WHERE ve.ind_anulacao_laudo <> 'S'
                   AND ve.criado_em >= %s
                 ORDER BY ve.criado_em;
@@ -352,7 +352,7 @@ def obter_exames_aghu(conn, data_referencia=None):
         for row in cur.fetchall():
             exames.append({
                 "adm_id": row[0],
-                "prontuario": row[1],
+                "medicalrecord": row[1],
                 "idexame": row[2],
                 "descricao_usual": row[3],
                 "valor": row[4],
@@ -368,6 +368,19 @@ def obter_exames_aghu(conn, data_referencia=None):
 def gerar_mensagem_hl7(exame):
     """Gera mensagem HL7 simulada"""
     return f"HL7|{exame['medicalrecord']}|{exame['idexame']}|{exame['dthrexame']}"
+
+    timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
+
+    msh = f"MSH|^~&|HUAP||EPIMED||{timestamp}||ORU^R01|20190409220503_ORU_65870_95936689|P|2.5|||||BR|ASCII"
+    pid = f"PID|1|{exame['medicalrecord']}|1235||^Integração HL7 Brasil||19910408000000|M|"
+    pv1 = f"PV1|1||||||||||||||||||{exame['hospitaladmissionnumber']}||||||||||||||||||||||||||"
+    orc = f"ORC|1|112233FH|||||||||||||||||"
+    obr = f"OBR|1|||||||||||||||||||||||||||"
+    obx = f"OBX|1|NM|100^PA||150/100|mmHg||||||||20210528142000"
+    obx = f"OBX|2|NM|101^Freq. Cardíaca||95|bpm||||||||20210528142000"
+    obx = f"OBX|3|NM|102^Freq. Respiratória||20|irpm||||||||2021052814200"
+
+    return f"{msh}\n{pid}\n{pv1}\n{obr}\n{obx}"
 
 def enviar_mensagem_hl7(mensagem):
     """Simula envio de mensagem HL7"""
@@ -386,8 +399,9 @@ def inserir_internacoes(conn, internacoes):
                     hospitaladmissionnumber,
                     medicalrecord,
                     hospitaladmissiondate,
-                    medicaldischargedate
-                ) VALUES (%s, %s, %s, %s)
+                    medicaldischargedate,
+                    criado_em
+                ) VALUES (%s, %s, %s, %s, NOW())
                 ON CONFLICT (hospitaladmissionnumber) DO NOTHING;
             """, (i["hospitaladmissionnumber"], i["medicalrecord"], i["hospitaladmissiondate"], i["medicaldischargedate"]))
         conn.commit()
@@ -404,8 +418,8 @@ def inserir_admissoes(conn, admissoes):
         with conn.cursor() as cur:
             cur.execute("""
                 INSERT INTO exa.admissoes (
-                    hospitaladmissionnumber, unitcode, bedcode, unitadmissiondatetime
-                ) VALUES (%s, %s, %s, %s)
+                    hospitaladmissionnumber, unitcode, bedcode, unitadmissiondatetime, criado_em
+                ) VALUES (%s, %s, %s, %s, NOW())
                 ON CONFLICT (hospitaladmissionnumber, unitcode, bedcode, unitadmissiondatetime) DO NOTHING;
             """, (a["hospitaladmissionnumber"], a["unitcode"], a["bedcode"], a["unitadmissiondatetime"]))
         conn.commit()
@@ -417,11 +431,11 @@ def inserir_exame(conn, exame):
     with conn.cursor() as cur:
         cur.execute("""
             INSERT INTO exa.exames (
-                adm_id, prontuario,idexame, dthrexame, descricao_usual, valor, tipo_inf_valor,
-                result_sigla_exa, result_material_exa_cod, ind_anulacao_laudo
-            ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                adm_id, medicalrecord, idexame, dthrexame, descricao_usual, valor, tipo_inf_valor,
+                result_sigla_exa, result_material_exa_cod, ind_anulacao_laudo, criado_em
+            ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, NOW())
             ON CONFLICT (adm_id, idexame, dthrexame) DO NOTHING;
-        """, (exame["adm_id"], exame["prontuario"], exame["idexame"], exame["dthrexame"], exame["descricao_usual"],
+        """, (exame["adm_id"], exame["medicalrecord"], exame["idexame"], exame["dthrexame"], exame["descricao_usual"],
                 exame["valor"], exame["tipo_inf_valor"], exame["result_sigla_exa"],
                 exame["result_material_exa_cod"], exame["ind_anulacao_laudo"]))
     conn.commit()
@@ -619,7 +633,7 @@ def verificar_e_enviar_exames():
         try:
             with conn_epimed.cursor() as cur:
                 cur.execute("""
-                    INSERT INTO log_execucoes 
+                    INSERT INTO exa.log_execucoes 
                     (data_execucao, novas_internacoes, novas_admissoes, novos_exames, duracao, status, mensagem)
                     VALUES (%s, %s, %s, %s, %s, %s, %s)
                 """, (datetime.now(), qnt_internacoes, qnt_admissoes, qnt_exames, duracao_total, status_execucao, mensagem_execucao))
