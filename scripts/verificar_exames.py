@@ -251,14 +251,14 @@ def obter_exames_baselocal(conn, data_referencia=None):
     with conn.cursor() as cur:
         if data_referencia:
             cur.execute("""
-                SELECT adm_id, idexame, dthrexame, descricao_usual, valor, tipo_inf_valor,
+                SELECT adm_id, idexame, dthrcoleta, nome_exame, valor, tipo_inf_valor,
                        result_sigla_exa, result_material_exa_cod, ind_anulacao_laudo
                 FROM exa.exames
-                WHERE dthrexame >= %s;
+                WHERE dthrcoleta >= %s;
             """, (data_referencia,))
         else:
             cur.execute("""
-                SELECT adm_id, idexame, dthrexame, descricao_usual, valor, tipo_inf_valor,
+                SELECT adm_id, idexame, dthrcoleta, nome_exame, valor, tipo_inf_valor,
                        result_sigla_exa, result_material_exa_cod, ind_anulacao_laudo
                 FROM exa.exames;
             """)
@@ -266,8 +266,8 @@ def obter_exames_baselocal(conn, data_referencia=None):
             exames.append({
                 "adm_id": row[0],
                 "idexame": row[1],
-                "dthrexame": row[2],
-                "descricao_usual": row[3],
+                "dthrcoleta": row[2],
+                "nome_exame": row[3],
                 "valor": row[4],
                 "tipo_inf_valor": row[5],
                 "result_sigla_exa": row[6],
@@ -295,25 +295,29 @@ def obter_exames_aghu(conn, data_referencia=None):
                 )
                 SELECT 
                     a.id AS adm_id,
+                    a.hospitaladmissionnumber,
                     ve.prontuario,
-                    ve.campo_laudo_nome AS idexame,
-                    ve.descricao_usual,
+                    ve.ise_soe_seq AS soe_seq,
+                    ve.sigla AS idexame,
+                    ve.descricao_usual AS nome_exame,
                     ve.are_valor AS valor,
                     ve.tipo_inf_valor,
+                    ve.unidade,
                     ve.result_sigla_exa,
                     ve.result_material_exa_cod,
                     ve.ind_anulacao_laudo,
-                    ve.criado_em AS dthrexame
+                    ve.dthr_programada,
+                    ve.dthr_liberacao
                 FROM exa.internacoes i
                 JOIN ultima_admissao a 
                     ON a.hospitaladmissionnumber = i.hospitaladmissionnumber
                 JOIN exa.vw_exames ve 
                     ON ve.prontuario = i.medicalrecord
-                   AND ve.criado_em BETWEEN a.unitadmissiondatetime - INTERVAL '4 hours'
+                   AND ve.dthr_programada BETWEEN a.unitadmissiondatetime - INTERVAL '4 hours'
                                        AND a.unitadmissiondatetime + INTERVAL '24 hours'
                 WHERE ve.ind_anulacao_laudo <> 'S'
-                  AND ve.criado_em >= %s
-                ORDER BY ve.criado_em;
+                  AND ve.dthr_programada >= %s
+                ORDER BY ve.dthr_programada;
             """, (data_referencia,))
         
         else:
@@ -329,56 +333,61 @@ def obter_exames_aghu(conn, data_referencia=None):
                 )
                 SELECT 
                     a.id AS adm_id,
+                    a.hospitaladmissionnumber,
                     ve.prontuario,
-                    ve.campo_laudo_nome AS idexame,
-                    ve.descricao_usual,
+                    ve.ise_soe_seq AS soe_seq,
+                    ve.sigla AS idexame,
+                    ve.descricao_usual AS nome_exame,
                     ve.are_valor AS valor,
                     ve.tipo_inf_valor,
+                    ve.unidade,
                     ve.result_sigla_exa,
                     ve.result_material_exa_cod,
                     ve.ind_anulacao_laudo,
-                    ve.criado_em AS dthrexame
+                    ve.dthr_programada,
+                    ve.dthr_liberacao
                 FROM exa.internacoes i
                 JOIN ultima_admissao a 
                     ON a.hospitaladmissionnumber = i.hospitaladmissionnumber
                 JOIN exa.vw_exames ve 
                     ON ve.prontuario::varchar = i.medicalrecord
-                   AND ve.criado_em BETWEEN a.unitadmissiondatetime - INTERVAL '4 hours'
+                   AND ve.dthr_programada BETWEEN a.unitadmissiondatetime - INTERVAL '4 hours'
                                        AND a.unitadmissiondatetime + INTERVAL '3 hours'
                 WHERE ve.ind_anulacao_laudo <> 'S'
-                ORDER BY ve.criado_em;
+                ORDER BY ve.dthr_programada;
             """)
 
         for row in cur.fetchall():
             exames.append({
                 "adm_id": row[0],
-                "medicalrecord": row[1],
-                "idexame": row[2],
-                "descricao_usual": row[3],
-                "valor": row[4],
-                "tipo_inf_valor": row[5],
-                "result_sigla_exa": row[6],
-                "result_material_exa_cod": row[7],
-                "ind_anulacao_laudo": row[8],
-                "dthrexame": row[9]
+                "hospitaladmissionnumber": row[1],
+                "medicalrecord": row[2],
+                "soe_seq": row[3],
+                "idexame": row[4],
+                "nome_exame": row[5],
+                "valor": row[6],
+                "tipo_inf_valor": row[7],
+                "unidade": row[8],
+                "result_sigla_exa": row[9],
+                "result_material_exa_cod": row[10],
+                "ind_anulacao_laudo": row[11],
+                "dthrcoleta": row[12]
             })
 
     return exames
 
 def gerar_mensagem_hl7(exame):
     """Gera mensagem HL7 simulada"""
-    return f"HL7|{exame['medicalrecord']}|{exame['idexame']}|{exame['dthrexame']}"
+    #return f"HL7|{exame['medicalrecord']}|{exame['idexame']}|{exame['dthrexame']}"
 
     timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
 
     msh = f"MSH|^~&|HUAP||EPIMED||{timestamp}||ORU^R01|20190409220503_ORU_65870_95936689|P|2.5|||||BR|ASCII"
     pid = f"PID|1|{exame['medicalrecord']}|1235||^Integração HL7 Brasil||19910408000000|M|"
     pv1 = f"PV1|1||||||||||||||||||{exame['hospitaladmissionnumber']}||||||||||||||||||||||||||"
-    orc = f"ORC|1|112233FH|||||||||||||||||"
+    orc = f"ORC|1|{exame['soe_seq']}|||||||||||||||||"
     obr = f"OBR|1|||||||||||||||||||||||||||"
-    obx = f"OBX|1|NM|100^PA||150/100|mmHg||||||||20210528142000"
-    obx = f"OBX|2|NM|101^Freq. Cardíaca||95|bpm||||||||20210528142000"
-    obx = f"OBX|3|NM|102^Freq. Respiratória||20|irpm||||||||2021052814200"
+    obx = f"OBX|1|NM|{exame['idexame']}^{exame['nome_exame']}||{exame['tipo_inf_valor']}|{exame['unidade']}||||||||{exame['dthrcoleta']}"
 
     return f"{msh}\n{pid}\n{pv1}\n{obr}\n{obx}"
 
@@ -431,11 +440,11 @@ def inserir_exame(conn, exame):
     with conn.cursor() as cur:
         cur.execute("""
             INSERT INTO exa.exames (
-                adm_id, medicalrecord, idexame, dthrexame, descricao_usual, valor, tipo_inf_valor,
+                adm_id, medicalrecord, idexame, dthrcoleta, nome_exame, valor, tipo_inf_valor,
                 result_sigla_exa, result_material_exa_cod, ind_anulacao_laudo, criado_em
             ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, NOW())
-            ON CONFLICT (adm_id, idexame, dthrexame) DO NOTHING;
-        """, (exame["adm_id"], exame["medicalrecord"], exame["idexame"], exame["dthrexame"], exame["descricao_usual"],
+            ON CONFLICT (adm_id, idexame, dthrcoleta) DO NOTHING;
+        """, (exame["adm_id"], exame["medicalrecord"], exame["idexame"], exame["dthrcoleta"], exame["nome_exame"],
                 exame["valor"], exame["tipo_inf_valor"], exame["result_sigla_exa"],
                 exame["result_material_exa_cod"], exame["ind_anulacao_laudo"]))
     conn.commit()
@@ -545,13 +554,13 @@ def verificar_e_enviar_exames():
         registrar_log("=== ETAPA 4 — EXAMES NOVOS ===")
 
         chaves_exames_epimed = {
-            (e["adm_id"], e["idexame"], e["dthrexame"].replace(tzinfo=None, microsecond=0))
+            (e["adm_id"], e["idexame"], e["dthrcoleta"].replace(tzinfo=None, microsecond=0))
             for e in exames_epimed
         }
 
         novos_exames = [
             e for e in exames_aghu
-            if (e["adm_id"], e["idexame"], e["dthrexame"].replace(tzinfo=None, microsecond=0))
+            if (e["adm_id"], e["idexame"], e["dthrcoleta"].replace(tzinfo=None, microsecond=0))
             not in chaves_exames_epimed
         ]
 
